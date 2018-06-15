@@ -12,6 +12,6 @@ class TicketingBookingController extends Controller
      */
     public function index()
     {
-        return $this->render('ticketing_booking/index.html.twig');
+        return $this->render('ticketing/booking.html.twig');
     }
 }

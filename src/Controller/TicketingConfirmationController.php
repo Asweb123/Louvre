@@ -12,6 +12,6 @@ class TicketingConfirmationController extends Controller
      */
     public function index()
     {
-        return $this->render('ticketing_confirmation/index.html.twig');
+        return $this->render('ticketing/confirmation.html.twig');
     }
 }

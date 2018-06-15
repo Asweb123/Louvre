@@ -12,6 +12,6 @@ class TicketingPaymentController extends Controller
      */
     public function index()
     {
-        return $this->render('ticketing_payment/index.html.twig');
+        return $this->render('ticketing/payment.html.twig');
     }
 }

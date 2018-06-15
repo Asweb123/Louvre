@@ -12,6 +12,6 @@ class TicketingSummaryController extends Controller
      */
     public function index()
     {
-        return $this->render('ticketing_summary/index.html.twig');
+        return $this->render('ticketing/summary.html.twig');
     }
 }
