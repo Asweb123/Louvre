@@ -1,7 +1,85 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{% endblock %}
+{% block content %}
 
-{% block body %}
+    <section class="pt-5">
+
+        <h1 class="text-center display-4 mb-5">Tarifs</h1>
+
+        <div class="text-center mb-5">Switcher</div>
+
+
+        <div class="tickets-list mb-5">
+
+            <div class="card text-center box-shadow">
+                <div class="card-header card-child">
+                    Billet Journée
+                </div>
+                <img src="{{ asset('img/img1.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
+                <div class="card-body">
+                    <h5 class="card-title">Tarif Enfant</h5>
+                    <p class="card-text card-price">8 €</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">A partir de 4 ans</li>
+                    <li class="list-group-item">Valable de 8h à 19h</li>
+                </ul>
+            </div>
+
+            <div class="card text-center box-shadow">
+                <div class="card-header card-normal">
+                    Billet-Journée
+                </div>
+                <img src="{{ asset('img/img1.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
+                <div class="card-body">
+                    <h5 class="card-title">Tarif Normal</h5>
+                    <p class="card-text card-price">16 €</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">A partir de 12 ans</li>
+                    <li class="list-group-item">Valable de 8h à 19h</li>
+                </ul>
+            </div>
+
+            <div class="card text-center box-shadow">
+                <div class="card-header card-senior">
+                    Billet Journée
+                </div>
+                <img src="{{ asset('img/img1.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
+                <div class="card-body">
+                    <h5 class="card-title">Tarif Sénior</h5>
+                    <p class="card-text card-price">12 €</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">A partir de 60 ans</li>
+                    <li class="list-group-item">Valable de 8h à 19h</li>
+                </ul>
+            </div>
+
+            <div class="card text-center box-shadow">
+                <div class="card-header card-reduc">
+                    Billet Journée
+                </div>
+                <img src="{{ asset('img/img1.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
+                <div class="card-body">
+                    <h5 class="card-title">Tarif Réduit</h5>
+                    <p class="card-text card-price">10 €</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Etudiant, militaire... *</li>
+                    <li class="list-group-item">Valable de 8h à 19h</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="text-center">
+            <button type="button" class="btn btn-outline-dark btn-lg mb-5 btn-louvre font-weight-bold">Commander</button>
+        </div>
+
+
+        <p class="text-reduc font-italic text-center mb-5">* Tarif réduit accordé aux étudiants de plus de 18 ans, militaires, demandeurs d'emploi, employés de musée ou d'un service du Ministère de la Culture.</p>
+
+    </section>
 
 {% endblock %}
