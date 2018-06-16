@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\OrderRepository")
@@ -23,6 +24,15 @@ class Order
 
     /**
      * @ORM\Column(type="smallint")
+     */
+
+    /**
+     * @Assert\Range(
+     *     min = 1,
+     *     max = 1000,
+     *     minMessage = "Veuillez choisir 1 billet au minimum",
+     *     maxMessage = "Veuilez choisir 1000 billets au maximum"
+     * )
      */
     private $ticketsNumber;
 

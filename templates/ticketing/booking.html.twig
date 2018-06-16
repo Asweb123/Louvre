@@ -1,7 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Billetterie{% endblock %}
+{% block title %}Réservation{% endblock %}
 
-{% block body %}
+{% block content %}
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
 
 {% endblock %}
