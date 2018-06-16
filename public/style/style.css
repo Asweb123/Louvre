@@ -55,8 +55,8 @@ body {
 
 
 .card {
+    min-width: 12rem;
     max-width: 15rem;
-    min-width: 13rem;
     margin: 1.8rem 1rem;
 }
 
