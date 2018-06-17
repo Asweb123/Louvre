@@ -1,7 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Billetterie{% endblock %}
+{% block title %}Bénéficiaires{% endblock %}
 
-{% block body %}
+{% block content %}
+
+    <section class="container">
+
+        {{ form_start(form) }}
+            {{ form_widget(form) }}
+        {{ form_end(form) }}
+
+    </section>
 
 {% endblock %}

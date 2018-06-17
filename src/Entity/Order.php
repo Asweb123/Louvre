@@ -19,14 +19,15 @@ class Order
 
     /**
      * @ORM\Column(type="date")
+     *
+     * @Assert\NotBlank()
+     * @Assert\Date()
      */
     private $bookingDate;
 
     /**
      * @ORM\Column(type="smallint")
-     */
-
-    /**
+     *
      * @Assert\Range(
      *     min = 1,
      *     max = 1000,
@@ -38,16 +39,20 @@ class Order
 
     /**
      * @ORM\Column(type="smallint")
+     *
+     * @Assert\NotBlank()
      */
     private $ticketType;
 
     /**
      * @ORM\Column(type="string", length=255)
+     *
      */
     private $emailCustomer;
 
     /**
      * @ORM\Column(type="string", length=255)
+     *
      */
     private $bookingRef;
 

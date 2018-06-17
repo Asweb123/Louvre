@@ -22,7 +22,7 @@ class TicketingBookingController extends Controller
 
         $form = $this->createFormBuilder($order)
             ->add('bookingDate', DateType::class, array(
-                'widget' =>'single_text',
+                'widget' => 'single_text',
                 'label' => 'Date de réservation'
             ))
             ->add('ticketsNumber', NumberType::class, array(
