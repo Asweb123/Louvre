@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -20,27 +22,26 @@ class Order
     /**
      * @ORM\Column(type="date")
      *
-     * @Assert\NotBlank()
-     * @Assert\Date()
+     * @Assert\NotBlank(groups={"booking"})
+     * @Assert\Date(groups={"booking"})
      */
     private $bookingDate;
 
     /**
-     * @ORM\Column(type="smallint")
      *
-     * @Assert\Range(
+     * @Assert\Range( groups={"booking"},
      *     min = 1,
      *     max = 1000,
      *     minMessage = "Veuillez choisir 1 billet au minimum",
      *     maxMessage = "Veuilez choisir 1000 billets au maximum"
      * )
      */
-    private $ticketsNumber;
+    private $ticketsQuantity;
 
     /**
      * @ORM\Column(type="smallint")
      *
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(groups={"booking"})
      */
     private $ticketType;
 
@@ -55,6 +56,16 @@ class Order
      *
      */
     private $bookingRef;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Ticket", mappedBy="relatedOrder", orphanRemoval=true)
+     */
+    private $ticketsList;
+
+    public function __construct()
+    {
+        $this->ticketsList = new ArrayCollection();
+    }
 
     public function getId()
     {
@@ -73,14 +84,14 @@ class Order
         return $this;
     }
 
-    public function getTicketsNumber(): ?int
+    public function getTicketsQuantity(): ?int
     {
-        return $this->ticketsNumber;
+        return $this->ticketsQuantity;
     }
 
-    public function setTicketsNumber(int $ticketsNumber): self
+    public function setTicketsQuantity(int $ticketsQuantity): self
     {
-        $this->ticketsNumber = $ticketsNumber;
+        $this->ticketsQuantity = $ticketsQuantity;
 
         return $this;
     }
@@ -117,6 +128,37 @@ class Order
     public function setBookingRef(string $bookingRef): self
     {
         $this->bookingRef = $bookingRef;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Ticket[]
+     */
+    public function getTicketsList(): Collection
+    {
+        return $this->ticketsList;
+    }
+
+    public function addTicketsList(Ticket $ticketsList): self
+    {
+        if (!$this->ticketsList->contains($ticketsList)) {
+            $this->ticketsList[] = $ticketsList;
+            $ticketsList->setRelatedOrder($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTicketsList(Ticket $ticketsList): self
+    {
+        if ($this->ticketsList->contains($ticketsList)) {
+            $this->ticketsList->removeElement($ticketsList);
+            // set the owning side to null (unless already changed)
+            if ($ticketsList->getRelatedOrder() === $this) {
+                $ticketsList->setRelatedOrder(null);
+            }
+        }
 
         return $this;
     }

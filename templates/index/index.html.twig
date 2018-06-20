@@ -18,7 +18,7 @@
                 <img src="{{ asset('img/img1.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
                 <div class="card-body">
                     <h5 class="card-title mb-0">Tarif Enfant</h5>
-                    <p class="card-text card-price">8 €</p>
+                    <p class="card-text card-price">{{ constant('CHILDREN_PRICING', ticket) }} €</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">A partir de 4 ans</li>
@@ -30,10 +30,10 @@
                 <div class="card-header card-normal">
                     Billet Journée
                 </div>
-                <img src="{{ asset('img/img1.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
+                <img src="{{ asset('img/img2.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
                 <div class="card-body">
                     <h5 class="card-title mb-0">Tarif Normal</h5>
-                    <p class="card-text card-price">16 €</p>
+                    <p class="card-text card-price">{{ constant('REGULAR_PRICING', ticket) }} €</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">A partir de 12 ans</li>
@@ -45,10 +45,10 @@
                 <div class="card-header card-senior">
                     Billet Journée
                 </div>
-                <img src="{{ asset('img/img1.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
+                <img src="{{ asset('img/img6.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
                 <div class="card-body">
                     <h5 class="card-title mb-0">Tarif Senior</h5>
-                    <p class="card-text card-price">12 €</p>
+                    <p class="card-text card-price">{{ constant('SENIOR_PRICING', ticket) }} €</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">A partir de 60 ans</li>
@@ -60,10 +60,10 @@
                 <div class="card-header card-reduc">
                     Billet Journée
                 </div>
-                <img src="{{ asset('img/img1.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
+                <img src="{{ asset('img/img3.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
                 <div class="card-body">
                     <h5 class="card-title mb-0">Tarif Réduit</h5>
-                    <p class="card-text card-price">10 €</p>
+                    <p class="card-text card-price">{{ constant('REDUCTION_PRICING', ticket) }} €</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Etudiant, militaire... *</li>

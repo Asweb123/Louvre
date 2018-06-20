@@ -6,11 +6,34 @@
 
     <section class="container mb-5">
 
+
+
+        <h1 class="h4  text-center mt-5 mb-4 ">Billetterie<br /><small class="text-muted d-md-none">Etape 1/5 : Réservation</small></h1>
+
+
+
+        <nav class="d-none d-md-block mt-5">
+            <ul class="my-breadcrumb">
+                <li><a href="#">Réservation</a></li>
+                <li><a href="#">Bénéficiaire</a></li>
+                <li><a href="#">Résumé</a></li>
+                <li><a href="#">Paiement</a></li>
+                <li><a href="#">Confirmation</a></li>
+            </ul>
+        </nav>
+
+
         {{ form_start(form) }}
         {{ form_widget(form) }}
         {{ form_end(form) }}
 
     </section>
+
+    <div class="text-center">
+        <a href="{{ path('index') }}">
+            <button type="button" class="btn btn-outline-dark  mb-2 btn-louvre">Annuler la commande</button>
+        </a>
+    </div>
 
 
 {% endblock %}

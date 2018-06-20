@@ -3,12 +3,20 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\TicketRepository")
  */
 class Ticket
 {
+    const CHILDREN_PRICING = 8;
+    const REGULAR_PRICING = 16;
+    const SENIOR_PRICING = 12;
+    const REDUCTION_PRICING = 10;
+
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -16,10 +24,6 @@ class Ticket
      */
     private $id;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $bookingRef;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -28,40 +32,52 @@ class Ticket
 
     /**
      * @ORM\Column(type="string", length=255)
+     *
+     * @Assert\NotBlank()
      */
     private $firstName;
 
     /**
      * @ORM\Column(type="string", length=255)
+     *
+     * @Assert\NotBlank()
      */
     private $lastName;
 
     /**
      * @ORM\Column(type="string", length=255)
+     *
+     * @Assert\NotBlank()
      */
     private $country;
 
+
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="boolean")
      */
-    private $birthDate;
+    private $reduction = false;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Order", inversedBy="ticketsList")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $relatedOrder;
+
+    /**
+     * @ORM\Column(type="datetime")
+     *
+     * @Assert\NotBlank()
+     * @Assert\Date()
+     */
+    private $dateOfBirth;
+
+
 
     public function getId()
     {
         return $this->id;
     }
 
-    public function getBookingRef(): ?string
-    {
-        return $this->bookingRef;
-    }
-
-    public function setBookingRef(string $bookingRef): self
-    {
-        $this->bookingRef = $bookingRef;
-
-        return $this;
-    }
 
     public function getPricing(): ?string
     {
@@ -111,15 +127,40 @@ class Ticket
         return $this;
     }
 
-    public function getBirthDate(): ?\DateTimeInterface
+    public function getDateOfBirth(): ?\DateTimeInterface
     {
-        return $this->birthDate;
+        return $this->dateOfBirth;
     }
 
-    public function setBirthDate(\DateTimeInterface $birthDate): self
+    public function setDateOfBirth(\DateTimeInterface $dateOfBirth): self
     {
-        $this->birthDate = $birthDate;
+        $this->dateOfBirth = $dateOfBirth;
 
         return $this;
     }
+
+    public function getReduction(): ?bool
+    {
+        return $this->reduction;
+    }
+
+    public function setReduction(bool $reduction): self
+    {
+        $this->reduction = $reduction;
+
+        return $this;
+    }
+
+    public function getRelatedOrder(): ?Order
+    {
+        return $this->relatedOrder;
+    }
+
+    public function setRelatedOrder(?Order $relatedOrder): self
+    {
+        $this->relatedOrder = $relatedOrder;
+
+        return $this;
+    }
+
 }

@@ -3,43 +3,36 @@
 namespace App\Controller;
 
 use App\Entity\Ticket;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
-use Symfony\Component\Form\Extension\Core\Type\CountryType;
+use App\Form\BeneficiariesListType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class TicketingBeneficiaryController extends Controller
+
+class TicketingBeneficiaryController extends AbstractController
 {
     /**
      * @Route("/billetterie/beneficiaire", name="ticketing_beneficiary")
      */
-    public function beneficiary(Request $request)
+    public function beneficiary(SessionInterface $session, Request $request)
     {
-        $ticket = new Ticket();
+        $order = $session->get('order');
 
-        $form = $this->createFormBuilder($ticket)
-            ->add('firstName', TextType::class, array(
-                'label' => 'Prénom'
-            ))
-            ->add('lastName', TextType::class, array(
-                'label' => 'Nom'
-            ))
-            ->add('birthDate', BirthdayType::class, array(
-                'label'=> 'Date de naissance'
-            ))
-            ->add('country', CountryType::class, array(
-                'label'=> 'Pays'
-            ))
-            ->add('validate', SubmitType::class, array('label' => 'Valider'))
-            ->getForm();
+
+        $form = $this->createForm(BeneficiariesListType::class, $order);
+
+        $form->add('validate', SubmitType::class, array('label' => 'Valider'));
+
 
         $form->handleRequest($request);
 
+
         if ($form->isSubmitted() && $form->isValid()) {
-            $ticket = $form->getData();
+
+            $order = $form->getData();
+            $session->set('order', $order);
 
             return $this->redirectToRoute('ticketing_summary');
         }
