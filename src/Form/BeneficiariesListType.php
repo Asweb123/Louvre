@@ -25,9 +25,10 @@ class BeneficiariesListType extends AbstractType
 
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults([
+        $resolver->setDefaults(array(
             'data_class' => Order::class,
-        ]);
+            'validation_groups' => array('beneficiary')
+        ));
     }
 }
 

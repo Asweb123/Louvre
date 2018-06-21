@@ -20,16 +20,15 @@ class OrderType extends AbstractType
         $builder
             ->add('bookingDate', DateType::class, array(
                 'widget' => 'single_text',
-                'label' => 'Date de visite'
+                'html5' => false,
+                'attr' => ['class' => 'js-datepicker']
             ))
             ->add('ticketsQuantity', IntegerType::class, array(
-                'label' => 'Nombre de billets'
             ))
             ->add('ticketType', ChoiceType::class, array(
-                'label' => 'Type de billet',
                 'choices' => array(
-                    'Journée' => '1',
-                    'Demi-Journée' => '2'
+                    'Day' => '1',
+                    'Half-day' => '2'
                 )
             ))
         ;
@@ -37,8 +36,9 @@ class OrderType extends AbstractType
 
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults([
+        $resolver->setDefaults(array(
             'data_class' => Order::class,
-        ]);
+            'validation_groups' => array('booking')
+        ));
     }
 }

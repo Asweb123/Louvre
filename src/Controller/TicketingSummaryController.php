@@ -14,7 +14,7 @@ class TicketingSummaryController extends Controller
     public function summary(SessionInterface $session)
     {
         $order = $session->get('order');
-
+        dump($order);
 
         return $this->render('ticketing/summary.html.twig');
     }

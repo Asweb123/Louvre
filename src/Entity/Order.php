@@ -6,9 +6,12 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use App\Validator\Constraints as OrderAssert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\OrderRepository")
+ *
+ * @OrderAssert\PmTodayTicket(groups={"booking"})
  */
 class Order
 {
@@ -22,18 +25,28 @@ class Order
     /**
      * @ORM\Column(type="date")
      *
+     * @OrderAssert\TodayClosing(groups={"booking"})
+     *
      * @Assert\NotBlank(groups={"booking"})
      * @Assert\Date(groups={"booking"})
+     * @Assert\GreaterThanOrEqual("today",
+     *     groups={"booking"},
+     *     message= "This value should be greater than or equal to today's date."
+     * )
      */
     private $bookingDate;
 
     /**
-     *
-     * @Assert\Range( groups={"booking"},
+     * @Assert\NotBlank(groups={"booking"})
+     * @Assert\Type(groups={"booking"},
+     *     type="integer",
+     *     message="The value is not a valid number."
+     * )
+     * @Assert\Range(groups={"booking"},
      *     min = 1,
      *     max = 1000,
-     *     minMessage = "Veuillez choisir 1 billet au minimum",
-     *     maxMessage = "Veuilez choisir 1000 billets au maximum"
+     *     minMessage = "Please choose at least 1 ticket.",
+     *     maxMessage = "Please choose less than 1000 tickets."
      * )
      */
     private $ticketsQuantity;
@@ -42,6 +55,11 @@ class Order
      * @ORM\Column(type="smallint")
      *
      * @Assert\NotBlank(groups={"booking"})
+     * @Assert\Choice(
+     *     { 1, 2 },
+     *
+     *     groups={"booking"}
+     * )
      */
     private $ticketType;
 
@@ -59,6 +77,8 @@ class Order
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Ticket", mappedBy="relatedOrder", orphanRemoval=true)
+     *
+     * @Assert\Valid
      */
     private $ticketsList;
 

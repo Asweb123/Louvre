@@ -33,27 +33,60 @@ class Ticket
     /**
      * @ORM\Column(type="string", length=255)
      *
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(groups={"beneficiary"})
+     * @Assert\Length(
+     *      min = 2,
+     *      max = 50,
+     *      minMessage = "Your first name must be at least {{ limit }} characters long",
+     *      maxMessage = "Your first name cannot be longer than {{ limit }} characters",
+     *      groups={"beneficiary"}
+     * )
+     * @Assert\Regex(
+     *     pattern="/\d/",
+     *     match=false,
+     *     message="Your name cannot contain a number",
+     *     groups={"beneficiary"}
+     * )
      */
     private $firstName;
 
     /**
      * @ORM\Column(type="string", length=255)
      *
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(groups={"beneficiary"})
+     * @Assert\Length(
+     *      min = 2,
+     *      max = 50,
+     *      minMessage = "Your last name must be at least {{ limit }} characters long.",
+     *      maxMessage = "Your last name cannot be longer than {{ limit }} characters.",
+     *      groups={"beneficiary"}
+     * )
+     * @Assert\Regex(
+     *     pattern="/\d/",
+     *     match=false,
+     *     message="Your name cannot contain a number",
+     *     groups={"beneficiary"}
+     * )
      */
     private $lastName;
 
     /**
      * @ORM\Column(type="string", length=255)
      *
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(groups={"beneficiary"})
+     * @Assert\Country(groups={"beneficiary"})
      */
     private $country;
 
 
     /**
      * @ORM\Column(type="boolean")
+     *
+     * @Assert\Type(
+     *     type="bool",
+     *     message="Your choice is not valid.",
+     *     groups={"beneficiary"}
+     * )
      */
     private $reduction = false;
 
@@ -68,6 +101,7 @@ class Ticket
      *
      * @Assert\NotBlank()
      * @Assert\Date()
+     * @Assert\LessThan("today")
      */
     private $dateOfBirth;
 

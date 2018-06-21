@@ -30,8 +30,8 @@ class TicketType extends AbstractType
 
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults([
-            'data_class' => Ticket::class,
-        ]);
+        $resolver->setDefaults(array(
+            'data_class' => Ticket::class
+        ));
     }
 }
