@@ -26,7 +26,9 @@ class Order
      * @ORM\Column(type="date")
      *
      * @OrderAssert\TodayClosing(groups={"booking"})
-     *
+     * @OrderAssert\SundayBookingDesabled(groups={"booking"})
+     * @OrderAssert\TuesdayBookingDesabled(groups={"booking"})
+     * @OrderAssert\PublicHolidayBookingDesabled(groups={"booking"})
      * @Assert\NotBlank(groups={"booking"})
      * @Assert\Date(groups={"booking"})
      * @Assert\GreaterThanOrEqual("today",
