@@ -11,12 +11,6 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class Ticket
 {
-    const CHILDREN_PRICING = 8;
-    const REGULAR_PRICING = 16;
-    const SENIOR_PRICING = 12;
-    const REDUCTION_PRICING = 10;
-
-
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
