@@ -84,6 +84,11 @@ class Order
      */
     private $ticketsList;
 
+    /**
+     * @ORM\Column(type="decimal", precision=10, scale=2)
+     */
+    private $totalPrice;
+
     public function __construct()
     {
         $this->ticketsList = new ArrayCollection();
@@ -171,7 +176,7 @@ class Order
 
         return $this;
     }
-
+/*
     public function removeTicketsList(Ticket $ticketsList): self
     {
         if ($this->ticketsList->contains($ticketsList)) {
@@ -181,6 +186,18 @@ class Order
                 $ticketsList->setRelatedOrder(null);
             }
         }
+
+        return $this;
+    }
+*/
+    public function getTotalPrice()
+    {
+        return $this->totalPrice;
+    }
+
+    public function setTotalPrice($totalPrice): self
+    {
+        $this->totalPrice = $totalPrice;
 
         return $this;
     }

@@ -77,6 +77,10 @@ body {
     font-size: 4.5rem;
 }
 
+.card-price-text {
+    font-size: 3rem;
+}
+
 .btn-louvre {
     border-width: 2px;
 }

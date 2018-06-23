@@ -3,6 +3,12 @@
 parameters:
     locale: 'en'
 
+    baby_price: 0.00
+    children_price: 8.00
+    base_price: 16.00
+    senior_price: 12.00
+    reduced_price: 10.00
+
 services:
     # default configuration for services in *this* file
     _defaults:
@@ -26,3 +32,6 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+
+

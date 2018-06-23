@@ -11,6 +11,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class Ticket
 {
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -98,6 +99,11 @@ class Ticket
      * @Assert\LessThan("today")
      */
     private $dateOfBirth;
+
+    /**
+     * @ORM\Column(type="decimal", precision=4, scale=2)
+     */
+    private $price;
 
 
 
@@ -187,6 +193,18 @@ class Ticket
     public function setRelatedOrder(?Order $relatedOrder): self
     {
         $this->relatedOrder = $relatedOrder;
+
+        return $this;
+    }
+
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    public function setPrice($price): self
+    {
+        $this->price = $price;
 
         return $this;
     }

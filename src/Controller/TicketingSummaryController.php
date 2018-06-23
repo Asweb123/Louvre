@@ -4,20 +4,20 @@ namespace App\Controller;
 
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use App\Service\PricingSetter;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Service\PricingCalculator;
 
-class TicketingSummaryController extends Controller
+class TicketingSummaryController extends AbstractController
 {
     /**
      * @Route("/billetterie/resume", name="ticketing_summary")
      */
-    public function summary(SessionInterface $session, PricingSetter $pricingSetter)
+    public function summary(SessionInterface $session, PricingCalculator $pricingCalculator)
     {
         $order = $session->get('order');
 
-        $order = $pricingSetter->getPricing($order);
+        $order = $pricingCalculator->setTicketsAndOrderPricing($order);
 
-        return $this->render('ticketing/summary.html.twig');
+        return $this->render('ticketing/summary.html.twig', array($order));
     }
 }

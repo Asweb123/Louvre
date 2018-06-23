@@ -27,7 +27,7 @@ class OrderType extends AbstractType
             ))
             ->add('ticketType', ChoiceType::class, array(
                 'choices' => array(
-                    'Day' => '1',
+                    'Full Day' => '1',
                     'Half-day' => '2'
                 )
             ))
