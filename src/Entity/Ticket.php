@@ -21,7 +21,7 @@ class Ticket
 
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="smallint")
      */
     private $pricing;
 

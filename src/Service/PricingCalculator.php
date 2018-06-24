@@ -29,7 +29,7 @@ class PricingCalculator
 
             if($reduction === true)
             {
-                $ticket->setPricing('Tarif Réduit');
+                $ticket->setPricing(5);
                 $ticket->setPrice($this->params->get('reduced_price'));
 
                 $totalPrice += $ticket->getPrice();
@@ -37,7 +37,7 @@ class PricingCalculator
 
             elseif (($dateOfBirth > $date60YearsAgo) && ($dateOfBirth <= $date12YearsAgo))
             {
-                $ticket->setPricing('Tarif Normal');
+                $ticket->setPricing(3);
                 $ticket->setPrice($this->params->get('base_price'));
 
                 $totalPrice += $ticket->getPrice();
@@ -45,7 +45,7 @@ class PricingCalculator
 
             elseif ($dateOfBirth <= $date60YearsAgo)
             {
-                $ticket->setPricing('Tarif Senior');
+                $ticket->setPricing(4);
                 $ticket->setPrice($this->params->get('senior_price'));
 
                 $totalPrice += $ticket->getPrice();
@@ -53,7 +53,7 @@ class PricingCalculator
 
             elseif (($dateOfBirth > $date12YearsAgo) && ($dateOfBirth <= $date4YearsAgo))
             {
-                $ticket->setPricing('Tarif Enfant');
+                $ticket->setPricing(2);
                 $ticket->setPrice($this->params->get('children_price'));
 
                 $totalPrice += $ticket->getPrice();
@@ -61,7 +61,7 @@ class PricingCalculator
 
             elseif ($dateOfBirth > $date4YearsAgo)
             {
-                $ticket->setPricing('Tarif Tout-petit');
+                $ticket->setPricing(1);
                 $ticket->setPrice($this->params->get('baby_price'));
 
                 $totalPrice += $ticket->getPrice();

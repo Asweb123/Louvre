@@ -18,6 +18,47 @@
         </ul>
     </nav>
 
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <form action="{{ path('ticketing_confirmation') }}" method="post" id="payment-form">
+        <div class="form">
+            <div class="heightField">
+                <label for="cardNumber-element">
+                    Numéro de carte banquaire :
+                </label>
+                <div id="cardNumber-element">
+                    <!-- A Stripe Element will be inserted here. -->
+                </div>
+                <!-- Used to display form errors. -->
+                <div class="text-danger" id="cardNumber-errors" role="alert"></div>
+            </div>
+
+            <div class="heightField">
+                <label for="cardExpiry-element">
+                    Date d'expiration :
+                </label>
+                <div id="cardExpiry-element">
+                    <!-- A Stripe Element will be inserted here. -->
+                </div>
+                <!-- Used to display form errors. -->
+                <div class="text-danger" id="cardExpiry-errors" role="alert"></div>
+            </div>
+
+            <div class="heightField">
+                <label for="cardCvc-element">
+                    CVC :
+                </label>
+                <div id="cardCvc-element">
+                    <!-- A Stripe Element will be inserted here. -->
+                </div>
+                <!-- Used to display form errors. -->
+                <div class="text-danger" id="cardCvc-errors" role="alert"></div>
+            </div>
+
+        </div>
+
+        <button class="btn btn-outline-dark btn-lg mb-5 btn-louvre font-weight-bold">Effectuer le paiement</button>
+    </form>
 
 </section>
 

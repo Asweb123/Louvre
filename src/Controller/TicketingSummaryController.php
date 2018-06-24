@@ -18,7 +18,7 @@ class TicketingSummaryController extends AbstractController
 
         $order = $pricingCalculator->setTicketsAndOrderPricing($order);
 
-        $order = $session->set('order');
+        $session->set('order', $order);
 
         return $this->render('ticketing/summary.html.twig', array(
             'order' => $order));
