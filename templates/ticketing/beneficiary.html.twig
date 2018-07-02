@@ -4,7 +4,7 @@
 
 {% block content %}
 
-    <h1 class="h4  text-center mt-5 mb-4 ">Billetterie<br /><small class="text-muted d-md-none">Etape 2/5 : Bénéficiaires</small></h1>
+    <h1 class="h4  text-center mt-5 mb-4 ">Billetterie<br /><small class="text-muted d-md-none">Etape 2/4 : Bénéficiaires</small></h1>
 
 
 
@@ -12,7 +12,6 @@
         <ul class="my-breadcrumb">
             <li><a href="#">Réservation</a></li>
             <li><a href="#">Bénéficiaire</a></li>
-            <li><a href="#">Résumé</a></li>
             <li><a href="#">Paiement</a></li>
             <li><a href="#">Confirmation</a></li>
         </ul>
@@ -23,6 +22,10 @@
         {{ form_start(form) }}
             {{ form_widget(form) }}
         {{ form_end(form) }}
+
+        <a href="{{ path('ticketing_beneficiary') }}">
+            <button type="button" class="btn btn-outline-dark btn-lg btn-louvre font-weight-bold">Retour</button>
+        </a>
 
     </section>
 

@@ -68,12 +68,19 @@ class Order
     /**
      * @ORM\Column(type="string", length=255)
      *
+     * @Assert\NotBlank(groups={"payment"})
+     * @Assert\Email(
+     *     message = "The email '{{ value }}' is not a valid email.",
+     *     checkMX = true,
+     *     groups={"booking"}
+     * )
      */
     private $emailCustomer;
 
     /**
      * @ORM\Column(type="string", length=255)
      *
+     * @Assert\NotBlank()
      */
     private $bookingRef;
 
@@ -88,6 +95,7 @@ class Order
      * @ORM\Column(type="decimal", precision=10, scale=2)
      */
     private $totalPrice;
+
 
     public function __construct()
     {
@@ -201,4 +209,8 @@ class Order
 
         return $this;
     }
+
+
+
+
 }

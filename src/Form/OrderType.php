@@ -4,6 +4,8 @@ namespace App\Form;
 
 use App\Entity\Order;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -30,6 +32,13 @@ class OrderType extends AbstractType
                     'Full Day' => '1',
                     'Half-day' => '2'
                 )
+            ))
+            ->add('emailCustomer', RepeatedType::class, array(
+                'type' => EmailType::class,
+                'invalid_message' => 'The email fields must match.',
+                'required' => true,
+                'first_options'  => array('label' => 'Email'),
+                'second_options' => array('label' => 'Repeat Email'),
             ))
         ;
     }

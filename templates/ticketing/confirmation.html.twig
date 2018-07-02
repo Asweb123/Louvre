@@ -2,6 +2,32 @@
 
 {% block title %}Billetterie{% endblock %}
 
-{% block body %}
+{% block content %}
+
+<section class="container mb-5">
+
+    <h1 class="h4  text-center mt-5 mb-4 ">Billetterie<br/><small class="text-muted d-md-none">Etape 4/4 : Confirmation</small></h1>
+
+    <nav class="d-none d-md-block mt-5">
+        <ul class="my-breadcrumb">
+            <li><a href="#">Réservation</a></li>
+            <li><a href="#">Bénéficiaire</a></li>
+            <li><a href="#">Paiement</a></li>
+            <li><a href="#">Confirmation</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        <p>Code de réservation : {{ order.bookingRef }}</p>
+        <p>Nombre de billet : {{ order.ticketsQuantity }}</p>
+        <p>Type de billet : {{ order.ticketType }}</p>
+        <p>Date de visite : {{ order.bookingDate|date('Y/m/d') }}</p>
+        <p>Moyen de paiement : Carte bancaire</p>
+        <p>Total de la commande : {{ order.totalPrice|number_format(2, ',') }} €</p>
+    </div>
+
+    <p>Vos billets ont été envoyé à l'adresse mail suivante : <span class="font-weight-bold">{{ order.emailCustomer }}</span></p>
+
+</section>
 
 {% endblock %}

@@ -34,7 +34,7 @@ class TicketingBeneficiaryController extends AbstractController
             $order = $form->getData();
             $session->set('order', $order);
 
-            return $this->redirectToRoute('ticketing_summary');
+            return $this->redirectToRoute('ticketing_payment');
         }
 
         return $this->render('ticketing/beneficiary.html.twig', array(
