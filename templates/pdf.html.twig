@@ -1,0 +1,64 @@
+
+<html>
+<head>
+
+    <style>
+        h1{
+            text-align: center;
+        }
+        .logo {
+            width: 60px;
+            height: auto;
+
+            margin: auto;
+        }
+        .globalInfo {
+            margin-top: 100px;
+        }
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+<h1>Musée du Louvre</h1>
+<img class="logo" src="{{app.request.basePath() ~ asset('img/louvre-pdf.jpg')}}" alt="Logo du Musée du Louvre">
+
+
+<p class="globalInfo">Code de réservation : <span class="bold">{{ order.bookingRef }}</span><br/>
+
+    Date de visite: <span class="bold">{{ order.bookingDate|date("m/d/Y") }}</span><br/>
+
+    Type de billet : {% if order.ticketType == 1 %}<span class="bold">Journée</span>
+{% elseif order.ticketType == 2 %}<span class="bold">Demi-journée</span>
+    {% endif %}<br/>
+
+    Nombre de billets : <span class="bold">{{ order.ticketsQuantity }}</span><br/>
+
+    Prix total de la commande: <span class="bold">{{ order.totalPrice|number_format(2, ',') }} €</span>
+</p>
+
+{% for ticket  in  order.ticketsList  %}
+
+        <p>Bénéficiaire : {{ ticket.firstName }} {{ ticket.lastName }}
+            <br/>
+            Tarif : {% if ticket.pricing == 1 %}Tout-petit
+            {% elseif ticket.pricing == 2 %}Enfant
+            {% elseif ticket.pricing == 3 %}Normal
+            {% elseif ticket.pricing == 4 %}Senior
+            {% elseif ticket.pricing == 5 %}Réduit
+            {% endif %}
+            <br/>
+            Prix unitaire : {{ ticket.price|number_format(2, ',') }} €
+        </p>
+
+
+{% endfor %}
+
+
+
+</body>
+
+</html>

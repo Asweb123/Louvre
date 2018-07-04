@@ -20,7 +20,10 @@
     <div>
         <p>Code de réservation : {{ order.bookingRef }}</p>
         <p>Nombre de billet : {{ order.ticketsQuantity }}</p>
-        <p>Type de billet : {{ order.ticketType }}</p>
+        <p>Type de billet : {% if order.ticketType == 1 %}Full day
+            {% elseif order.ticketType == 2 %}Half-day
+            {% endif %}
+        </p>
         <p>Date de visite : {{ order.bookingDate|date('Y/m/d') }}</p>
         <p>Moyen de paiement : Carte bancaire</p>
         <p>Total de la commande : {{ order.totalPrice|number_format(2, ',') }} €</p>

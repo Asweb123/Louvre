@@ -1,9 +1,10 @@
 $(document).ready(function() {
-    $('.js-datepicker').flatpickr({
-        altInput: true,
+    $('.flatpickr').flatpickr({
+        altInput: false,
         altFormat: "F j, Y",
         minDate: "today",
         maxDate: new Date().fp_incr(365),
+        allowInput: true,
         disable: [
             function (date) {
                 return (

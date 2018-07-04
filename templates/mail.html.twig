@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <style>
+            body {
+                font-family: "Open Sans", sans-serif;
+                margin: 0 0;
+            }
+            header {
+                padding: 25px 0;
+                background: linear-gradient( whitesmoke, rgba(255,0,0,0));
+            }
+            h1, h2 {
+             text-align: center;
+                color: rgb(52, 58, 64);
+            }
+            .logo {
+                width: 60px;
+                height: auto;
+                min-height: 0;
+                min-width: 0;
+                margin: auto;
+            }
+            .round {
+                border: solid 2px black;
+                border-radius: 100px;
+                width: 80px;
+                height: 80px;
+                display: flex;
+                margin: auto;
+                background-color: white;
+            }
+            section {
+                padding: 0 10px;
+            }
+            p {
+                margin-bottom: 35px;
+            }
+            .bold {
+                font-weight: bold;
+            }
+            .line {
+                border-top: lightgray 2px;
+                width: 50%;
+                text-align: center;
+                margin-bottom: 35px;
+            }
+            .centered {
+                text-align: center;
+            }
+            .textInfo {
+                font-size: 15px;
+            }
+        </style>
+    </head>
+
+    <body>
+    <header>
+        <h1 class="center">Musée du Louvre</h1>
+        <div class="round">
+            <img class="logo" src="{{ app.request.getSchemeAndHttpHost() ~ asset('img/louvre-mail.png') }}" alt="Logo du Musée du Louvre">
+        </div>
+        <h2>Billetterie</h2>
+    </header>
+    <section>
+        <p>Madame, Monsieur,</p>
+        <p>Veuillez trouver en pièce jointe vos billets au format PDF consernant la commande suivante :</p>
+
+        <p>Code de réservation : <span class="bold">{{ order.bookingRef }}</span><br/>
+
+            Date de visite: <span class="bold">{{ order.bookingDate|date("m/d/Y") }}</span><br/>
+
+            Type de billet : {% if order.ticketType == 1 %}<span class="bold">Journée</span>
+            {% elseif order.ticketType == 2 %}<span class="bold">Demi-journée</span>
+            {% endif %}<br/>
+
+            Nombre de billets : <span class="bold">{{ order.ticketsQuantity }}</span><br/>
+
+            Prix total de la commande: <span class="bold">{{ order.totalPrice|number_format(2, ',') }} €</span>
+        </p>
+
+        <p>
+            N'oubliez pas de vous munir d'une version imprimée du document reçu en pièce jointe le jour de votre visite.
+        </p>
+
+        <hr class="line">
+
+        <p class="textInfo">
+            Pour toute question concernant votre commande, vous pouvez nous contacter sur site internet <a href="#">louvre-billetterie.com</a> à la rubrique contact.
+        </p>
+    </section>
+    </body>
+
+</html>

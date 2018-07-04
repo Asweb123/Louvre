@@ -4,13 +4,13 @@ namespace App\Form;
 
 use App\Entity\Order;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
-use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 
 
 
@@ -23,9 +23,11 @@ class OrderType extends AbstractType
             ->add('bookingDate', DateType::class, array(
                 'widget' => 'single_text',
                 'html5' => false,
-                'attr' => ['class' => 'js-datepicker']
+                'attr' => ['class' => 'flatpickr', 'autocomplete' => 'off']
+
             ))
             ->add('ticketsQuantity', IntegerType::class, array(
+                'attr' => ['min' => '1']
             ))
             ->add('ticketType', ChoiceType::class, array(
                 'choices' => array(
