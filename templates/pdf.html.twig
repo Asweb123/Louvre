@@ -6,17 +6,54 @@
         h1{
             text-align: center;
         }
-        .logo {
-            width: 60px;
-            height: auto;
-
+        .divLogo {
+            width: 130px;
+            height: 130px;
             margin: auto;
         }
+        .logo {
+            width: 130px;
+            height: auto;
+            text-align: center;
+
+        }
         .globalInfo {
-            margin-top: 100px;
+            margin-top: 80px;
         }
         .bold {
             font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        thead {
+            padding-left: 0px;
+            padding-right: 0px;
+            border-bottom: solid grey 2px;
+        }
+        .center {
+            text-align: center;
+        }
+        .left {
+            text-align: left;
+        }
+        .right {
+            text-align: right;
+        }
+        .quart {
+            width: 20%;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0px;
+            font-size: 15px;
+        }
+        hr {
+            border-top: black 1px;
+            width: 30%;
+            text-align: center;
+            margin-bottom: 35px;
         }
     </style>
 
@@ -24,8 +61,14 @@
 
 <body>
 <h1>Musée du Louvre</h1>
-<img class="logo" src="{{app.request.basePath() ~ asset('img/louvre-pdf.jpg')}}" alt="Logo du Musée du Louvre">
+<div class="divLogo">
+    <img class="logo" src="img/louvre-pdf.jpg" alt="Logo du Musée du Louvre">
+</div>
+<h3 class="center">Attestation de réservation</h3>
 
+<p class="center">Document à présenter à l'entrée du musée accompagné de toute pièce justificative<br/>
+    (Carte d'étudiant, carte militaire, pièce d'identité...)
+</p>
 
 <p class="globalInfo">Code de réservation : <span class="bold">{{ order.bookingRef }}</span><br/>
 
@@ -40,24 +83,48 @@
     Prix total de la commande: <span class="bold">{{ order.totalPrice|number_format(2, ',') }} €</span>
 </p>
 
-{% for ticket  in  order.ticketsList  %}
+<table>
+    <thead>
+    <tr>
+        <th class="left">Bénéficiaire</th>
+        <th class="quart center">Tarif</th>
+        <th class="quart right">Prix</th>
+    </tr>
+    </thead>
 
-        <p>Bénéficiaire : {{ ticket.firstName }} {{ ticket.lastName }}
-            <br/>
-            Tarif : {% if ticket.pricing == 1 %}Tout-petit
-            {% elseif ticket.pricing == 2 %}Enfant
-            {% elseif ticket.pricing == 3 %}Normal
-            {% elseif ticket.pricing == 4 %}Senior
-            {% elseif ticket.pricing == 5 %}Réduit
-            {% endif %}
-            <br/>
-            Prix unitaire : {{ ticket.price|number_format(2, ',') }} €
-        </p>
+    <tbody>
 
+    {% for ticket  in  order.ticketsList  %}
+        <tr>
+            <td class="left">
+                {{ ticket.firstName }} {{ ticket.lastName }}
+            </td>
 
-{% endfor %}
+            <td class="center">
+                {% if ticket.pricing == 1 %}Tout-petit
+                {% elseif ticket.pricing == 2 %}Enfant
+                {% elseif ticket.pricing == 3 %}Normal
+                {% elseif ticket.pricing == 4 %}Senior
+                {% elseif ticket.pricing == 5 %}Réduit
+                {% endif %}
+            </td>
 
+            <td class="right">
+                {{ ticket.price|number_format(2, ',') }} €
+            </td>
 
+        </tr>
+    {% endfor %}
+
+    </tbody>
+</table>
+<div class="footer">
+    <hr/>
+    <p class="center">Musée du Louvre<br/>
+        99, rue de Rivoli 75001 Paris<br/>
+        louvre-billetterie.com
+    </p>
+</div>
 
 </body>
 

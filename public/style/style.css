@@ -2,6 +2,14 @@ body {
     background-color: #fffbf0;
 }
 
+.fullPage {
+    min-height: 100vh;
+}
+
+.margin {
+    margin-bottom: 5rem;
+}
+
 
 .navbar-toggler {
     border: none;
@@ -17,6 +25,20 @@ body {
 .nav-link {
     color: white !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .box-shadow {
@@ -44,6 +66,15 @@ body {
     color: white;
 }
 
+
+
+.subTitle {
+    font-size: 2.7rem;
+}
+
+.priceTitle {
+    font-size: 2rem;
+}
 
 
 .tickets-list {
@@ -163,15 +194,30 @@ body {
 .my-breadcrumb li {
     margin: 1rem 2rem;
 }
-.my-breadcrumb li a {
-    color: inherit;
-    text-decoration: none;
+
+.liBreadcrumb {
+
 }
 
 .table-headBorder {
     border-top-width: 0px !important;
 }
 
+.svgDiv, .navText {
+    text-align: center;
+}
+
+.arrow {
+    margin-top: -25px;
+}
+
+.navText {
+    color: #343a40;
+}
+
+.grey {
+    color: grey;
+}
 
 
 

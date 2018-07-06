@@ -6,14 +6,29 @@
 
 <section class="container mb-5">
 
-    <h1 class="h4  text-center mt-5 mb-4 ">Billetterie<br/><small class="text-muted d-md-none">Etape 3/4 : récapitulatif</small></h1>
+    <h1 class="h3  text-center mt-5 mb-4 ">Billetterie<br/><small class="text-muted d-md-none">Etape 3/4 : récapitulatif</small></h1>
 
     <nav class="d-none d-md-block mt-5">
         <ul class="my-breadcrumb">
-            <li><a href="#">Réservation</a></li>
-            <li><a href="#">Bénéficiaire</a></li>
-            <li><a href="#">Paiement</a></li>
-            <li><a href="#">Confirmation</a></li>
+            <li class="liBreadcrumb">
+                <div class="svgDiv"><img src="{{ asset('img/calendar-60.svg') }}" alt="" width="80px"/></div>
+                <div class="navText font-weight-bold">Réservation</div>
+            </li>
+            <img src="{{ asset('img/arrow.svg') }}" alt="" width="30px" class="arrow"/>
+            <li class="liBreadcrumb">
+                <div class="svgDiv"><img src="{{ asset('img/badge-13.svg') }}" alt="" width="80px"/></div>
+                <div class="navText font-weight-bold">Bénéficiaire</div>
+            </li>
+            <img src="{{ asset('img/arrow.svg') }}" alt="" width="30px" class="arrow"/>
+            <li class="liBreadcrumb">
+                <div class="svgDiv"><img src="{{ asset('img/handout.svg') }}" alt="" width="80px"/></div>
+                <div class="navText font-weight-bold">Paiement</div>
+            </li>
+            <img src="{{ asset('img/arrow-bw.svg') }}" alt="" width="30px" class="arrow"/>
+            <li class="liBreadcrumb">
+                <div class="svgDiv"><img src="{{ asset('img/like-2-bw.svg') }}" alt="" width="80px"/></div>
+                <div class="navText grey">Confirmation</div>
+            </li>
         </ul>
     </nav>
 
@@ -66,7 +81,7 @@
 
 
     <p class="text-center mb-5">
-        Une fois votre commande finalisée, vos billets vous seront envoyé au format PDF à l'adresse mail suivante :<br/>
+        Une fois votre commande finalisée, vos billets seront envoyé au format PDF à l'adresse mail suivante :<br/>
         <span class="font-weight-bold">{{ order.emailCustomer }}</span>
     </p>
 

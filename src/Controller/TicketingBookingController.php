@@ -22,9 +22,6 @@ class TicketingBookingController extends AbstractController
 
         $form = $this->createForm(OrderType::class, $order);
 
-        $form->add('validate', SubmitType::class, array('label' => 'Valider'));
-
-
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

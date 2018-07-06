@@ -19,7 +19,8 @@ class BeneficiariesListType extends AbstractType
     {
         $builder
             ->add('ticketsList', CollectionType::class, array(
-                'entry_type' => TicketType::class
+                'entry_type' => BeneficiaryType::class,
+                'label' => false
             ))
         ;
     }

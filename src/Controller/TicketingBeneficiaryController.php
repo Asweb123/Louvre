@@ -20,14 +20,9 @@ class TicketingBeneficiaryController extends AbstractController
     {
         $order = $session->get('order');
 
-
         $form = $this->createForm(BeneficiariesListType::class, $order);
 
-        $form->add('validate', SubmitType::class, array('label' => 'Valider'));
-
-
         $form->handleRequest($request);
-
 
         if ($form->isSubmitted() && $form->isValid()) {
 
@@ -38,7 +33,8 @@ class TicketingBeneficiaryController extends AbstractController
         }
 
         return $this->render('ticketing/beneficiary.html.twig', array(
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'order' => $order
         ));
     }
 }

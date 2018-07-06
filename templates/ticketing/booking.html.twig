@@ -6,36 +6,48 @@
 
     <section class="container mb-5">
 
-        <h1 class="h4  text-center mt-5 mb-4 ">Billetterie<br /><small class="text-muted d-md-none">Etape 1/4 : Réservation</small></h1>
-
-
+        <h1 class="h3  text-center mt-5 mb-4 ">Billetterie<br /><small class="text-muted d-md-none">Etape 1/4 : Réservation</small></h1>
 
         <nav class="d-none d-md-block mt-5">
             <ul class="my-breadcrumb">
-                <li><a href="#">Réservation</a></li>
-                <li><a href="#">Bénéficiaire</a></li>
-                <li><a href="#">Paiement</a></li>
-                <li><a href="#">Confirmation</a></li>
+                <li class="liBreadcrumb">
+                    <div class="svgDiv"><img src="{{ asset('img/calendar-60.svg') }}" alt="" width="80px"/></div>
+                    <div class="navText font-weight-bold">Réservation</div>
+                </li>
+                <img src="{{ asset('img/arrow-bw.svg') }}" alt="" width="30px" class="arrow"/>
+                <li class="liBreadcrumb">
+                    <div class="svgDiv"><img src="{{ asset('img/badge-13-bw.svg') }}" alt="" width="80px"/></div>
+                    <div class="navText grey">Bénéficiaire</div>
+                </li>
+                <img src="{{ asset('img/arrow-bw.svg') }}" alt="" width="30px" class="arrow"/>
+                <li class="liBreadcrumb">
+                    <div class="svgDiv"><img src="{{ asset('img/handout-bw.svg') }}" alt="" width="80px"/></div>
+                    <div class="navText grey">Paiement</div>
+                </li>
+                <img src="{{ asset('img/arrow-bw.svg') }}" alt="" width="30px" class="arrow"/>
+                <li class="liBreadcrumb">
+                    <div class="svgDiv"><img src="{{ asset('img/like-2-bw.svg') }}" alt="" width="80px"/></div>
+                    <div class="navText grey">Confirmation</div>
+                </li>
             </ul>
         </nav>
 
-
         {{ form_start(form) }}
         {{ form_widget(form) }}
+        <div class="clearfix">
+            <input type="submit" class="btn btn-outline-dark btn-lg btn-louvre font-weight-bold float-right mt-4" value="Valider"/>
+        </div>
         {{ form_end(form) }}
 
-
-        <a href="{{ path('ticketing_beneficiary') }}">
-            <button type="button" class="btn btn-outline-dark btn-lg btn-louvre font-weight-bold">Retour</button>
-        </a>
+        <div class="text-center mt-5">
+            <a href="{{ path('index') }}">
+                <button type="button" class="btn btn-outline-dark  mb-2 btn-louvre">Annuler la commande</button>
+            </a>
+        </div>
 
     </section>
 
-    <div class="text-center">
-        <a href="{{ path('index') }}">
-            <button type="button" class="btn btn-outline-dark  mb-2 btn-louvre">Annuler la commande</button>
-        </a>
-    </div>
+
 
 
 {% endblock %}

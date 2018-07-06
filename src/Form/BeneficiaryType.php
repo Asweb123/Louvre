@@ -12,7 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\CountryType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 
-class TicketType extends AbstractType
+class BeneficiaryType extends AbstractType
 {
 
     public function buildForm(FormBuilderInterface $builder, array $options)

@@ -5,6 +5,7 @@
             body {
                 font-family: "Open Sans", sans-serif;
                 margin: 0 0;
+                box-sizing: border-box;
             }
             header {
                 padding: 25px 0;
@@ -31,7 +32,7 @@
                 background-color: white;
             }
             section {
-                padding: 0 10px;
+                padding: 0 30px;
             }
             p {
                 margin-bottom: 35px;
@@ -39,32 +40,55 @@
             .bold {
                 font-weight: bold;
             }
-            .line {
-                border-top: lightgray 2px;
-                width: 50%;
-                text-align: center;
-                margin-bottom: 35px;
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 75px;
             }
-            .centered {
+            thead {
+                padding-left: 0px;
+                padding-right: 0px;
+                border-bottom: solid grey 2px;
+            }
+            .center {
                 text-align: center;
+            }
+            .left {
+                text-align: left;
+            }
+            .right {
+                text-align: right;
+            }
+            .quart {
+                width: 20%;
             }
             .textInfo {
                 font-size: 15px;
             }
+            .separator {
+                border-top: black 1px;
+                width: 30%;
+                text-align: center;
+                margin-bottom: 35px;
+            }
         </style>
     </head>
 
+
     <body>
+
     <header>
-        <h1 class="center">Musée du Louvre</h1>
+        <h1>Musée du Louvre</h1>
         <div class="round">
             <img class="logo" src="{{ app.request.getSchemeAndHttpHost() ~ asset('img/louvre-mail.png') }}" alt="Logo du Musée du Louvre">
         </div>
         <h2>Billetterie</h2>
     </header>
+
     <section>
         <p>Madame, Monsieur,</p>
-        <p>Veuillez trouver en pièce jointe vos billets au format PDF consernant la commande suivante :</p>
+
+        <p>Veuillez trouver en pièce jointe une attestation de réservation au format PDF consernant la commande suivante :</p>
 
         <p>Code de réservation : <span class="bold">{{ order.bookingRef }}</span><br/>
 
@@ -79,16 +103,57 @@
             Prix total de la commande: <span class="bold">{{ order.totalPrice|number_format(2, ',') }} €</span>
         </p>
 
+        <table>
+            <thead>
+                <tr>
+                    <th class="left">Bénéficiaire</th>
+                    <th class="quart center">Tarif</th>
+                    <th class="quart right">Prix</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+            {% for ticket  in  order.ticketsList  %}
+                <tr>
+                    <td class="left">
+                        {{ ticket.firstName }} {{ ticket.lastName }}
+                    </td>
+
+                    <td class="center">
+                        {% if ticket.pricing == 1 %}Tout-petit
+                        {% elseif ticket.pricing == 2 %}Enfant
+                        {% elseif ticket.pricing == 3 %}Normal
+                        {% elseif ticket.pricing == 4 %}Senior
+                        {% elseif ticket.pricing == 5 %}Réduit
+                        {% endif %}
+                    </td>
+
+                    <td class="right">
+                        {{ ticket.price|number_format(2, ',') }} €
+                    </td>
+
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+
+
         <p>
-            N'oubliez pas de vous munir d'une version imprimée du document reçu en pièce jointe le jour de votre visite.
+            N'oubliez pas de vous munir d'une version imprimée du document reçu en pièce jointe le jour de votre visite ainsi que de toute pièce justificative éventuelle.
         </p>
 
-        <hr class="line">
-
-        <p class="textInfo">
-            Pour toute question concernant votre commande, vous pouvez nous contacter sur site internet <a href="#">louvre-billetterie.com</a> à la rubrique contact.
-        </p>
     </section>
+
+    <footer>
+        <hr class="separator">
+        <p class="center textInfo">Musée du Louvre<br/>
+            99, rue de Rivoli 75001 Paris<br/>
+            <a href="#">louvre-billetterie.com</a>
+        </p>
+    </footer>
+
     </body>
 
 </html>
