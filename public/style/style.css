@@ -182,6 +182,10 @@ body {
     border-width: 2px;
 }
 
+.subTicketing {
+    font-size: 1.7rem;
+}
+
 .my-breadcrumb {
     list-style: none;
     overflow: hidden;

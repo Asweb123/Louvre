@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Constraint;
 /**
  * @Annotation
  */
-class SundayBookingDesabled extends Constraint
+class SundayBookingDisabled extends Constraint
 {
     public $message = 'It\'s not possible to book tickets on Sundays';
 }

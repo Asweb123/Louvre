@@ -5,7 +5,7 @@ namespace App\Validator\Constraints;
 
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
-class PublicHolidayBookingDesabledValidator extends ConstraintValidator
+class PublicHolidayBookingDisabledValidator extends ConstraintValidator
 {
     public function validate($bookingDate, Constraint $constraint)
     {

@@ -4,11 +4,11 @@
 
 {% block content %}
 
-    <h1 class="h3  text-center mt-5 mb-4 ">Billetterie<br /><small class="text-muted d-md-none">Etape 2/4 : Bénéficiaires</small></h1>
+    <h1 class="h2 display-4 text-center mt-5 mb-5 ">Billetterie<br /><small class="text-muted d-md-none subTicketing">Etape 2/4 : Bénéficiaires</small></h1>
 
 
 
-    <nav class="d-none d-md-block mt-5">
+    <nav class="d-none d-md-block mt-5 mb-5">
         <ul class="my-breadcrumb">
             <li class="liBreadcrumb">
                 <div class="svgDiv"><img src="{{ asset('img/calendar-60.svg') }}" alt="" width="80px"/></div>
@@ -33,6 +33,10 @@
     </nav>
 
     <section class="container">
+
+        <p class="text-center mb-5">
+            Afin de nous permettre de définir votre tarification, veuillez compléter chaque champ du formulaire suivant :
+        </p>
 
         {{ form_start(form) }}
         {% for key, ticket in form.ticketsList %}

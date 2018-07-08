@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Service\CodeGenerator;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -21,7 +22,7 @@ class TicketingConfirmationController extends Controller
     /**
      * @Route("/billetterie/confirmation", name="ticketing_confirmation")
      */
-    public function confirmation(SessionInterface $session, CodeGenerator $codeGenerator, \Swift_Mailer $mailer)
+    public function confirmation(SessionInterface $session, CodeGenerator $codeGenerator, EntityManagerInterface $entityManager,\Swift_Mailer $mailer)
     {
         $order = $session->get('order');
 
@@ -39,23 +40,23 @@ class TicketingConfirmationController extends Controller
                 'description' => 'Billetterie Le louvre',
                 'source' => $token,
             ]);
-*/
+    */
             $bookingRef = $codeGenerator->codeGenerator();
             $order = $order->setBookingRef($bookingRef);
+
+          //  $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($order);
+            $entityManager->flush();
         }
 
 
         $html = $this->renderView('pdf.html.twig',  array(
             'order' => $order,
         ));
-
-
         $dompdf = $this->get('dompdf');
-
-
      //  $dompdf->streamHtml($html, "document.pdf");
-
         $pdf = $dompdf->getPdf($html);
+
 
         $attachment = new \Swift_Attachment($pdf, 'louvre-reservation.pdf', 'application/pdf');
         $message = (new \Swift_Message('Le Louvre'))
@@ -78,7 +79,6 @@ class TicketingConfirmationController extends Controller
             )
             */
         ;
-
         $mailer->send($message);
 
 

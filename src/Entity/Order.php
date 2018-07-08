@@ -12,6 +12,7 @@ use App\Validator\Constraints as OrderAssert;
  * @ORM\Entity(repositoryClass="App\Repository\OrderRepository")
  *
  * @OrderAssert\PmTodayTicket(groups={"booking"})
+ * @OrderAssert\MaxTicketsQuantity(groups={"booking"})
  */
 class Order
 {
@@ -26,9 +27,9 @@ class Order
      * @ORM\Column(type="date")
      *
      * @OrderAssert\TodayClosing(groups={"booking"})
-     * @OrderAssert\SundayBookingDesabled(groups={"booking"})
-     * @OrderAssert\TuesdayBookingDesabled(groups={"booking"})
-     * @OrderAssert\PublicHolidayBookingDesabled(groups={"booking"})
+     * @OrderAssert\SundayBookingDisabled(groups={"booking"})
+     * @OrderAssert\TuesdayBookingDisabled(groups={"booking"})
+     * @OrderAssert\PublicHolidayBookingDisabled(groups={"booking"})
      * @Assert\NotBlank(groups={"booking"})
      * @Assert\Date(groups={"booking"})
      * @Assert\GreaterThanOrEqual("today",
@@ -39,6 +40,8 @@ class Order
     private $bookingDate;
 
     /**
+     * * @ORM\Column(type="smallint")
+     *
      * @Assert\NotBlank(groups={"booking"})
      * @Assert\Type(groups={"booking"},
      *     type="integer",
@@ -46,7 +49,7 @@ class Order
      * )
      * @Assert\Range(groups={"booking"},
      *     min = 1,
-     *     max = 1000,
+     *     max = 1001,
      *     minMessage = "Please choose at least 1 ticket.",
      *     maxMessage = "Please choose less than 1000 tickets."
      * )
@@ -95,6 +98,11 @@ class Order
      * @ORM\Column(type="decimal", precision=10, scale=2)
      */
     private $totalPrice;
+
+    /**
+     *
+     */
+    private $totalTicketsDay;
 
 
     public function __construct()
@@ -184,7 +192,7 @@ class Order
 
         return $this;
     }
-/*
+
     public function removeTicketsList(Ticket $ticketsList): self
     {
         if ($this->ticketsList->contains($ticketsList)) {
@@ -197,7 +205,7 @@ class Order
 
         return $this;
     }
-*/
+
     public function getTotalPrice()
     {
         return $this->totalPrice;
@@ -206,6 +214,18 @@ class Order
     public function setTotalPrice($totalPrice): self
     {
         $this->totalPrice = $totalPrice;
+
+        return $this;
+    }
+
+    public function getTotalTicketsDay(): ?int
+    {
+        return $this->totalTicketsDay;
+    }
+
+    public function setTotalTicketsDay(int $totalTicketsDay): self
+    {
+        $this->totalTicketsDay = $totalTicketsDay;
 
         return $this;
     }
