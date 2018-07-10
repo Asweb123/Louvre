@@ -2,21 +2,21 @@
 
 namespace App\Repository;
 
-use App\Entity\Order;
+use App\Entity\OrderCustomer;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
- * @method Order|null find($id, $lockMode = null, $lockVersion = null)
- * @method Order|null findOneBy(array $criteria, array $orderBy = null)
- * @method Order[]    findAll()
- * @method Order[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method OrderCustomer|null find($id, $lockMode = null, $lockVersion = null)
+ * @method OrderCustomer|null findOneBy(array $criteria, array $orderBy = null)
+ * @method OrderCustomer[]    findAll()
+ * @method OrderCustomer[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class OrderRepository extends ServiceEntityRepository
+class OrderCustomerRepository extends ServiceEntityRepository
 {
     public function __construct(RegistryInterface $registry)
     {
-        parent::__construct($registry, Order::class);
+        parent::__construct($registry, OrderCustomer::class);
     }
 
 //    /**

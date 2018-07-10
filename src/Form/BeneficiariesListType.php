@@ -2,7 +2,7 @@
 
 namespace App\Form;
 
-use App\Entity\Order;
+use App\Entity\OrderCustomer;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -28,7 +28,7 @@ class BeneficiariesListType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => Order::class,
+            'data_class' => OrderCustomer::class,
             'validation_groups' => array('beneficiary')
         ));
     }

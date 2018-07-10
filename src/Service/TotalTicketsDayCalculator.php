@@ -3,13 +3,13 @@
 namespace App\Service;
 
 
-use App\Repository\OrderRepository;
+use App\Repository\OrderCustomerRepository;
 
 class TotalTicketsDayCalculator
 {
     private $orderRepository;
 
-    public function __construct(OrderRepository $orderRepository)
+    public function __construct(OrderCustomerRepository $orderRepository)
     {
         $this->orderRepository = $orderRepository;
     }

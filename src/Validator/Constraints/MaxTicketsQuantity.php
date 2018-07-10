@@ -9,7 +9,8 @@ use Symfony\Component\Validator\Constraint;
  */
 class MaxTicketsQuantity extends Constraint
 {
-    public $message = 'Sorry, no more tickets available for this date.';
+
+    public $message = 'Sorry, tickets quantity left for this date: {{ ticketsQuantityAvailable }}';
 
     public function getTargets()
     {

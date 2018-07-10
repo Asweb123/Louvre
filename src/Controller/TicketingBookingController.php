@@ -2,10 +2,10 @@
 
 namespace App\Controller;
 
-use App\Entity\Order;
-use App\Entity\Ticket;
+use App\Entity\OrderCustomer;
+
 use App\Form\OrderType;
-use App\Service\TotalTicketsDayCalculator;
+use App\Service\BeneficiariesListCreator;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
@@ -17,34 +17,29 @@ class TicketingBookingController extends AbstractController
     /**
      * @Route("/billetterie/reservation", name="ticketing_booking")
      */
-    public function booking(SessionInterface $session, Request $request, TotalTicketsDayCalculator $totalTicketsDayCalculator)
+    public function booking(SessionInterface $session, Request $request, BeneficiariesListCreator $beneficiariesListCreator)
     {
 
         if(($session->has('order')) === true) {
             $order = $session->get('order');
+            $originalTicketsQuantity = $order->getTicketsQuantity();
         }
         else {
-            $order = new Order();
+            $order = new OrderCustomer();
+            $originalTicketsQuantity = 0;
         }
-
 
         $form = $this->createForm(OrderType::class, $order);
 
         $form->handleRequest($request);
 
-
-
         if ($form->isSubmitted() && $form->isValid()) {
 
             $order = $form->getData();
 
-            $ticketsQuantity = $order->getTicketsQuantity();
+            $newTicketsQuantity = $order->getTicketsQuantity();
 
-            for ($i = 1; $i <= $ticketsQuantity; $i++) {
-                $ticket= new Ticket();
-                $order->addTicketsList($ticket);
-            }
-
+            $order = $beneficiariesListCreator->beneficiariesListCreator($order, $originalTicketsQuantity,$newTicketsQuantity);
 
             $session->set('order', $order);
 

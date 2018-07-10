@@ -86,7 +86,7 @@ class Ticket
     private $reduction = false;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Order", inversedBy="ticketsList")
+     * @ORM\ManyToOne(targetEntity="OrderCustomer", inversedBy="ticketsList")
      * @ORM\JoinColumn(nullable=false)
      */
     private $relatedOrder;
@@ -185,12 +185,12 @@ class Ticket
         return $this;
     }
 
-    public function getRelatedOrder(): ?Order
+    public function getRelatedOrder(): ?OrderCustomer
     {
         return $this->relatedOrder;
     }
 
-    public function setRelatedOrder(?Order $relatedOrder): self
+    public function setRelatedOrder(?OrderCustomer $relatedOrder): self
     {
         $this->relatedOrder = $relatedOrder;
 

@@ -20,11 +20,12 @@ class MaxTicketsQuantityValidator extends ConstraintValidator
     public function validate($order, Constraint $constraint)
     {
         $totalTicketsDay = $this->totalTicketsDayCalculator->totalTicketsDayCalculator($order->getBookingDate());
-        $order->setTotalTicketsDay($totalTicketsDay);
+        $ticketsQuantityAvailable = 1000 - $totalTicketsDay;
 
-        if (($order->getTicketsQuantity() + $order->getTotalTicketsDay()) > 1000)
+        if (($order->getTicketsQuantity() + $totalTicketsDay) > 1000)
         {
             $this->context->buildViolation($constraint->message)
+                ->setParameter('{{ ticketsQuantityAvailable }}', $ticketsQuantityAvailable)
                 ->atPath('ticketsQuantity')
                 ->addViolation();
         }

@@ -9,12 +9,12 @@ use Symfony\Component\Validator\Constraints as Assert;
 use App\Validator\Constraints as OrderAssert;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\OrderRepository")
+ * @ORM\Entity(repositoryClass="OrderCustomerRepository")
  *
  * @OrderAssert\PmTodayTicket(groups={"booking"})
  * @OrderAssert\MaxTicketsQuantity(groups={"booking"})
  */
-class Order
+class OrderCustomer
 {
     /**
      * @ORM\Id()
@@ -49,9 +49,9 @@ class Order
      * )
      * @Assert\Range(groups={"booking"},
      *     min = 1,
-     *     max = 1001,
+     *     max = 15,
      *     minMessage = "Please choose at least 1 ticket.",
-     *     maxMessage = "Please choose less than 1000 tickets."
+     *     maxMessage = "Please choose 15 tickets or less."
      * )
      */
     private $ticketsQuantity;
@@ -98,11 +98,6 @@ class Order
      * @ORM\Column(type="decimal", precision=10, scale=2)
      */
     private $totalPrice;
-
-    /**
-     *
-     */
-    private $totalTicketsDay;
 
 
     public function __construct()
@@ -217,20 +212,5 @@ class Order
 
         return $this;
     }
-
-    public function getTotalTicketsDay(): ?int
-    {
-        return $this->totalTicketsDay;
-    }
-
-    public function setTotalTicketsDay(int $totalTicketsDay): self
-    {
-        $this->totalTicketsDay = $totalTicketsDay;
-
-        return $this;
-    }
-
-
-
 
 }
