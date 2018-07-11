@@ -28,7 +28,11 @@ body {
 
 
 
-
+.max-width {
+    max-width: 850px;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 
 
@@ -184,6 +188,7 @@ body {
 
 .subTicketing {
     font-size: 1.7rem;
+    line-height: 50% !important;
 }
 
 .my-breadcrumb {
@@ -199,9 +204,6 @@ body {
     margin: 1rem 2rem;
 }
 
-.liBreadcrumb {
-
-}
 
 .table-headBorder {
     border-top-width: 0px !important;

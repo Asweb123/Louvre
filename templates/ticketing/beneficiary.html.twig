@@ -34,7 +34,7 @@
 
     <section class="container">
 
-        <p class="text-center mb-5">
+        <p class="text-center mb-5 max-width">
             {{ 'Afin de nous permettre de définir votre tarification, veuillez compléter les champs ci-dessous :'|trans }}
         </p>
 
@@ -43,7 +43,7 @@
             {% if order.ticketsQuantity == 1 %}
                 {{ form_row(ticket, {'label': false } ) }}
             {% else %}
-                {% set userIndex = 'Personne ' ~ loop.index %}
+                {% set userIndex = 'Visiteur ' ~ loop.index %}
                 {{ form_row(ticket, {'label': userIndex } ) }}
             {% endif %}
         {% endfor %}
@@ -56,7 +56,7 @@
 
         <div class="text-center mt-5">
             <a href="{{ path('index') }}">
-                <button type="button" class="btn btn-outline-dark  mb-2 btn-louvre">{{ 'Annuler la commande'|trans }}</button>
+                <button type="button" class="btn btn-outline-secondary  mb-2 btn-louvre">{{ 'Annuler la commande'|trans }}</button>
             </a>
         </div>
 

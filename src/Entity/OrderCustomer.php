@@ -34,7 +34,7 @@ class OrderCustomer
      * @Assert\Date(groups={"booking"})
      * @Assert\GreaterThanOrEqual("today",
      *     groups={"booking"},
-     *     message= "This value should be greater than or equal to today's date."
+     *     message= "La date choisie est invalide ."
      * )
      */
     private $bookingDate;
@@ -45,13 +45,13 @@ class OrderCustomer
      * @Assert\NotBlank(groups={"booking"})
      * @Assert\Type(groups={"booking"},
      *     type="integer",
-     *     message="The value is not a valid number."
+     *     message="Cette valeur n'est pas un nombre valide."
      * )
      * @Assert\Range(groups={"booking"},
      *     min = 1,
      *     max = 15,
-     *     minMessage = "Please choose at least 1 ticket.",
-     *     maxMessage = "Please choose 15 tickets or less."
+     *     minMessage = "Veuillez choisir au moins 1 billet.",
+     *     maxMessage = "Veuillez choisir au maximum 15 billets"
      * )
      */
     private $ticketsQuantity;
@@ -73,7 +73,7 @@ class OrderCustomer
      *
      * @Assert\NotBlank(groups={"payment"})
      * @Assert\Email(
-     *     message = "The email '{{ value }}' is not a valid email.",
+     *     message = "L'adresse mail '{{ value }}' n\'est pas une adresse valide.",
      *     checkMX = true,
      *     groups={"booking"}
      * )
@@ -213,3 +213,10 @@ class OrderCustomer
     }
 
 }
+
+
+// This value should be greater than or equal to today's date.
+// The value is not a valid number.
+// Please choose at least 1 ticket.
+// Please choose 15 tickets or less.
+// The email '{{ value }}' is not a valid email.

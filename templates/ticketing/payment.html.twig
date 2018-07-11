@@ -17,7 +17,7 @@
             <img src="{{ asset('img/arrow.svg') }}" alt="" width="30px" class="arrow"/>
             <li class="liBreadcrumb">
                 <div class="svgDiv"><img src="{{ asset('img/badge-13.svg') }}" alt="" width="80px"/></div>
-                <div class="navText font-weight-bold">{{ 'Bnéficiaires'|trans }}</div>
+                <div class="navText font-weight-bold">{{ 'Bénéficiaires'|trans }}</div>
             </li>
             <img src="{{ asset('img/arrow.svg') }}" alt="" width="30px" class="arrow"/>
             <li class="liBreadcrumb">
@@ -81,7 +81,7 @@
         </tbody>
     </table>
 
-    <p class="text-center mb-5">
+    <p class="text-center mb-5 max-width">
         {{ 'Veuillez vérifier l\'exactitude des informations données ci-dessus et cliquer sur le bouton "Valider" pour procéder au paiement par carte bancaire.'|trans }}
     </p>
 
@@ -108,7 +108,7 @@
 
     <div class="text-center mt-5">
         <a href="{{ path('index') }}">
-            <button type="button" class="btn btn-outline-dark  mb-2 btn-louvre">{{ 'Annuler la commande'|trans }}</button>
+            <button type="button" class="btn btn-outline-secondary  mb-2 btn-louvre">{{ 'Annuler la commande'|trans }}</button>
         </a>
     </div>
 

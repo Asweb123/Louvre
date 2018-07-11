@@ -18,12 +18,29 @@ class BeneficiaryType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('firstName', TextType::class)
-            ->add('lastName', TextType::class)
-            ->add('dateOfBirth', BirthdayType::class)
-            ->add('country', CountryType::class)
+            ->add('firstName', TextType::class, array(
+                'label' => 'Prénom',
+            ))
+            ->add('lastName', TextType::class, array(
+                'label' => 'Nom',
+            ))
+            ->add('dateOfBirth', BirthdayType::class, array(
+                'label' => 'Date de naissance',
+                'format' => 'dd MMM yyyy',
+                'placeholder' => array(
+                    'year' => 'Année', 'month' => 'Mois', 'day' => 'Jour',
+                )
+            ))
+            ->add('country', CountryType::class, array(
+                'label' => 'Pays',
+                'placeholder' => 'Sélectionner un pays',
+
+
+            ))
             ->add('reduction', CheckboxType::class, array(
-                'required' => false
+                'label' => 'Réduction',
+                'required' => false,
+                'help' => 'Sur présentation d\'un justificatif à l\'entrée du musée'
             ))
         ;
     }

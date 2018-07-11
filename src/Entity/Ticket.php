@@ -32,14 +32,14 @@ class Ticket
      * @Assert\Length(
      *      min = 2,
      *      max = 50,
-     *      minMessage = "Your first name must be at least {{ limit }} characters long",
-     *      maxMessage = "Your first name cannot be longer than {{ limit }} characters",
+     *      minMessage = "Votre prénom doit contenir un minimum de {{ limit }} charactères.",
+     *      maxMessage = "Votre prénoms doit contenir au maximum {{ limit }} characters",
      *      groups={"beneficiary"}
      * )
      * @Assert\Regex(
      *     pattern="/\d/",
      *     match=false,
-     *     message="Your name cannot contain a number",
+     *     message="Votre nom ne peut pas contenir de chiffre.",
      *     groups={"beneficiary"}
      * )
      */
@@ -52,14 +52,14 @@ class Ticket
      * @Assert\Length(
      *      min = 2,
      *      max = 50,
-     *      minMessage = "Your last name must be at least {{ limit }} characters long.",
-     *      maxMessage = "Your last name cannot be longer than {{ limit }} characters.",
+     *      minMessage = "Votre nom doit contenir un minimum de {{ limit }} charactères.",
+     *      maxMessage = "Votre nom doit contenir au maximum {{ limit }} charactères.",
      *      groups={"beneficiary"}
      * )
      * @Assert\Regex(
      *     pattern="/\d/",
      *     match=false,
-     *     message="Your name cannot contain a number",
+     *     message="Votre nom ne peut pas contenir de chiffre.",
      *     groups={"beneficiary"}
      * )
      */
@@ -79,7 +79,7 @@ class Ticket
      *
      * @Assert\Type(
      *     type="bool",
-     *     message="Your choice is not valid.",
+     *     message="Votre choix n'est pas valide.",
      *     groups={"beneficiary"}
      * )
      */
@@ -210,3 +210,10 @@ class Ticket
     }
 
 }
+
+
+// Your first name must be at least {{ limit }} characters long.
+// Your first name cannot be longer than {{ limit }} characters.
+// Your last name must be at least {{ limit }} characters long.
+// Your last name cannot be longer than {{ limit }} characters.
+// Your name cannot contain a number

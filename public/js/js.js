@@ -1,7 +1,8 @@
 $(document).ready(function() {
     $('.flatpickr').flatpickr({
-        altInput: false,
-        altFormat: "F j, Y",
+        dateFormat: "d/m/Y",
+    //    altInput: false,
+    //    altFormat: "F j, Y",
         minDate: "today",
         maxDate: new Date().fp_incr(365),
         allowInput: true,
@@ -39,6 +40,16 @@ $(document).ready(function() {
     flatpickr.l10ns.fr.firstDayOfWeek = 1;
     flatpickr.l10ns.fr.altFormat = "j/m/Y"
 */
+
+
+    $('label').css('font-weight', 'bold').css('color', '#212529');
+    $('legend').css('font-weight', 'bold').css('color', '#212529');
+
+    $('form > fieldset > legend').css('font-size', '1.65rem').css('color', '#727272').addClass('text-center');
+    $('form > fieldset > div').addClass('mb-5');
+
+
+
 });
 
 

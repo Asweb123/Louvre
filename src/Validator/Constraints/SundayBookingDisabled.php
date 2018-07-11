@@ -10,5 +10,7 @@ use Symfony\Component\Validator\Constraint;
  */
 class SundayBookingDisabled extends Constraint
 {
-    public $message = 'It\'s not possible to book tickets on Sundays';
+    public $message = 'Les dimanches sont indisponibles à la réservation.';
 }
+
+// 'It\'s not possible to book tickets on Sundays'

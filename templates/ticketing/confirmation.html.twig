@@ -17,7 +17,7 @@
             <img src="{{ asset('img/arrow.svg') }}" alt="" width="30px" class="arrow"/>
             <li class="liBreadcrumb">
                 <div class="svgDiv"><img src="{{ asset('img/badge-13.svg') }}" alt="" width="80px"/></div>
-                <div class="navText font-weight-bold">{{ 'Bnéficiaires'|trans }}</div>
+                <div class="navText font-weight-bold">{{ 'Bénéficiaires'|trans }}</div>
             </li>
             <img src="{{ asset('img/arrow.svg') }}" alt="" width="30px" class="arrow"/>
             <li class="liBreadcrumb">
@@ -32,7 +32,7 @@
         </ul>
     </nav>
 
-    <p class="text-center mb-5">
+    <p class="text-center mb-5 max-width">
         {{ 'Nous vous remerçions pour votre commande. Vous allez recevoir dans quelques instants un mail contenant vos billets à imprimer et à présenter lors de votre visite du musée.'|trans }}
     </p>
 
@@ -48,11 +48,13 @@
         <p>{{ 'Total de la commande : '|trans }}<span class="font-weight-bold">{{ order.totalPrice|number_format(2, ',') }} €</span></p>
     </div>
 
-    <p class="mb-5">{{ 'Vos billets ont été envoyé à l\'adresse mail suivante : '|trans }}<span class="font-weight-bold">{{ order.emailCustomer }}</span></p>
+    <p style="margin-bottom: 75px;">{{ 'Vos billets ont été envoyé à l\'adresse mail suivante : '|trans }}<span class="font-weight-bold">{{ order.emailCustomer }}</span></p>
 
-    <div class="text-center mt-5">
+
+
+    <div class="text-center mb-5">
         <a href="{{ path('index') }}">
-            <button type="button" class="btn btn-outline-dark  mb-2 btn-louvre">{{ 'Retour à l\'accueil'|trans }}</button>
+            <button type="button" class="btn btn-outline-dark btn-lg mb-2 btn-louvre font-weight-bold">{{ 'Retour à l\'accueil'|trans }}</button>
         </a>
     </div>
 </section>

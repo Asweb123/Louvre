@@ -10,5 +10,7 @@ use Symfony\Component\Validator\Constraint;
  */
 class PublicHolidayBookingDisabled extends Constraint
 {
-    public $message = 'On this date, the museum will be closed due to public holiday.';
+    public $message = 'Le musée sera fermé à la date sélectionnée. ';
 }
+
+// 'On this date, the museum will be closed due to public holiday.'

@@ -23,24 +23,30 @@ class OrderType extends AbstractType
             ->add('bookingDate', DateType::class, array(
                 'widget' => 'single_text',
                 'html5' => false,
-                'attr' => ['class' => 'flatpickr', 'autocomplete' => 'off']
+                'format' => 'dd-MM-yyyy',
+                'label' => 'Date de visite',
+                'placeholder' => 'jj/mm/aaaa',
+                'attr' => ['class' => 'flatpickr', 'autocomplete' => 'off'],
+                'help' => 'Réservation impossible le dimanche. Fermé le mardi, le 1er Mai, le 1er Novembre et le 25 Décembre.'
 
             ))
             ->add('ticketsQuantity', IntegerType::class, array(
+                'label' => 'Nombre de visiteurs',
                 'attr' => ['min' => '1']
             ))
             ->add('ticketType', ChoiceType::class, array(
+                'label' => 'Type de billet',
                 'choices' => array(
-                    'Full Day' => '1',
-                    'Half-day' => '2'
+                    'Journée' => '1',
+                    'Demi-Journée' => '2'
                 )
             ))
             ->add('emailCustomer', RepeatedType::class, array(
                 'type' => EmailType::class,
-                'invalid_message' => 'The email fields must match.',
+                'invalid_message' => 'Les adresses mails ne sont pas identiques.',
                 'required' => true,
-                'first_options'  => array('label' => 'Email'),
-                'second_options' => array('label' => 'Repeat Email'),
+                'first_options'  => array('label' => 'Adresse mail de réception des billets'),
+                'second_options' => array('label' => 'Confirmer l\'adresse mail'),
             ))
         ;
     }
