@@ -4,9 +4,9 @@
 
     <section class="container-fluid">
 
-        <h1 class="text-center display-4 mb-3">Musée du Louvre</h1>
-        <h2 class="text-center display-4 mb-5 subTitle">- Billetterie -</h2>
-        <p class="text-center priceTitle">Les tarifs</p>
+        <h1 class="text-center display-4 mb-3">{{ 'Musée du Louvre'|trans }}</h1>
+        <h2 class="text-center display-4 mb-5 subTitle">{{ '- Billetterie -'|trans }}</h2>
+        <p class="text-center priceTitle">{{ 'Les tarifs'|trans }}</p>
         <div class="text-center mb-5">Switcher</div>
 
 
@@ -15,76 +15,76 @@
 
                 <div class="card text-center box-shadow is-visible">
                     <div class="card-header card-normal">
-                        Billet Journée
+                        {{ 'Billet Journée'|trans }}
                     </div>
                     <img src="{{ asset('img/img2.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
                     <div class="card-body">
-                        <h5 class="card-title mb-0">Tarif Normal</h5>
+                        <h5 class="card-title mb-0">{{ 'Tarif Normal'|trans }}</h5>
                         <p class="card-text card-price">{{ basePrice }} €</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">A partir de 12 ans</li>
-                        <li class="list-group-item">Valable de 8h à 19h</li>
+                        <li class="list-group-item">{{ 'A partir de 12 ans'|trans }}</li>
+                        <li class="list-group-item">{{ 'Valable de 8h à 19h'|trans }}</li>
                     </ul>
                 </div>
 
                 <div class="card text-center box-shadow is-visible">
                     <div class="card-header card-child">
-                        Billet Journée
+                        {{ 'Billet Journée'|trans }}
                     </div>
                     <img src="{{ asset('img/img1.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
                     <div class="card-body">
-                        <h5 class="card-title mb-0">Tarif Enfant</h5>
+                        <h5 class="card-title mb-0">{{ 'Tarif Enfant'|trans }}</h5>
                         <p class="card-text card-price">{{ childrenPrice }} €</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">A partir de 4 ans</li>
-                        <li class="list-group-item">Valable de 8h à 19h</li>
+                        <li class="list-group-item">{{ 'A partir de 4 ans'|trans }}</li>
+                        <li class="list-group-item">{{ 'Valable de 8h à 19h'|trans }}</li>
                     </ul>
                 </div>
 
                 <div class="card text-center box-shadow is-visible">
                     <div class="card-header card-baby">
-                        Billet Journée
+                        {{ 'Billet Journée'|trans }}
                     </div>
                     <img src="{{ asset('img/img7.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
                     <div class="card-body">
-                        <h5 class="card-title mb-0">Tarif Tout-Petit</h5>
-                        <p class="card-text card-price-text pt-3">Gratuit</p>
+                        <h5 class="card-title mb-0">{{ 'Tarif Tout-Petit'|trans }}</h5>
+                        <p class="card-text card-price-text pt-3">{{ 'Gratuit'|trans }}</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Moins de 4 ans</li>
-                        <li class="list-group-item">Valable de 8h à 19h</li>
+                        <li class="list-group-item">{{ 'Moins de 4 ans'|trans }}</li>
+                        <li class="list-group-item">{{ 'Valable de 8h à 19h'|trans }}</li>
                     </ul>
                 </div>
 
                 <div class="card text-center box-shadow is-visible">
                     <div class="card-header card-senior">
-                        Billet Journée
+                        {{ 'Billet Journée'|trans }}
                     </div>
                     <img src="{{ asset('img/img6.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
                     <div class="card-body">
-                        <h5 class="card-title mb-0">Tarif Senior</h5>
+                        <h5 class="card-title mb-0">{{ 'Tarif Senior'|trans }}</h5>
                         <p class="card-text card-price">{{ seniorPrice }} €</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">A partir de 60 ans</li>
-                        <li class="list-group-item">Valable de 8h à 19h</li>
+                        <li class="list-group-item">{{ 'A partir de 60 ans'|trans }}</li>
+                        <li class="list-group-item">{{ 'Valable de 8h à 19h'|trans }}</li>
                     </ul>
                 </div>
 
                 <div class="card text-center box-shadow is-visible">
                     <div class="card-header card-reduc">
-                        Billet Journée
+                        {{ 'Billet Journée'|trans }}
                     </div>
                     <img src="{{ asset('img/img3.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
                     <div class="card-body">
-                        <h5 class="card-title mb-0">Tarif Réduit</h5>
+                        <h5 class="card-title mb-0">{{ 'Tarif Réduit'|trans }}</h5>
                         <p class="card-text card-price">{{ reducedPrice }} €</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Etudiant, militaire... *</li>
-                        <li class="list-group-item">Valable de 8h à 19h</li>
+                        <li class="list-group-item">{{ 'Etudiant, militaire... *'|trans }}</li>
+                        <li class="list-group-item">{{ 'Valable de 8h à 19h'|trans }}</li>
                     </ul>
                 </div>
 
@@ -93,12 +93,13 @@
 
         <div class="text-center mb-5">
             <a href="{{ path('ticketing_booking') }}">
-                <button type="button" class="btn btn-outline-dark btn-lg btn-louvre font-weight-bold">Commander</button>
+                <button type="button" class="btn btn-outline-dark btn-lg btn-louvre font-weight-bold">{{ 'Commander'|trans }}</button>
             </a>
         </div>
 
 
-        <p class="text-reduc font-italic text-center mb-5">* Tarif réduit accordé aux étudiants de plus de 18 ans, militaires, demandeurs d'emploi, employés de musée ou d'un service du Ministère de la Culture.</p>
+        <p class="text-reduc font-italic text-center mb-5">{{ '* Tarif réduit accordé aux étudiants de plus de 18 ans,
+        militaires, demandeurs d\'emploi, employés de musée ou d\'un service du Ministère de la Culture.'|trans }}</p>
 
     </section>
 

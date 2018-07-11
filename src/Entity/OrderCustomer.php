@@ -83,12 +83,11 @@ class OrderCustomer
     /**
      * @ORM\Column(type="string", length=255)
      *
-     * @Assert\NotBlank()
      */
     private $bookingRef;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Ticket", mappedBy="relatedOrder", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity="App\Entity\Ticket", mappedBy="relatedOrder", orphanRemoval=true, cascade={"persist"})
      *
      * @Assert\Valid
      */

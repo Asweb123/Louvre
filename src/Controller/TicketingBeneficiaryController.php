@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Ticket;
 use App\Form\BeneficiariesListType;
+use App\Service\TicketingStepsCheck;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
@@ -16,9 +17,20 @@ class TicketingBeneficiaryController extends AbstractController
     /**
      * @Route("/billetterie/beneficiaires", name="ticketing_beneficiary")
      */
-    public function beneficiary(SessionInterface $session, Request $request)
+    public function beneficiary(SessionInterface $session, Request $request, TicketingStepsCheck $ticketingStepsCheck)
     {
-        $order = $session->get('order');
+        if(($session->has('order')) === true) {
+            $order = $session->get('order');
+
+            if(($ticketingStepsCheck->beneficiaryStepCheck($order) === false)) {
+
+                return $this->redirectToRoute('ticketing_booking');
+            }
+        } else {
+
+            return $this->redirectToRoute('ticketing_booking');
+        }
+
 
         $form = $this->createForm(BeneficiariesListType::class, $order);
 

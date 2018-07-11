@@ -6,38 +6,42 @@
 
 <section class="container mb-5">
 
-    <h1 class="h2 display-4 text-center mt-5 mb-5 ">Billetterie<br/><small class="text-muted d-md-none subTicketing">Etape 3/4 : Paiement</small></h1>
+    <h1 class="h2 display-4 text-center mt-5 mb-5 ">{{ 'Billetterie'|trans }}<br/><small class="text-muted d-md-none subTicketing">{{ 'Etape 3/4 : Paiement'|trans }}</small></h1>
 
     <nav class="d-none d-md-block mt-5 mb-5">
         <ul class="my-breadcrumb">
             <li class="liBreadcrumb">
                 <div class="svgDiv"><img src="{{ asset('img/calendar-60.svg') }}" alt="" width="80px"/></div>
-                <div class="navText font-weight-bold">Réservation</div>
+                <div class="navText font-weight-bold">{{ 'Réservation'|trans }}</div>
             </li>
             <img src="{{ asset('img/arrow.svg') }}" alt="" width="30px" class="arrow"/>
             <li class="liBreadcrumb">
                 <div class="svgDiv"><img src="{{ asset('img/badge-13.svg') }}" alt="" width="80px"/></div>
-                <div class="navText font-weight-bold">Bénéficiaire</div>
+                <div class="navText font-weight-bold">{{ 'Bnéficiaires'|trans }}</div>
             </li>
             <img src="{{ asset('img/arrow.svg') }}" alt="" width="30px" class="arrow"/>
             <li class="liBreadcrumb">
                 <div class="svgDiv"><img src="{{ asset('img/handout.svg') }}" alt="" width="80px"/></div>
-                <div class="navText font-weight-bold">Paiement</div>
+                <div class="navText font-weight-bold">{{ 'Paiement'|trans }}</div>
             </li>
             <img src="{{ asset('img/arrow-bw.svg') }}" alt="" width="30px" class="arrow"/>
             <li class="liBreadcrumb">
                 <div class="svgDiv"><img src="{{ asset('img/like-2-bw.svg') }}" alt="" width="80px"/></div>
-                <div class="navText grey">Confirmation</div>
+                <div class="navText grey">{{ 'Confirmation'|trans }}</div>
             </li>
         </ul>
     </nav>
 
+    <p class="text-center mb-5">
+        {{ 'Une fois votre commande finalisée, vos billets seront envoyé au format PDF à l\'adresse mail suivante :'|trans }}<br/>
+        <span class="font-weight-bold">{{ order.emailCustomer }}</span>
+    </p>
 
     <table class="table mb-5">
         <thead class="table-headBorder">
         <tr>
-            <th class="table-headBorder" scope="col">Billet</th>
-            <th class="table-headBorder text-center" scope="col">Prix</th>
+            <th class="table-headBorder" scope="col">{{ 'Billets'|trans }}</th>
+            <th class="table-headBorder text-center" scope="col">{{ 'Prix'|trans }}</th>
         </tr>
         </thead>
 
@@ -45,23 +49,23 @@
 
         {% for ticket  in  order.ticketsList  %}
         <tr>
-            <td>Bénéficiaire : <span class="font-weight-bold">{{ ticket.firstName }} {{ ticket.lastName }}</span>
+            <td>{{ 'Bénéficiaire : '|trans }}<span class="font-weight-bold">{{ ticket.firstName }} {{ ticket.lastName }}</span>
                 <br/>
 
-                Tarif : <span class="font-weight-bold">{% if ticket.pricing == 1 %}Tout-petit
-                {% elseif ticket.pricing == 2 %}Enfant
-                {% elseif ticket.pricing == 3 %}Normal
-                {% elseif ticket.pricing == 4 %}Senior
-                {% elseif ticket.pricing == 5 %}Réduit
+                {{ 'Tarif : '|trans }}<span class="font-weight-bold">{% if ticket.pricing == 1 %}{{ 'Tout-petit'|trans }}
+                {% elseif ticket.pricing == 2 %}{{ 'Enfant'|trans }}
+                {% elseif ticket.pricing == 3 %}{{ 'Normal'|trans }}
+                {% elseif ticket.pricing == 4 %}{{ 'Senior'|trans }}
+                {% elseif ticket.pricing == 5 %}{{ 'Réduit'|trans }}
                 {% endif %}</span>
                 <br/>
 
-                Type de billet : <span class="font-weight-bold">{% if order.ticketType == 1 %}Full day
-                {% elseif order.ticketType == 2 %}Half-day
+                {{ 'Type de billet : '|trans }}<span class="font-weight-bold">{% if order.ticketType == 1 %}{{ 'Full day'|trans }}
+                {% elseif order.ticketType == 2 %}{{ 'Half-day'|trans }}
                 {% endif %}</span>
                 <br/>
 
-                Date de visite : <span class="font-weight-bold">{{ order.bookingDate|date('Y/m/d') }}</span>
+                {{ 'Date de visite : '|trans }}<span class="font-weight-bold">{{ order.bookingDate|date('Y/m/d') }}</span>
 
             </td>
             <td class="text-center">{{ ticket.price|number_format(2, ',') }} €</span></td>
@@ -77,13 +81,8 @@
         </tbody>
     </table>
 
-    <p class="text-center mb-2">
-        Veuillez vérifier l'exactitude des informations données ci-dessus et cliquer sur le bouton "Valider" pour procéder au paiement par carte bancaire.
-    </p>
-
     <p class="text-center mb-5">
-        Une fois votre commande finalisée, vos billets seront envoyé au format PDF à l'adresse mail suivante :<br/>
-        <span class="font-weight-bold">{{ order.emailCustomer }}</span>
+        {{ 'Veuillez vérifier l\'exactitude des informations données ci-dessus et cliquer sur le bouton "Valider" pour procéder au paiement par carte bancaire.'|trans }}
     </p>
 
 
@@ -92,20 +91,26 @@
                 src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                 data-key="pk_test_XJEMQqTn9vPLz78h6NYr2bRb"
                 data-amount="{{ (order.totalPrice * 100) }}"
-                data-name="Musée du Louvre"
+                data-name="{{ 'Musée du Louvre'|trans }}"
                 data-description="Billetterie"
                 data-image="{{ asset('img/louvre-stripe.png') }}"
                 data-locale="auto"
                 data-currency="eur"
                 data-email="{{ order.emailCustomer }}"
-                data-label="Valider"
+                data-label="{{ 'Valider'|trans }}"
         >
         </script>
     </form>
 
     <a href="{{ path('ticketing_beneficiary') }}">
-        <button type="button" class="btn btn-outline-dark btn-lg btn-louvre font-weight-bold">Retour</button>
+        <button type="button" class="btn btn-outline-dark btn-lg btn-louvre font-weight-bold">{{ 'Retour'|trans }}</button>
     </a>
+
+    <div class="text-center mt-5">
+        <a href="{{ path('index') }}">
+            <button type="button" class="btn btn-outline-dark  mb-2 btn-louvre">{{ 'Annuler la commande'|trans }}</button>
+        </a>
+    </div>
 
 </section>
 

@@ -20,14 +20,15 @@ class TicketingBookingController extends AbstractController
     public function booking(SessionInterface $session, Request $request, BeneficiariesListCreator $beneficiariesListCreator)
     {
 
-        if(($session->has('order')) === true) {
+        if($session->has('order') === true) {
             $order = $session->get('order');
             $originalTicketsQuantity = $order->getTicketsQuantity();
-        }
-        else {
+
+        } else {
             $order = new OrderCustomer();
             $originalTicketsQuantity = 0;
         }
+
 
         $form = $this->createForm(OrderType::class, $order);
 
@@ -38,7 +39,6 @@ class TicketingBookingController extends AbstractController
             $order = $form->getData();
 
             $newTicketsQuantity = $order->getTicketsQuantity();
-
             $order = $beneficiariesListCreator->beneficiariesListCreator($order, $originalTicketsQuantity,$newTicketsQuantity);
 
             $session->set('order', $order);
@@ -46,8 +46,6 @@ class TicketingBookingController extends AbstractController
             return $this->redirectToRoute('ticketing_beneficiary');
         }
 
-        return $this->render('ticketing/booking.html.twig', array(
-            'form' => $form->createView()
-        ));
+        return $this->render('ticketing/booking.html.twig', array('form' => $form->createView()));
     }
 }

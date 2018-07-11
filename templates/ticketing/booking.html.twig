@@ -6,28 +6,28 @@
 
     <section class="container mb-5">
 
-        <h1 class="h2 display-4 text-center mt-5 mb-5 ">Billetterie<br /><small class="text-muted d-md-none subTicketing">Etape 1/4 : Réservation</small></h1>
+        <h1 class="h2 display-4 text-center mt-5 mb-5 ">{{ 'Billetterie'|trans }}<br /><small class="text-muted d-md-none subTicketing">{{ 'Etape 1/4 : Réservation'|trans }}</small></h1>
 
         <nav class="d-none d-md-block mt-5 mb-5">
             <ul class="my-breadcrumb">
                 <li class="liBreadcrumb">
                     <div class="svgDiv"><img src="{{ asset('img/calendar-60.svg') }}" alt="" width="80px"/></div>
-                    <div class="navText font-weight-bold">Réservation</div>
+                    <div class="navText font-weight-bold">{{ 'Réservation'|trans }}</div>
                 </li>
                 <img src="{{ asset('img/arrow-bw.svg') }}" alt="" width="30px" class="arrow"/>
                 <li class="liBreadcrumb">
                     <div class="svgDiv"><img src="{{ asset('img/badge-13-bw.svg') }}" alt="" width="80px"/></div>
-                    <div class="navText grey">Bénéficiaire</div>
+                    <div class="navText grey">{{ 'Bnéficiaires'|trans }}</div>
                 </li>
                 <img src="{{ asset('img/arrow-bw.svg') }}" alt="" width="30px" class="arrow"/>
                 <li class="liBreadcrumb">
                     <div class="svgDiv"><img src="{{ asset('img/handout-bw.svg') }}" alt="" width="80px"/></div>
-                    <div class="navText grey">Paiement</div>
+                    <div class="navText grey">{{ 'Paiement'|trans }}</div>
                 </li>
                 <img src="{{ asset('img/arrow-bw.svg') }}" alt="" width="30px" class="arrow"/>
                 <li class="liBreadcrumb">
                     <div class="svgDiv"><img src="{{ asset('img/like-2-bw.svg') }}" alt="" width="80px"/></div>
-                    <div class="navText grey">Confirmation</div>
+                    <div class="navText grey">{{ 'Confirmation'|trans }}</div>
                 </li>
             </ul>
         </nav>
@@ -35,19 +35,16 @@
         {{ form_start(form) }}
         {{ form_widget(form) }}
         <div class="clearfix">
-            <input type="submit" class="btn btn-outline-dark btn-lg btn-louvre font-weight-bold float-right mt-4" value="Valider"/>
+            <input type="submit" class="btn btn-outline-dark btn-lg btn-louvre font-weight-bold float-right mt-4" value="{{ 'Valider'|trans }}"/>
         </div>
         {{ form_end(form) }}
 
         <div class="text-center mt-5">
             <a href="{{ path('index') }}">
-                <button type="button" class="btn btn-outline-dark  mb-2 btn-louvre">Annuler la commande</button>
+                <button type="button" class="btn btn-outline-dark  mb-2 btn-louvre">{{ 'Annuler la commande'|trans }}</button>
             </a>
         </div>
 
     </section>
-
-
-
 
 {% endblock %}

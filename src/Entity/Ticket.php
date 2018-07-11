@@ -132,7 +132,7 @@ class Ticket
 
     public function setFirstName(string $firstName): self
     {
-        $this->firstName = $firstName;
+        $this->firstName = ucfirst($firstName);
 
         return $this;
     }
@@ -144,7 +144,7 @@ class Ticket
 
     public function setLastName(string $lastName): self
     {
-        $this->lastName = $lastName;
+        $this->lastName = ucfirst($lastName);
 
         return $this;
     }

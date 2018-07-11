@@ -22,7 +22,12 @@ class IndexController extends AbstractController
      */
     public function index(SessionInterface $session)
     {
-        $session->clear();
+        if (isset($session) === false) {
+            $session->start();
+        }elseif($session->has('order') === true) {
+            $session->remove('order');
+        }
+
 
         return $this->render('index/index.html.twig', array(
             'babyPrice' => $this->params->get('baby_price'),

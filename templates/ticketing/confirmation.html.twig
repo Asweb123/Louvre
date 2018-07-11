@@ -6,57 +6,53 @@
 
 <section class="container mb-5">
 
-    <h1 class="h2 display-4 text-center mt-5 mb-5 ">Billetterie<br/><small class="text-muted d-md-none subTicketing">Etape 4/4 : Confirmation</small></h1>
+    <h1 class="h2 display-4 text-center mt-5 mb-5 ">{{ 'Billetterie'|trans }}<br/><small class="text-muted d-md-none subTicketing">{{ 'Etape 4/4 : Confirmation'|trans }}</small></h1>
 
     <nav class="d-none d-md-block mt-5 mb-5">
         <ul class="my-breadcrumb">
             <li class="liBreadcrumb">
                 <div class="svgDiv"><img src="{{ asset('img/calendar-60.svg') }}" alt="" width="80px"/></div>
-                <div class="navText font-weight-bold">Réservation</div>
+                <div class="navText font-weight-bold">{{ 'Réservation'|trans }}</div>
             </li>
             <img src="{{ asset('img/arrow.svg') }}" alt="" width="30px" class="arrow"/>
             <li class="liBreadcrumb">
                 <div class="svgDiv"><img src="{{ asset('img/badge-13.svg') }}" alt="" width="80px"/></div>
-                <div class="navText font-weight-bold">Bénéficiaire</div>
+                <div class="navText font-weight-bold">{{ 'Bnéficiaires'|trans }}</div>
             </li>
             <img src="{{ asset('img/arrow.svg') }}" alt="" width="30px" class="arrow"/>
             <li class="liBreadcrumb">
                 <div class="svgDiv"><img src="{{ asset('img/handout.svg') }}" alt="" width="80px"/></div>
-                <div class="navText font-weight-bold">Paiement</div>
+                <div class="navText font-weight-bold">{{ 'Paiement'|trans }}</div>
             </li>
             <img src="{{ asset('img/arrow.svg') }}" alt="" width="30px" class="arrow"/>
             <li class="liBreadcrumb">
                 <div class="svgDiv"><img src="{{ asset('img/like-2.svg') }}" alt="" width="80px"/></div>
-                <div class="navText font-weight-bold">Confirmation</div>
+                <div class="navText font-weight-bold">{{ 'Confirmation'|trans }}</div>
             </li>
         </ul>
     </nav>
 
     <p class="text-center mb-5">
-        Nous vous remerçions pour votre commande. Vous allez recevoir maintenant un mail contenant vos billets sous la forme d'une attestation à imprimer et à présenter lors de votre visite du musée ainsi q'un mail confirmant votre paiement.
+        {{ 'Nous vous remerçions pour votre commande. Vous allez recevoir dans quelques instants un mail contenant vos billets à imprimer et à présenter lors de votre visite du musée.'|trans }}
     </p>
 
     <div>
-        <p>Code de réservation : <span class="font-weight-bold">{{ order.bookingRef }}</span></p>
-        <p>Nombre de billet : <span class="font-weight-bold">{{ order.ticketsQuantity }}</span></p>
-        <p>Type de billet : <span class="font-weight-bold">{% if order.ticketType == 1 %}Full day
-            {% elseif order.ticketType == 2 %}Half-day</span>
+        <p>{{ 'Code de réservation : '|trans }}<span class="font-weight-bold">{{ order.bookingRef }}</span></p>
+        <p>{{ 'Nombre de billet : '|trans }}<span class="font-weight-bold">{{ order.ticketsQuantity }}</span></p>
+        <p>{{ 'Type de billet : '|trans }}<span class="font-weight-bold">{% if order.ticketType == 1 %}{{ 'Full day'|trans }}
+            {% elseif order.ticketType == 2 %}{{ 'Half-day' }}</span>
             {% endif %}
         </p>
-        <p>Date de visite : <span class="font-weight-bold">{{ order.bookingDate|date('Y/m/d') }}</span></p>
-        <p>Moyen de paiement : <span class="font-weight-bold">Carte bancaire</span></p>
-        <p>Total de la commande : <span class="font-weight-bold">{{ order.totalPrice|number_format(2, ',') }} €</span></p>
+        <p>{{ 'Date de visite : '|trans }}<span class="font-weight-bold">{{ order.bookingDate|date('Y/m/d') }}</span></p>
+        <p>{{ 'Moyen de paiement : '|trans }}<span class="font-weight-bold">{{ 'Carte bancaire'|trans }}</span></p>
+        <p>{{ 'Total de la commande : '|trans }}<span class="font-weight-bold">{{ order.totalPrice|number_format(2, ',') }} €</span></p>
     </div>
 
-    <p class="mb-5">Vos billets ont été envoyé à l'adresse mail suivante : <span class="font-weight-bold">{{ order.emailCustomer }}</span></p>
-
-    <p>
-        En cas de non-réception des mails de confirmation de paiement et/ou d'attestation, nous vous invitons à prendre note du code de réservation indiqué ci-dessus et à prendre contact avec nous via la rubrique "Contact" du site.
-    </p>
+    <p class="mb-5">{{ 'Vos billets ont été envoyé à l\'adresse mail suivante : '|trans }}<span class="font-weight-bold">{{ order.emailCustomer }}</span></p>
 
     <div class="text-center mt-5">
         <a href="{{ path('index') }}">
-            <button type="button" class="btn btn-outline-dark  mb-2 btn-louvre">Retour à l'accueil</button>
+            <button type="button" class="btn btn-outline-dark  mb-2 btn-louvre">{{ 'Retour à l\'accueil'|trans }}</button>
         </a>
     </div>
 </section>
