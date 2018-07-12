@@ -33,7 +33,3 @@ class BeneficiariesListType extends AbstractType
         ));
     }
 }
-
-
-
-

@@ -25,7 +25,6 @@ class BeneficiariesListCreator
                 $order->removeTicketsList($lastTicket);
             }
         }
-
         return $order;
     }
 }

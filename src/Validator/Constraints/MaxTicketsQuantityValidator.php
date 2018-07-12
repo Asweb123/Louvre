@@ -29,6 +29,5 @@ class MaxTicketsQuantityValidator extends ConstraintValidator
                 ->atPath('ticketsQuantity')
                 ->addViolation();
         }
-
     }
 }

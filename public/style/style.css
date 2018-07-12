@@ -1,3 +1,5 @@
+/*****************GLOBAL*****************/
+
 body {
     background-color: #fffbf0;
 }
@@ -10,6 +12,7 @@ body {
     margin-bottom: 5rem;
 }
 
+/*****************NAV*****************/
 
 .navbar-toggler {
     border: none;
@@ -34,6 +37,8 @@ body {
     margin-left: auto;
 }
 
+/*****************INFOS*****************/
+
 .font400 {
     font-weight: 400;
 }
@@ -57,19 +62,7 @@ body {
     position:absolute;
 }
 
-
-
-
-
-
-
-
-.box-shadow {
-    box-shadow: 0px 5px 10px 1px rgba(112,112,112,0.20);
-}
-
-
-
+/*****************FOOTER*****************/
 
 .footer {
     margin-top: 3rem;
@@ -89,63 +82,7 @@ body {
     color: white;
 }
 
-
-.pricing-switcher .fieldset-s {
-    display: inline-block;
-    position: relative;
-    padding: 2px;
-    border-radius: 50em;
-    border: 1px solid #343a40;
-    background-color: #343a40;
-
-}
-
-.pricing-switcher input[type="radio"] {
-    position: absolute;
-    opacity: 0;
-}
-
-.pricing-switcher label {
-    position: relative;
-    z-index: 1;
-    display: inline-block;
-    float: left;
-    width: 130px;
-    height: 35px;
-    line-height: 40px;
-    cursor: pointer;
-    font-size: 1rem;
-    color: #FFFFFF;
-
-}
-
-.pricing-switcher .switch {
-    /* floating background */
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    height: 43px;
-    width: 130px;
-    background-color: #7cbeb7;
-    border-radius: 50em;
-    -webkit-transition: -webkit-transform 0.5s;
-    -moz-transition: -moz-transform 0.5s;
-    transition: transform 0.5s;
-}
-
-.pricing-switcher input[type="radio"]:checked + label + .switch,
-.pricing-switcher input[type="radio"]:checked + label:nth-of-type(n) + .switch {
-    /* use label:nth-of-type(n) to fix a bug on safari with multiple adjacent-sibling selectors*/
-    -webkit-transform: translateX(130px);
-    -moz-transform: translateX(130px);
-    -ms-transform: translateX(130px);
-    -o-transform: translateX(130px);
-    transform: translateX(130px);
-}
-
-
-
-
+/*****************INDEX PRICING CARDS*****************/
 
 .subTitle {
     font-size: 2.7rem;
@@ -198,10 +135,62 @@ body {
     font-size: 3rem;
 }
 
+.box-shadow {
+    box-shadow: 0px 5px 10px 1px rgba(112,112,112,0.20);
+}
 
 
 
+.pricing-switcher .fieldset-s {
+    display: inline-block;
+    position: relative;
+    padding: 2px;
+    border-radius: 50em;
+    border: 1px solid #343a40;
+    background-color: #343a40;
 
+}
+
+.pricing-switcher input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.pricing-switcher label {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    float: left;
+    width: 130px;
+    height: 35px;
+    line-height: 40px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #FFFFFF;
+
+}
+
+.pricing-switcher .switch {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 43px;
+    width: 130px;
+    background-color: #7cbeb7;
+    border-radius: 50em;
+    -webkit-transition: -webkit-transform 0.5s;
+    -moz-transition: -moz-transform 0.5s;
+    transition: transform 0.5s;
+}
+
+.pricing-switcher input[type="radio"]:checked + label + .switch,
+.pricing-switcher input[type="radio"]:checked + label:nth-of-type(n) + .switch {
+    -webkit-transform: translateX(130px);
+    -moz-transform: translateX(130px);
+    -ms-transform: translateX(130px);
+    -o-transform: translateX(130px);
+    transform: translateX(130px);
+}
 
 
 .scene {
@@ -231,7 +220,7 @@ body {
 }
 
 
-
+/*****************TICKETING*****************/
 
 
 
@@ -320,17 +309,3 @@ body {
 .stripe-button-el > span:hover {
     color: white !important;
 }
-/*
-.closed {
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    border-radius: 150px;
-    bottom: 3px;
-    left: calc(50% - 1.5px);
-    content: " ";
-    display: block;
-    background: #3d8eb9;
-}
-*/
-

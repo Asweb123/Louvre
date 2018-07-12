@@ -17,5 +17,4 @@ class PmTodayTicket extends Constraint
     }
 }
 
-
 // 'After 2 pm, it\'s not possible to choose a day ticket. Please select a half day ticket.'

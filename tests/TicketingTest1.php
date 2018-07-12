@@ -30,7 +30,6 @@ class TicketingTest1 extends WebTestCase
             'order[emailCustomer][second]' => 'test@live.fr'
         ));
 
-
         $client->submit($formBooking);
 
         $crawler = $client->followRedirect();

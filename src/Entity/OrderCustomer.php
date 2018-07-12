@@ -214,7 +214,6 @@ class OrderCustomer
 
 }
 
-
 // This value should be greater than or equal to today's date.
 // The value is not a valid number.
 // Please choose at least 1 ticket.

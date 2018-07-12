@@ -99,8 +99,5 @@ class TicketingTest4 extends WebTestCase
         $crawler = $client->click($link);
         //Control Cancel Order link button to Index page
         $this->assertCount(1, $crawler->filter('html:contains("Les tarifs")'));
-
-
-
     }
 }

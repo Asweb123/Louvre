@@ -78,11 +78,10 @@ class TicketingConfirmationController extends Controller
 
             } else {
 
-                //Flash message to do
+
                 return $this->redirectToRoute('ticketing_payment');
             }
         }
-
 
         $session->set('order', $order);
 

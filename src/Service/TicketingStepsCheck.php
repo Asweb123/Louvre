@@ -42,12 +42,4 @@ class TicketingStepsCheck
 
         return $ticketsCheck;
     }
-
-
-    public function bookingStepsCheck($order)
-    {
-
-    }
-
-
 }

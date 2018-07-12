@@ -75,12 +75,9 @@ class PricingCalculator
 
                 $totalPrice += $ticket->getPrice();
             }
-
         }
-
         $order->setTotalPrice($totalPrice);
 
         return $order;
     }
-
 }
