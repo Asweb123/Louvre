@@ -34,9 +34,28 @@ body {
     margin-left: auto;
 }
 
+.font400 {
+    font-weight: 400;
+}
 
+.mb-6 {
+    margin-bottom: 4.5rem;
+}
 
+.map-responsive {
+    overflow:hidden;
+    padding-bottom:40%;
+    position:relative;>
+    height:0;
+}
 
+.map-responsive iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
 
 
 
@@ -188,7 +207,7 @@ body {
 
 .subTicketing {
     font-size: 1.7rem;
-    line-height: 50% !important;
+
 }
 
 .my-breadcrumb {

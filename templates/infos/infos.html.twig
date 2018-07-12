@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Infos pratiques{% endblock %}
+
+{% block content %}
+
+    <section class="container mb-6">
+
+        <h1 class="h2 display-4 text-center mt-5 mb-6 ">{{ 'Infos Pratiques'|trans }}</h1>
+
+        <h2 class="text-muted text-center subTicketing font400 mb-5">{{ 'Horaires'|trans }}</h2>
+
+        <p>
+            <span class="font-weight-bold">Lundi : </span>9h - 18h<br/>
+            <span class="font-weight-bold">Mardi : </span>Fermé<br/>
+            <span class="font-weight-bold">Mercredi : </span>9h - 18h<br/>
+            <span class="font-weight-bold">Jeudi : </span>9h - 18h<br/>
+            <span class="font-weight-bold">Vendredi : </span>9h -18h<br/>
+            <span class="font-weight-bold">Samedi : </span>9h - 18h<br/>
+            <span class="font-weight-bold">Dimanche : </span>9h - 18h<br/>
+        </p>
+        <p class="mb-6">
+            L'évacuation des salles débute à 17h30 ou à 21h15 les jours de nocturne.
+        </p>
+
+
+        <h2 class="text-muted text-center subTicketing font400 mb-5">{{ 'Accéder au Musée du Louvre'|trans }}</h2>
+
+        <div class="map-responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.7954927493324!2d2.3327862514530624!3d48.86211000829687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb975fcfa192f84d4!2sMus%C3%A9e+du+Louvre!5e0!3m2!1sfr!2sat!4v1531364169680" width="1110" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+
+        <p class="mt-4"><span class="font-weight-bold">En métro : </span>lignes 1 et 7, station "Palais-Royal / Musée du Louvre"</p>
+
+        <p><span class="font-weight-bold">En bus : </span>bus n° 21, 24, 27, 39, 48, 68, 69, 72, 81, 95</p>
+
+        <p><span class="font-weight-bold">Stations Velib à proximité du musée :</span><br/>
+            n°1015 : 2 place A. Malraux<br/>
+            n°1023 : 165 rue Saint-Honoré<br/>
+            n°1014 : 5 rue de l’Echelle<br/>
+            n°1013 : 186 rue Saint-Honoré
+        </p>
+        <p><span class="font-weight-bold">En voiture : </span>un parc de stationnement souterrain est accessible par l'avenue du général Lemonier, tous les jours de 7 h 00 à 23 h 00.</p>
+
+        <p class="mb-6"><span class="font-weight-bold">En Batobus : </span>Escale Louvre, quai François Mitterrand</p>
+
+
+        <h2 class="text-muted text-center subTicketing font400 mb-5">{{ 'Nous contacter'|trans }}</h2>
+
+        <p><span class="font-weight-bold">Hotline : </span>+33 (0)1 40 20 50 50</p>
+
+        <p><span class="font-weight-bold">Adresse mail : </span>contact@louvre.com</p>
+
+    </section>
+
+{% endblock %}

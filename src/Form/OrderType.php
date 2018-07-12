@@ -32,10 +32,11 @@ class OrderType extends AbstractType
             ))
             ->add('ticketsQuantity', IntegerType::class, array(
                 'label' => 'Nombre de visiteurs',
-                'attr' => ['min' => '1']
+                'attr' => ['min' => '1', 'max' => '15']
             ))
             ->add('ticketType', ChoiceType::class, array(
                 'label' => 'Type de billet',
+                'help' => 'Le billet "Demi-Journée" n\'est valable qu\'à partir de 14h.',
                 'choices' => array(
                     'Journée' => '1',
                     'Demi-Journée' => '2'
