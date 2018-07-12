@@ -7,88 +7,186 @@
         <h1 class="text-center display-4 mb-3">{{ 'Musée du Louvre'|trans }}</h1>
         <h2 class="text-center display-4 mb-5 subTitle">{{ '- Billetterie -'|trans }}</h2>
         <p class="text-center priceTitle">{{ 'Les tarifs'|trans }}</p>
-        <div class="text-center mb-5">Switcher</div>
+
+
+
+        <div class="pricing-switcher text-center">
+            <p class="fieldset-s">
+                <input type="radio" name="duration" value="full-day" id="full-day" checked>
+                <label for="full-day">Journée</label>
+                <input type="radio" name="duration" value="half-day" id="half-day">
+                <label for="half-day">Demi-Journée</label>
+                <span class="switch"></span>
+            </p>
+        </div>
 
 
         <div class="tickets-list mb-5">
-
-
-                <div class="card text-center box-shadow is-visible">
-                    <div class="card-header card-normal">
-                        {{ 'Billet Journée'|trans }}
+            <div class="scene">
+                <div class="scene-card">
+                    <div class="card text-center box-shadow card-face card-front">
+                        <div class="card-header card-normal">
+                            {{ 'Billet Journée'|trans }}
+                        </div>
+                        <img src="{{ asset('img/img2.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
+                        <div class="card-body">
+                            <h5 class="card-title mb-0">{{ 'Tarif Normal'|trans }}</h5>
+                            <p class="card-text card-price">{{ basePrice }} €</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{ 'A partir de 12 ans'|trans }}</li>
+                            <li class="list-group-item">{{ 'A partir de 9h'|trans }}</li>
+                        </ul>
                     </div>
-                    <img src="{{ asset('img/img2.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
-                    <div class="card-body">
-                        <h5 class="card-title mb-0">{{ 'Tarif Normal'|trans }}</h5>
-                        <p class="card-text card-price">{{ basePrice }} €</p>
+
+                    <div class="card text-center box-shadow card-face card-back">
+                        <div class="card-header card-normal">
+                            {{ 'Billet Demi-Journée'|trans }}
+                        </div>
+                        <img src="{{ asset('img/img10.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
+                        <div class="card-body">
+                            <h5 class="card-title mb-0">{{ 'Tarif Normal'|trans }}</h5>
+                            <p class="card-text card-price">{{ basePrice/2 }} €</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{ 'A partir de 12 ans'|trans }}</li>
+                            <li class="list-group-item">{{ 'A partir de 14h'|trans }}</li>
+                        </ul>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">{{ 'A partir de 12 ans'|trans }}</li>
-                        <li class="list-group-item">{{ 'Valable de 8h à 19h'|trans }}</li>
-                    </ul>
                 </div>
+            </div>
+            <div class="scene">
+                <div class="scene-card">
+                    <div class="card text-center box-shadow card-face card-front">
+                        <div class="card-header card-child">
+                            {{ 'Billet Journée'|trans }}
+                        </div>
+                        <img src="{{ asset('img/img1.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
+                        <div class="card-body">
+                            <h5 class="card-title mb-0">{{ 'Tarif Enfant'|trans }}</h5>
+                            <p class="card-text card-price">{{ childrenPrice }} €</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{ 'A partir de 4 ans'|trans }}</li>
+                            <li class="list-group-item">{{ 'A partir de 9h'|trans }}</li>
+                        </ul>
+                    </div>
 
-                <div class="card text-center box-shadow is-visible">
-                    <div class="card-header card-child">
-                        {{ 'Billet Journée'|trans }}
+                    <div class="card text-center box-shadow card-face card-back">
+                        <div class="card-header card-child">
+                            {{ 'Billet Demi-Journée'|trans }}
+                        </div>
+                        <img src="{{ asset('img/img13.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
+                        <div class="card-body">
+                            <h5 class="card-title mb-0">{{ 'Tarif Enfant'|trans }}</h5>
+                            <p class="card-text card-price">{{ childrenPrice/2 }} €</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{ 'A partir de 4 ans'|trans }}</li>
+                            <li class="list-group-item">{{ 'A partir de 14h'|trans }}</li>
+                        </ul>
                     </div>
-                    <img src="{{ asset('img/img1.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
-                    <div class="card-body">
-                        <h5 class="card-title mb-0">{{ 'Tarif Enfant'|trans }}</h5>
-                        <p class="card-text card-price">{{ childrenPrice }} €</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">{{ 'A partir de 4 ans'|trans }}</li>
-                        <li class="list-group-item">{{ 'Valable de 8h à 19h'|trans }}</li>
-                    </ul>
                 </div>
+            </div>
+            <div class="scene">
+                <div class="scene-card">
+                    <div class="card text-center box-shadow card-face card-front" style="height: 487.734px">
+                        <div class="card-header card-baby">
+                            {{ 'Billet Journée'|trans }}
+                        </div>
+                        <img src="{{ asset('img/img7.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
+                        <div class="card-body">
+                            <h5 class="card-title mb-0">{{ 'Tarif Tout-Petit'|trans }}</h5>
+                            <p class="card-text card-price-text pt-3">{{ 'Gratuit'|trans }}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{ 'Moins de 4 ans'|trans }}</li>
+                            <li class="list-group-item">{{ 'A partir de 9h'|trans }}</li>
+                        </ul>
+                    </div>
 
-                <div class="card text-center box-shadow is-visible">
-                    <div class="card-header card-baby">
-                        {{ 'Billet Journée'|trans }}
+                    <div class="card text-center box-shadow card-face card-back" style="height: 487.734px">
+                        <div class="card-header card-baby">
+                            {{ 'Billet Demi-Journée'|trans }}
+                        </div>
+                        <img src="{{ asset('img/img8.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
+                        <div class="card-body">
+                            <h5 class="card-title mb-0">{{ 'Tarif Tout-Petit'|trans }}</h5>
+                            <p class="card-text card-price-text pt-3">{{ 'Gratuit'|trans }}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{ 'Moins de 4 ans'|trans }}</li>
+                            <li class="list-group-item">{{ 'A partir de 14h'|trans }}</li>
+                        </ul>
                     </div>
-                    <img src="{{ asset('img/img7.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
-                    <div class="card-body">
-                        <h5 class="card-title mb-0">{{ 'Tarif Tout-Petit'|trans }}</h5>
-                        <p class="card-text card-price-text pt-3">{{ 'Gratuit'|trans }}</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">{{ 'Moins de 4 ans'|trans }}</li>
-                        <li class="list-group-item">{{ 'Valable de 8h à 19h'|trans }}</li>
-                    </ul>
                 </div>
+            </div>
+            <div class="scene">
+                <div class="scene-card">
+                    <div class="card text-center box-shadow card-face card-front">
+                        <div class="card-header card-senior">
+                            {{ 'Billet Journée'|trans }}
+                        </div>
+                        <img src="{{ asset('img/img6.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
+                        <div class="card-body">
+                            <h5 class="card-title mb-0">{{ 'Tarif Senior'|trans }}</h5>
+                            <p class="card-text card-price">{{ seniorPrice }} €</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{ 'A partir de 60 ans'|trans }}</li>
+                            <li class="list-group-item">{{ 'A partir de 9h'|trans }}</li>
+                        </ul>
+                    </div>
 
-                <div class="card text-center box-shadow is-visible">
-                    <div class="card-header card-senior">
-                        {{ 'Billet Journée'|trans }}
+                    <div class="card text-center box-shadow card-face card-back">
+                        <div class="card-header card-senior">
+                            {{ 'Billet Demi-Journée'|trans }}
+                        </div>
+                        <img src="{{ asset('img/img11.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
+                        <div class="card-body">
+                            <h5 class="card-title mb-0">{{ 'Tarif Senior'|trans }}</h5>
+                            <p class="card-text card-price">{{ seniorPrice/2 }} €</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{ 'A partir de 60 ans'|trans }}</li>
+                            <li class="list-group-item">{{ 'A partir de 14h'|trans }}</li>
+                        </ul>
                     </div>
-                    <img src="{{ asset('img/img6.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
-                    <div class="card-body">
-                        <h5 class="card-title mb-0">{{ 'Tarif Senior'|trans }}</h5>
-                        <p class="card-text card-price">{{ seniorPrice }} €</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">{{ 'A partir de 60 ans'|trans }}</li>
-                        <li class="list-group-item">{{ 'Valable de 8h à 19h'|trans }}</li>
-                    </ul>
                 </div>
+            </div>
+            <div class="scene">
+                <div class="scene-card">
+                    <div class="card text-center box-shadow card-face card-front">
+                        <div class="card-header card-reduc">
+                            {{ 'Billet Journée'|trans }}
+                        </div>
+                        <img src="{{ asset('img/img3.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
+                        <div class="card-body">
+                            <h5 class="card-title mb-0">{{ 'Tarif Réduit'|trans }}</h5>
+                            <p class="card-text card-price">{{ reducedPrice }} €</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{ 'Etudiant, militaire... *'|trans }}</li>
+                            <li class="list-group-item">{{ 'A partir de 9h'|trans }}</li>
+                        </ul>
+                    </div>
 
-                <div class="card text-center box-shadow is-visible">
-                    <div class="card-header card-reduc">
-                        {{ 'Billet Journée'|trans }}
+                    <div class="card text-center box-shadow card-face card-back">
+                        <div class="card-header card-reduc">
+                            {{ 'Billet Demi-Journée'|trans }}
+                        </div>
+                        <img src="{{ asset('img/img14.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
+                        <div class="card-body">
+                            <h5 class="card-title mb-0">{{ 'Tarif Réduit'|trans }}</h5>
+                            <p class="card-text card-price">{{ reducedPrice/2 }} €</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{ 'Etudiant, militaire... *'|trans }}</li>
+                            <li class="list-group-item">{{ 'A partir de 14h'|trans }}</li>
+                        </ul>
                     </div>
-                    <img src="{{ asset('img/img3.jpg') }}" alt="Bronze" style="width: 100%; height: auto;">
-                    <div class="card-body">
-                        <h5 class="card-title mb-0">{{ 'Tarif Réduit'|trans }}</h5>
-                        <p class="card-text card-price">{{ reducedPrice }} €</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">{{ 'Etudiant, militaire... *'|trans }}</li>
-                        <li class="list-group-item">{{ 'Valable de 8h à 19h'|trans }}</li>
-                    </ul>
                 </div>
-
-
+            </div>
         </div>
 
         <div class="text-center mb-5">
