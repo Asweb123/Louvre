@@ -309,3 +309,15 @@ body {
 .stripe-button-el > span:hover {
     color: white !important;
 }
+
+/*********404********/
+
+.flexy {
+    display: flex;
+    justify-content: center;
+    margin-top: -6rem;
+}
+
+.text404 {
+    margin: auto;
+}

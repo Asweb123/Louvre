@@ -28,7 +28,6 @@ class IndexController extends AbstractController
             $session->remove('order');
         }
 
-
         return $this->render('index/index.html.twig', array(
             'babyPrice' => $this->params->get('baby_price'),
             'childrenPrice' => $this->params->get('children_price'),

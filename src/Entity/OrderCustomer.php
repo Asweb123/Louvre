@@ -26,6 +26,7 @@ class OrderCustomer
     /**
      * @ORM\Column(type="date")
      *
+     * @OrderAssert\MaxDateAvailable(groups={"booking"})
      * @OrderAssert\TodayClosing(groups={"booking"})
      * @OrderAssert\SundayBookingDisabled(groups={"booking"})
      * @OrderAssert\TuesdayBookingDisabled(groups={"booking"})
