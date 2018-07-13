@@ -78,40 +78,40 @@
     <body>
 
     <header>
-        <h1>Musée du Louvre</h1>
+        <h1>{{ 'Musée du Louvre'|trans }}</h1>
         <div class="round">
             <img class="logo" src="{{ app.request.getSchemeAndHttpHost() ~ asset('img/louvre-mail.png') }}" alt="Logo du Musée du Louvre">
         </div>
-        <h2>Billetterie</h2>
+        <h2>{{ 'Billetterie'|trans }}</h2>
     </header>
 
 
     <section>
-        <p>Date de commande : {{ "now"|date("m/d/Y H:i") }}</p>
+        <p>{{ 'Date de commande : '|trans }}{{ "now"|date("m/d/Y H:i") }}</p>
 
-        <p>Madame, Monsieur,</p>
+        <p>{{ 'Madame, Monsieur,'|trans }}</p>
 
-        <p>Veuillez trouver en pièce jointe une attestation de réservation au format PDF consernant la commande suivante :</p>
+        <p>{{ 'Veuillez trouver en pièce jointe une attestation de réservation au format PDF consernant la commande suivante :'|trans }}</p>
 
-        <p>Code de réservation : <span class="bold">{{ order.bookingRef }}</span><br/>
+        <p>{{ 'Code de réservation : '|trans }}<span class="bold">{{ order.bookingRef }}</span><br/>
 
-            Date de visite: <span class="bold">{{ order.bookingDate|date("m/d/Y") }}</span><br/>
+            {{ 'Date de visite: '|trans }}<span class="bold">{{ order.bookingDate|date("m/d/Y") }}</span><br/>
 
-            Type de billet : {% if order.ticketType == 1 %}<span class="bold">Journée</span>
-            {% elseif order.ticketType == 2 %}<span class="bold">Demi-journée</span>
+            {{ 'Type de billet : '|trans }}{% if order.ticketType == 1 %}<span class="bold">{{ 'Journée'|trans }}</span>
+            {% elseif order.ticketType == 2 %}<span class="bold">{{ 'Demi-journée'|trans }}</span>
             {% endif %}<br/>
 
-            Nombre de billets : <span class="bold">{{ order.ticketsQuantity }}</span><br/>
+            {{ 'Nombre de billets : '|trans }}<span class="bold">{{ order.ticketsQuantity }}</span><br/>
 
-            Prix total de la commande: <span class="bold">{{ order.totalPrice|number_format(2, ',') }} €</span>
+            {{ 'Prix total de la commande: '|trans }}<span class="bold">{{ order.totalPrice|number_format(2, ',') }} €</span>
         </p>
 
         <table>
             <thead>
                 <tr>
-                    <th class="left">Bénéficiaire</th>
-                    <th class="quart center">Tarif</th>
-                    <th class="quart right">Prix</th>
+                    <th class="left">{{ 'Bénéficiaire'|trans }}</th>
+                    <th class="quart center">{{ 'Tarif'|trans }}</th>
+                    <th class="quart right">{{ 'Prix'|trans }}</th>
                 </tr>
             </thead>
 
@@ -124,11 +124,11 @@
                     </td>
 
                     <td class="center">
-                        {% if ticket.pricing == 1 %}Tout-petit
-                        {% elseif ticket.pricing == 2 %}Enfant
-                        {% elseif ticket.pricing == 3 %}Normal
-                        {% elseif ticket.pricing == 4 %}Senior
-                        {% elseif ticket.pricing == 5 %}Réduit
+                        {% if ticket.pricing == 1 %}{{ 'Tout-petit'|trans }}
+                        {% elseif ticket.pricing == 2 %}{{ 'Enfant'|trans }}
+                        {% elseif ticket.pricing == 3 %}{{ 'Normal'|trans }}
+                        {% elseif ticket.pricing == 4 %}{{ 'Senior'|trans }}
+                        {% elseif ticket.pricing == 5 %}{{ 'Réduit'|trans }}
                         {% endif %}
                     </td>
 
@@ -144,7 +144,7 @@
 
 
         <p>
-            N'oubliez pas de vous munir d'une version imprimée du document reçu en pièce jointe le jour de votre visite ainsi que de toute pièce justificative éventuelle.
+            {{ 'N\'oubliez pas de vous munir d\'une version imprimée du document reçu en pièce jointe le jour de votre visite ainsi que de toute pièce justificative éventuelle.'|trans }}
         </p>
 
     </section>

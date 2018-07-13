@@ -29,10 +29,10 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link text-center" href="{{  path('ticketing_booking') }}">{{ 'Commander'|trans }}</a>
+                    <a class="nav-link text-center {% block orderActive %}{% endblock %}" href="{{  path('ticketing_booking') }}">{{ 'Commander'|trans }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-center" href="{{ path('infos') }}">{{ 'Infos pratiques'|trans }}</a>
+                    <a class="nav-link text-center {% block infosActive %}{% endblock %}" href="{{ path('infos') }}">{{ 'Infos pratiques'|trans }}</a>
                 </li>
             </ul>
         </div>
@@ -46,11 +46,9 @@
 
     <footer class="footer">
         <div class="">
+            <span>Musée du Louvre</span>
+            <span> - </span>
             <span>© 2018</span>
-            <span> - </span>
-            <span>{{ 'Crédits'|trans }}</span>
-            <span> - </span>
-            <span>{{ 'Mentions légales'|trans }}</span>
         </div>
     </footer>
 

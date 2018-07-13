@@ -1,12 +1,14 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}{{ 'Erreur 404'|trans }}{% endblock %}
+
 {% block content %}
     <div class="container-fluid fullPage flexy">
         <div class="m-auto">
-            <h1 class=" text-center display-4 mb-5">Page non trouvée..</h1>
+            <h1 class=" text-center display-4 mb-5">{{ 'Page non trouvée'|trans }}</h1>
 
             <p class="text-center">
-                La page demandé n'existe pas ou est actuellement indisponible. Vérifiez l'URL renseignée ou retournez à <a href="{{ path('index') }}">l'accueil du site</a>.
+                {{ 'La page demandé n\'existe pas ou est actuellement indisponible. Vérifiez l\'URL renseignée ou retournez à '|trans}}<a href="{{ path('index') }}">{{ 'l\'accueil du site'|trans }}</a>.
             </p>
         </div>
     </div>
