@@ -7,4 +7,4 @@ controllers:
     type: annotation
     prefix:
         fr: ''
-        en: '/en'
+        en: 'en'

@@ -21,7 +21,10 @@ class TicketingConfirmationController extends Controller
 
 
     /**
-     * @Route("/billetterie/confirmation", name="ticketing_confirmation")
+     * @Route({
+     *     "fr": "/billetterie/confirmation",
+     *     "en": "/ticketing/confirmation"
+     * }, name="ticketing_confirmation")
      */
     public function confirmation(SessionInterface $session, CodeGenerator $codeGenerator,
                                  EntityManagerInterface $entityManager, \Swift_Mailer $mailer,
@@ -77,8 +80,6 @@ class TicketingConfirmationController extends Controller
                 $mailer->send($message);
 
             } else {
-
-
                 return $this->redirectToRoute('ticketing_payment');
             }
         }

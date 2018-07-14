@@ -11,7 +11,10 @@ use App\Service\PricingCalculator;
 class TicketingPaymentController extends AbstractController
 {
     /**
-     * @Route("/billetterie/paiement", name="ticketing_payment")
+     * @Route({
+     *     "fr": "/billetterie/paiement",
+     *     "en": "/ticketing/payment"
+     * }, name="ticketing_payment")
      */
     public function payment(SessionInterface $session, PricingCalculator $pricingCalculator, TicketingStepsCheck $ticketingStepsCheck)
     {

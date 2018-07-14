@@ -35,6 +35,14 @@
                     <a class="nav-link text-center {% block infosActive %}{% endblock %}" href="{{ path('infos') }}">{{ 'Infos pratiques'|trans }}</a>
                 </li>
             </ul>
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0 navSeparator">
+                <li class="nav-item">
+                    <a class="nav-link text-center {% if app.request.locale != 'fr' %}activeLocale{% endif %}" href="{{  path('index.en') }}">English</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center {% if app.request.locale == 'fr' %}activeLocale{% endif %}" href="{{ path('index.fr') }}">Français</a>
+                </li>
+            </ul>
         </div>
     </nav>
 

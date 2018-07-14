@@ -8,7 +8,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class InfosController extends Controller
 {
     /**
-     * @Route("/infos", name="infos")
+     * @Route({
+     *     "fr": "/infos-pratiques",
+     *     "en": "/practical-information"
+     * }, name="infos")
      */
     public function infos()
     {

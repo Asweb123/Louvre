@@ -95,7 +95,7 @@
 
         <p>{{ 'Code de réservation : '|trans }}<span class="bold">{{ order.bookingRef }}</span><br/>
 
-            {{ 'Date de visite: '|trans }}<span class="bold">{{ order.bookingDate|date("m/d/Y") }}</span><br/>
+            {{ 'Date de visite : '|trans }}<span class="bold">{{ order.bookingDate|date("m/d/Y") }}</span><br/>
 
             {{ 'Type de billet : '|trans }}{% if order.ticketType == 1 %}<span class="bold">{{ 'Journée'|trans }}</span>
             {% elseif order.ticketType == 2 %}<span class="bold">{{ 'Demi-journée'|trans }}</span>
@@ -103,7 +103,7 @@
 
             {{ 'Nombre de billets : '|trans }}<span class="bold">{{ order.ticketsQuantity }}</span><br/>
 
-            {{ 'Prix total de la commande: '|trans }}<span class="bold">{{ order.totalPrice|number_format(2, ',') }} €</span>
+            {{ 'Prix total de la commande : '|trans }}<span class="bold">{{ order.totalPrice|number_format(2, ',') }} €</span>
         </p>
 
         <table>

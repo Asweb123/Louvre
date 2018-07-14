@@ -7,8 +7,18 @@ $(document).ready(function() {
     $('form > fieldset > div').addClass('mb-5');
 
     //Flip cards price on Index
-    $('.fieldset-s > label').click(function() {
-        $('.scene-card').toggleClass('is-flipped');
+    var card = $('.scene-card');
+
+     $('.fieldset-s > label[for="full-day"]').click(function()  {
+         if (card.hasClass('is-flipped-h')){
+             card.removeClass('is-flipped-h').addClass('is-flipped-f');
+         }
+    });
+
+    $('.fieldset-s > label[for="half-day"]').click(function() {
+        if (!(card.hasClass('is-flipped-h'))){
+            card.removeClass('is-flipped-f').addClass('is-flipped-h');
+        }
     });
 
 });

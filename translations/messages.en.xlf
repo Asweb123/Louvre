@@ -193,9 +193,9 @@
         <source>Billetterie</source>
         <target>Ticketing</target>
       </trans-unit>
-      <trans-unit id="Ogfi8uJ" resname="Date de commande :">
-        <source>Date de commande :</source>
-        <target>Order date :</target>
+      <trans-unit id="Ogfi8uJ" resname="Date de commande : ">
+        <source>Date de commande : </source>
+        <target>Order date : </target>
       </trans-unit>
       <trans-unit id="Xi.uCrd" resname="Madame, Monsieur,">
         <source>Madame, Monsieur,</source>
@@ -205,29 +205,29 @@
         <source>Veuillez trouver en pièce jointe une attestation de réservation au format PDF consernant la commande suivante :</source>
         <target>Please find attached a PDF reservation certificate for the following order :</target>
       </trans-unit>
-      <trans-unit id="uDKi1jR" resname="Code de réservation :">
-        <source>Code de réservation :</source>
-        <target>Booking code :</target>
+      <trans-unit id="uDKi1jR" resname="Code de réservation : ">
+        <source>Code de réservation : </source>
+        <target>Booking code : </target>
       </trans-unit>
-      <trans-unit id="s.Qiyny" resname="Date de visite :">
-        <source>Date de visite :</source>
-        <target>Visite date:</target>
+      <trans-unit id="s.Qiyne" resname="Date de visite : ">
+        <source>Date de visite : </source>
+        <target>Visite date : </target>
       </trans-unit>
-      <trans-unit id="BjKVIW_" resname="Type de billet :">
-        <source>Type de billet :</source>
-        <target>Ticket type :</target>
+      <trans-unit id="BjKVIW_" resname="Type de billet : ">
+        <source>Type de billet : </source>
+        <target>Ticket type : </target>
       </trans-unit>
       <trans-unit id="oSzjLTU" resname="Demi-journée">
         <source>Demi-journée</source>
         <target>Half-Day</target>
       </trans-unit>
-      <trans-unit id="rdcpC9p" resname="Nombre de billets :">
-        <source>Nombre de billets :</source>
-        <target>Tickets quantity :</target>
+      <trans-unit id="rdcpC9p" resname="Nombre de billets : ">
+        <source>Nombre de billets : </source>
+        <target>Tickets quantity : </target>
       </trans-unit>
-      <trans-unit id="Lg4x5Bt" resname="Prix total de la commande :">
-        <source>Prix total de la commande :</source>
-        <target>Total price of the order :</target>
+      <trans-unit id="Lg4x5Br" resname="Prix total de la commande : ">
+        <source>Prix total de la commande : </source>
+        <target>Total price of the order : </target>
       </trans-unit>
       <trans-unit id="FnmCkQw" resname="beneficiary.number">
         <source>beneficiary.number</source>
@@ -331,7 +331,7 @@
       </trans-unit>
       <trans-unit id="4cBU6p5" resname="Etape 1/4 : Réservation">
         <source>Etape 1/4 : Réservation</source>
-        <target>Step 1/4 : Reservation</target>
+        <target>Step 1/4 : Booking</target>
       </trans-unit>
       <trans-unit id="C4OeDYy" resname="Bénéficiaire">
         <source>Bénéficiaire</source>
@@ -341,34 +341,33 @@
         <source>Etape 4/4 : Confirmation</source>
         <target>Step 4/4 : Confirmation</target>
       </trans-unit>
-      <trans-unit id="SkYvESM" resname="Nous vous remerçions pour votre commande. Vous allez recevoir dans quelques instants un mail contenant">
-        <source>Nous vous remerçions pour votre commande. Vous allez recevoir dans quelques instants un mail contenant</source>
-        <target>
-          We thank you for your order. You will receive in a few moments an email containing</target>
+      <trans-unit id="SkYvESM" resname="Nous vous remerçions pour votre commande. Vous allez recevoir dans quelques instants un mail contenant ">
+        <source>Nous vous remerçions pour votre commande. Vous allez recevoir dans quelques instants un mail contenant </source>
+        <target>We thank you for your order. You will receive in a few moments an email containing </target>
       </trans-unit>
       <trans-unit id="7QukMVA" resname="yourTicket.number">
         <source>yourTicket.number</source>
         <target>{1}your ticket|[2, Inf]your tickets</target>
       </trans-unit>
-      <trans-unit id=".BwmqJJ" resname="à imprimer et à présenter lors de votre visite du musée.">
-        <source>à imprimer et à présenter lors de votre visite du musée.</source>
-        <target>to print and to present during your visit of the museum.</target>
+      <trans-unit id=".BwmqJJ" resname=" à imprimer et à présenter lors de votre visite du musée.">
+        <source> à imprimer et à présenter lors de votre visite du musée.</source>
+        <target> to print and to present during your visit of the museum.</target>
       </trans-unit>
-      <trans-unit id="pJKO.U7" resname="Date de visite :">
-        <source>Date de visite :</source>
-        <target>Visite date :</target>
+      <trans-unit id="pJKO.U7" resname="Date de visite : ">
+        <source>Date de visite : </source>
+        <target>Visite date : </target>
       </trans-unit>
-      <trans-unit id="K4wdpS9" resname="Moyen de paiement :">
-        <source>Moyen de paiement :</source>
-        <target>Method of payment :</target>
+      <trans-unit id="K4wdpS9" resname="Moyen de paiement : ">
+        <source>Moyen de paiement : </source>
+        <target>Method of payment : </target>
       </trans-unit>
       <trans-unit id="ZmZOrf3" resname="Carte bancaire">
         <source>Carte bancaire</source>
         <target>Bank card</target>
       </trans-unit>
-      <trans-unit id="udtplfd" resname="Total de la commande :">
-        <source>Total de la commande :</source>
-        <target>Total order :</target>
+      <trans-unit id="udtplfd" resname="Prix total de la commande : ">
+        <source>Prix total de la commande : </source>
+        <target>Total price of the order : </target>
       </trans-unit>
       <trans-unit id="zVkfop9" resname="yourTicketHasBeenSent.number">
         <source>yourTicketHasBeenSent.number</source>
@@ -390,12 +389,12 @@
         <source>Une fois votre commande finalisée, </source>
         <target>Once your order is finalized,  </target>
       </trans-unit>
-      <trans-unit id="ABlFzb5" resname="yourTicketWillBeSend.number">
+      <trans-unit id="ABlFzb5" resname="yourTicketWillBeSent.number">
         <source>yourTicketWillBeSent.number</source>
         <target>{1}your ticket will be sent|[2, Inf]your tickets will be sent</target>
       </trans-unit>
-      <trans-unit id="DU_X8po" resname="au format PDF à l'adresse mail suivante :">
-        <source>au format PDF à l'adresse mail suivante :</source>
+      <trans-unit id="DU_X8po" resname=" au format PDF à l'adresse mail suivante :">
+        <source> au format PDF à l'adresse mail suivante :</source>
         <target> in PDF format to the following email address :</target>
       </trans-unit>
       <trans-unit id="M7MZtGC" resname="ticket.number">

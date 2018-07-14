@@ -15,7 +15,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class TicketingBeneficiaryController extends AbstractController
 {
     /**
-     * @Route("/billetterie/beneficiaire", name="ticketing_beneficiary")
+     * @Route({
+     *     "fr": "/billetterie/beneficiaire",
+     *     "en": "/ticketing/beneficiary"
+     * }, name="ticketing_beneficiary")
      */
     public function beneficiary(SessionInterface $session, Request $request, TicketingStepsCheck $ticketingStepsCheck)
     {

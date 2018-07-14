@@ -18,7 +18,8 @@ class IndexController extends AbstractController
     }
 
     /**
-     * @Route("/", name="index")
+     * @Route("/")
+     * @Route({"fr": "/accueil", "en": "/home"}, name="index")
      */
     public function index(SessionInterface $session)
     {

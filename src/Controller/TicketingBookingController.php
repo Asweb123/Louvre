@@ -15,7 +15,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class TicketingBookingController extends AbstractController
 {
     /**
-     * @Route("/billetterie/reservation", name="ticketing_booking")
+     * @Route({
+     *     "fr": "/billetterie/reservation",
+     *     "en": "/ticketing/booking"
+     * }, name="ticketing_booking")
      */
     public function booking(SessionInterface $session, Request $request, BeneficiariesListCreator $beneficiariesListCreator)
     {

@@ -206,28 +206,28 @@
         <target>Veuillez trouver en pièce jointe une attestation de réservation au format PDF consernant la commande suivante :</target>
       </trans-unit>
       <trans-unit id="uDKi1jR" resname="Code de réservation :">
-        <source>Code de réservation :</source>
-        <target>Code de réservation :</target>
+        <source>Code de réservation : </source>
+        <target>Code de réservation : </target>
       </trans-unit>
       <trans-unit id="s.Qiyny" resname="Date de visite:">
-        <source>Date de visite:</source>
-        <target>Date de visite:</target>
+        <source>Date de visite : </source>
+        <target>Date de visite : </target>
       </trans-unit>
-      <trans-unit id="BjKVIW_" resname="Type de billet :">
-        <source>Type de billet :</source>
-        <target>Type de billet :</target>
+      <trans-unit id="BjKVIW_" resname="Type de billet : ">
+        <source>Type de billet : </source>
+        <target>Type de billet : </target>
       </trans-unit>
       <trans-unit id="oSzjLTU" resname="Demi-journée">
         <source>Demi-journée</source>
         <target>Demi-journée</target>
       </trans-unit>
       <trans-unit id="rdcpC9p" resname="Nombre de billets :">
-        <source>Nombre de billets :</source>
-        <target>Nombre de billets :</target>
+        <source>Nombre de billets : </source>
+        <target>Nombre de billets : </target>
       </trans-unit>
-      <trans-unit id="Lg4x5Bt" resname="Prix total de la commande:">
-        <source>Prix total de la commande:</source>
-        <target>Prix total de la commande:</target>
+      <trans-unit id="Lg4x5Bt" resname="Prix total de la commande : ">
+        <source>Prix total de la commande : </source>
+        <target>Prix total de la commande : </target>
       </trans-unit>
       <trans-unit id="FnmCkQw" resname="beneficiary.number">
         <source>beneficiary.number</source>
@@ -354,24 +354,24 @@
         <target>à imprimer et à présenter lors de votre visite du musée.</target>
       </trans-unit>
       <trans-unit id="pJKO.U7" resname="Date de visite :">
-        <source>Date de visite :</source>
-        <target>Date de visite :</target>
+        <source>Date de visite : </source>
+        <target>Date de visite : </target>
       </trans-unit>
       <trans-unit id="K4wdpS9" resname="Moyen de paiement :">
-        <source>Moyen de paiement :</source>
-        <target>Moyen de paiement :</target>
+        <source>Moyen de paiement : </source>
+        <target>Moyen de paiement : </target>
       </trans-unit>
       <trans-unit id="ZmZOrf3" resname="Carte bancaire">
         <source>Carte bancaire</source>
         <target>Carte bancaire</target>
       </trans-unit>
-      <trans-unit id="udtplfd" resname="Total de la commande :">
-        <source>Total de la commande :</source>
-        <target>Total de la commande :</target>
+      <trans-unit id="udtplfd" resname="Prix total de la commande : ">
+        <source>Prix total de la commande : </source>
+        <target>Prix total de la commande : </target>
       </trans-unit>
-      <trans-unit id="q_nJmfU" resname="yourTicketHadBeenSent.number">
-        <source>yourTicketHadBeenSent.number</source>
-        <target>{1}votre billet sera envoyé|[2, Inf]vos billets seront envoyés</target>
+      <trans-unit id="q_nJmfU" resname="yourTicketHasBeenSent.number">
+        <source>yourTicketHasBeenSent.number</source>
+        <target>{1}Votre billet a été envoyé|[2, Inf]Vos billets ont été envoyés</target>
       </trans-unit>
       <trans-unit id="rgjTnzQ" resname="à l'adresse mail suivante :">
         <source>à l'adresse mail suivante :</source>
