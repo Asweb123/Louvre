@@ -117,33 +117,33 @@
         <source>Horaires</source>
         <target>Horaires</target>
       </trans-unit>
-      <trans-unit id="HyUvDa0" resname="Lundi :">
-        <source>Lundi :</source>
-        <target>Lundi :</target>
+      <trans-unit id="HyUvDa0" resname="Lundi : ">
+        <source>Lundi : </source>
+        <target>Lundi : </target>
       </trans-unit>
-      <trans-unit id="i_bRFme" resname="Mardi :">
-        <source>Mardi :</source>
-        <target>Mardi :</target>
+      <trans-unit id="i_bRFme" resname="Mardi : ">
+        <source>Mardi : </source>
+        <target>Mardi : </target>
       </trans-unit>
-      <trans-unit id="7_OTcpT" resname="Mercredi :">
-        <source>Mercredi :</source>
-        <target>Mercredi :</target>
+      <trans-unit id="7_OTcpT" resname="Mercredi : ">
+        <source>Mercredi : </source>
+        <target>Mercredi : </target>
       </trans-unit>
-      <trans-unit id="lcVhS37" resname="Jeudi :">
-        <source>Jeudi :</source>
-        <target>Jeudi :</target>
+      <trans-unit id="lcVhS37" resname="Jeudi : ">
+        <source>Jeudi : </source>
+        <target>Jeudi : </target>
       </trans-unit>
-      <trans-unit id="UpjBtVh" resname="Vendredi :">
-        <source>Vendredi :</source>
-        <target>Vendredi :</target>
+      <trans-unit id="UpjBtVh" resname="Vendredi : ">
+        <source>Vendredi : </source>
+        <target>Vendredi : </target>
       </trans-unit>
-      <trans-unit id="aLCM6Ux" resname="Samedi :">
-        <source>Samedi :</source>
-        <target>Samedi :</target>
+      <trans-unit id="aLCM6Ux" resname="Samedi : ">
+        <source>Samedi : </source>
+        <target>Samedi : </target>
       </trans-unit>
-      <trans-unit id="d3hUU3x" resname="Dimanche :">
-        <source>Dimanche :</source>
-        <target>Dimanche :</target>
+      <trans-unit id="d3hUU3x" resname="Dimanche : ">
+        <source>Dimanche : </source>
+        <target>Dimanche : </target>
       </trans-unit>
       <trans-unit id="nNAtoHa" resname="L'évacuation des salles débute à 17h30 ou à 21h15 les jours de nocturne.">
         <source>L'évacuation des salles débute à 17h30 ou à 21h15 les jours de nocturne.</source>
@@ -153,41 +153,41 @@
         <source>Accéder au Musée du Louvre</source>
         <target>Accéder au Musée du Louvre</target>
       </trans-unit>
-      <trans-unit id="aReyBiM" resname="En métro :">
-        <source>En métro :</source>
-        <target>En métro :</target>
+      <trans-unit id="aReyBiM" resname="En métro : ">
+        <source>En métro : </source>
+        <target>En métro : </target>
       </trans-unit>
-      <trans-unit id="uISOclo" resname="En bus :">
-        <source>En bus :</source>
-        <target>En bus :</target>
+      <trans-unit id="uISOclo" resname="En bus : ">
+        <source>En bus : </source>
+        <target>En bus : </target>
       </trans-unit>
-      <trans-unit id="JU1Rv9E" resname="Stations Velib à proximité du musée :">
-        <source>Stations Velib à proximité du musée :</source>
-        <target>Stations Velib à proximité du musée :</target>
+      <trans-unit id="JU1Rv9E" resname="Stations Velib à proximité du musée : ">
+        <source>Stations Velib à proximité du musée : </source>
+        <target>Stations Velib à proximité du musée : </target>
       </trans-unit>
-      <trans-unit id="eGunw6e" resname="En voiture :">
-        <source>En voiture :</source>
-        <target>En voiture :</target>
+      <trans-unit id="eGunw6e" resname="En voiture : ">
+        <source>En voiture : </source>
+        <target>En voiture : </target>
       </trans-unit>
       <trans-unit id="W0Gx388" resname="Un parc de stationnement souterrain est accessible par l'avenue du général Lemonier, tous les jours de 7 h 00 à 23 h 00.">
         <source>Un parc de stationnement souterrain est accessible par l'avenue du général Lemonier, tous les jours de 7 h 00 à 23 h 00.</source>
         <target>Un parc de stationnement souterrain est accessible par l'avenue du général Lemonier, tous les jours de 7 h 00 à 23 h 00.</target>
       </trans-unit>
-      <trans-unit id="_eJyqnF" resname="En Batobus :">
-        <source>En Batobus :</source>
-        <target>En Batobus :</target>
+      <trans-unit id="_eJyqnF" resname="En Batobus : ">
+        <source>En Batobus : </source>
+        <target>En Batobus : </target>
       </trans-unit>
       <trans-unit id="nziugJj" resname="Nous contacter">
         <source>Nous contacter</source>
         <target>Nous contacter</target>
       </trans-unit>
-      <trans-unit id="XSnN3Wu" resname="Hotline :">
-        <source>Hotline :</source>
-        <target>Hotline :</target>
+      <trans-unit id="XSnN3Wu" resname="Hotline : ">
+        <source>Hotline : </source>
+        <target>Hotline : </target>
       </trans-unit>
-      <trans-unit id="Iynq7F3" resname="Adresse mail :">
-        <source>Adresse mail :</source>
-        <target>Adresse mail :</target>
+      <trans-unit id="Iynq7F3" resname="Adresse mail : ">
+        <source>Adresse mail : </source>
+        <target>Adresse mail : </target>
       </trans-unit>
       <trans-unit id="FixDDnI" resname="Billetterie">
         <source>Billetterie</source>
@@ -205,7 +205,7 @@
         <source>Veuillez trouver en pièce jointe une attestation de réservation au format PDF consernant la commande suivante :</source>
         <target>Veuillez trouver en pièce jointe une attestation de réservation au format PDF consernant la commande suivante :</target>
       </trans-unit>
-      <trans-unit id="uDKi1jR" resname="Code de réservation :">
+      <trans-unit id="uDKi1jR" resname="Code de réservation : ">
         <source>Code de réservation : </source>
         <target>Code de réservation : </target>
       </trans-unit>
@@ -221,7 +221,7 @@
         <source>Demi-journée</source>
         <target>Demi-journée</target>
       </trans-unit>
-      <trans-unit id="rdcpC9p" resname="Nombre de billets :">
+      <trans-unit id="rdcpC9p" resname="Nombre de billets : ">
         <source>Nombre de billets : </source>
         <target>Nombre de billets : </target>
       </trans-unit>
@@ -297,25 +297,25 @@
         <source>Confirmation</source>
         <target>Confirmation</target>
       </trans-unit>
-      <trans-unit id="jggPhoo" resname="Afin de nous permettre de définir">
-        <source>Afin de nous permettre de définir</source>
-        <target>Afin de nous permettre de définir</target>
+      <trans-unit id="jggPhoo" resname="Afin de nous permettre de définir ">
+        <source>Afin de nous permettre de définir </source>
+        <target>Afin de nous permettre de définir </target>
       </trans-unit>
       <trans-unit id="usHkcMV" resname="yourpricing.number">
         <source>yourpricing.number</source>
         <target>{1}votre tarification|[2, Inf]vos tarifications</target>
       </trans-unit>
-      <trans-unit id="eHJuYLU" resname=", veuillez compléter">
-        <source>, veuillez compléter</source>
-        <target>, veuillez compléter</target>
+      <trans-unit id="eHJuYLU" resname=", veuillez compléter ">
+        <source>, veuillez compléter </source>
+        <target>, veuillez compléter </target>
       </trans-unit>
       <trans-unit id="A6h.WU_" resname="theFields.number">
         <source>theFields.number</source>
         <target>{1}les champs|[2, Inf]les formulaires</target>
       </trans-unit>
-      <trans-unit id="iWsqpPL" resname="ci-dessous :">
-        <source>ci-dessous :</source>
-        <target>ci-dessous :</target>
+      <trans-unit id="iWsqpPL" resname=" ci-dessous :">
+        <source> ci-dessous :</source>
+        <target> ci-dessous :</target>
       </trans-unit>
       <trans-unit id="YmunqJ." resname="Valider">
         <source>Valider</source>
@@ -341,23 +341,23 @@
         <source>Etape 4/4 : Confirmation</source>
         <target>Etape 4/4 : Confirmation</target>
       </trans-unit>
-      <trans-unit id="SkYvESM" resname="Nous vous remerçions pour votre commande. Vous allez recevoir dans quelques instants un mail contenant">
-        <source>Nous vous remerçions pour votre commande. Vous allez recevoir dans quelques instants un mail contenant</source>
-        <target>Nous vous remerçions pour votre commande. Vous allez recevoir dans quelques instants un mail contenant</target>
+      <trans-unit id="SkYvESM" resname="Nous vous remerçions pour votre commande. Vous allez recevoir dans quelques instants un mail contenant ">
+        <source>Nous vous remerçions pour votre commande. Vous allez recevoir dans quelques instants un mail contenant </source>
+        <target>Nous vous remerçions pour votre commande. Vous allez recevoir dans quelques instants un mail contenant </target>
       </trans-unit>
       <trans-unit id="7QukMVA" resname="youtTicket.number">
         <source>youtTicket.number</source>
         <target>{1}votre billet|[2, Inf]vos billets</target>
       </trans-unit>
-      <trans-unit id=".BwmqJJ" resname="à imprimer et à présenter lors de votre visite du musée.">
-        <source>à imprimer et à présenter lors de votre visite du musée.</source>
-        <target>à imprimer et à présenter lors de votre visite du musée.</target>
+      <trans-unit id=".BwmqJJ" resname=" à imprimer et à présenter lors de votre visite du musée.">
+        <source> à imprimer et à présenter lors de votre visite du musée.</source>
+        <target> à imprimer et à présenter lors de votre visite du musée.</target>
       </trans-unit>
-      <trans-unit id="pJKO.U7" resname="Date de visite :">
+      <trans-unit id="pJKO.U7" resname="Date de visite : ">
         <source>Date de visite : </source>
         <target>Date de visite : </target>
       </trans-unit>
-      <trans-unit id="K4wdpS9" resname="Moyen de paiement :">
+      <trans-unit id="K4wdpS9" resname="Moyen de paiement : ">
         <source>Moyen de paiement : </source>
         <target>Moyen de paiement : </target>
       </trans-unit>
@@ -365,17 +365,17 @@
         <source>Carte bancaire</source>
         <target>Carte bancaire</target>
       </trans-unit>
-      <trans-unit id="udtplfd" resname="Prix total de la commande : ">
-        <source>Prix total de la commande : </source>
-        <target>Prix total de la commande : </target>
+      <trans-unit id="udtplfd" resname="Total de la commande : ">
+        <source>Total de la commande : </source>
+        <target>Total de la commande : </target>
       </trans-unit>
       <trans-unit id="q_nJmfU" resname="yourTicketHasBeenSent.number">
         <source>yourTicketHasBeenSent.number</source>
         <target>{1}Votre billet a été envoyé|[2, Inf]Vos billets ont été envoyés</target>
       </trans-unit>
-      <trans-unit id="rgjTnzQ" resname="à l'adresse mail suivante :">
-        <source>à l'adresse mail suivante :</source>
-        <target>à l'adresse mail suivante :</target>
+      <trans-unit id="rgjTnzQ" resname=" à l'adresse mail suivante : ">
+        <source> à l'adresse mail suivante : </source>
+        <target> à l'adresse mail suivante : </target>
       </trans-unit>
       <trans-unit id="j5_bCOw" resname="Retour à l'accueil">
         <source>Retour à l'accueil</source>
@@ -385,29 +385,29 @@
         <source>Etape 3/4 : Paiement</source>
         <target>Etape 3/4 : Paiement</target>
       </trans-unit>
-      <trans-unit id="XXaxoXt" resname="Une fois votre commande finalisée,">
-        <source>Une fois votre commande finalisée,</source>
-        <target>Une fois votre commande finalisée,</target>
+      <trans-unit id="XXaxoXt" resname="Une fois votre commande finalisée, ">
+        <source>Une fois votre commande finalisée, </source>
+        <target>Une fois votre commande finalisée, </target>
       </trans-unit>
       <trans-unit id="ABlFzb5" resname="yourTicketWillBeSent.number">
         <source>yourTicketWillBeSent.number</source>
         <target>{1}votre billet sera envoyé|[2, Inf]vos billets seront envoyés</target>
       </trans-unit>
-      <trans-unit id="DU_X8po" resname="au format PDF à l'adresse mail suivante :">
-        <source>au format PDF à l'adresse mail suivante :</source>
-        <target>au format PDF à l'adresse mail suivante :</target>
+      <trans-unit id="DU_X8po" resname=" au format PDF à l'adresse mail suivante :">
+        <source> au format PDF à l'adresse mail suivante :</source>
+        <target> au format PDF à l'adresse mail suivante :</target>
       </trans-unit>
       <trans-unit id="M7MZtGC" resname="ticket.number">
         <source>ticket.number</source>
         <target>{1}Billet|[2, Inf]Billets</target>
       </trans-unit>
-      <trans-unit id="DxVKM_c" resname="Bénéficiaire :">
-        <source>Bénéficiaire :</source>
-        <target>Bénéficiaire :</target>
+      <trans-unit id="DxVKM_c" resname="Bénéficiaire : ">
+        <source>Bénéficiaire : </source>
+        <target>Bénéficiaire : </target>
       </trans-unit>
-      <trans-unit id="BvasDkH" resname="Tarif :">
-        <source>Tarif :</source>
-        <target>Tarif :</target>
+      <trans-unit id="BvasDkH" resname="Tarif : ">
+        <source>Tarif : </source>
+        <target>Tarif : </target>
       </trans-unit>
       <trans-unit id="Itj4ahY" resname="Veuillez vérifier l'exactitude des informations données ci-dessus et cliquer sur le bouton &quot;Valider&quot; pour procéder au paiement par carte bancaire.">
         <source>Veuillez vérifier l'exactitude des informations données ci-dessus et cliquer sur le bouton "Valider" pour procéder au paiement par carte bancaire.</source>

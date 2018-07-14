@@ -61,7 +61,7 @@ class OrderType extends AbstractType
     {
         $resolver->setDefaults(array(
             'data_class' => OrderCustomer::class,
-            'validation_groups' => array('booking', 'bookingBis'), new GroupSequence(['OrderCustomer', 'booking', 'bookingBis'])
+            'validation_groups' =>  new GroupSequence(['OrderCustomer', 'booking', 'bookingBis'])
         ));
     }
 }

@@ -51,7 +51,7 @@
 
         {% for ticket  in  order.ticketsList  %}
         <tr>
-            <td>{{ 'Bénéficiaire : '|trans }}<span class="font-weight-bold">{{ ticket.firstName }} {{ ticket.lastName }}</span>
+            <td>{{ 'Bénéficiaire : '|trans }}<div class="inline"><span class="font-weight-bold name">{{ ticket.firstName }} {{ ticket.lastName }}</span></div>
                 <br/>
 
                 {{ 'Tarif : '|trans }}<span class="font-weight-bold">{% if ticket.pricing == 1 %}{{ 'Tout-petit'|trans }}
@@ -67,7 +67,7 @@
                 {% endif %}</span>
                 <br/>
 
-                {{ 'Date de visite : '|trans }}<span class="font-weight-bold">{{ order.bookingDate|date('Y/m/d') }}</span>
+                {{ 'Date de visite : '|trans }}<span class="font-weight-bold">{{ order.bookingDate|date('d/m/Y') }}</span>
 
             </td>
             <td class="text-center"><span class="font-weight-bold">{{ ticket.price|number_format(2, ',') }} €</span></td>

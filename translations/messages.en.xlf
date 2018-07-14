@@ -117,33 +117,33 @@
         <source>Horaires</source>
         <target>Opening hours</target>
       </trans-unit>
-      <trans-unit id="HyUvDa0" resname="Lundi :">
-        <source>Lundi :</source>
-        <target>Monday :</target>
+      <trans-unit id="HyUvDa0" resname="Lundi : ">
+        <source>Lundi : </source>
+        <target>Monday : </target>
       </trans-unit>
-      <trans-unit id="i_bRFme" resname="Mardi :">
-        <source>Mardi :</source>
-        <target>Tuesday :</target>
+      <trans-unit id="i_bRFme" resname="Mardi : ">
+        <source>Mardi : </source>
+        <target>Tuesday : </target>
       </trans-unit>
-      <trans-unit id="7_OTcpT" resname="Mercredi :">
-        <source>Mercredi :</source>
-        <target>Wednesday :</target>
+      <trans-unit id="7_OTcpT" resname="Mercredi : ">
+        <source>Mercredi : </source>
+        <target>Wednesday : </target>
       </trans-unit>
-      <trans-unit id="lcVhS37" resname="Jeudi :">
-        <source>Jeudi :</source>
-        <target>Thursday :</target>
+      <trans-unit id="lcVhS37" resname="Jeudi : ">
+        <source>Jeudi : </source>
+        <target>Thursday : </target>
       </trans-unit>
-      <trans-unit id="UpjBtVh" resname="Vendredi :">
-        <source>Vendredi :</source>
-        <target>Friday :</target>
+      <trans-unit id="UpjBtVh" resname="Vendredi : ">
+        <source>Vendredi : </source>
+        <target>Friday : </target>
       </trans-unit>
-      <trans-unit id="aLCM6Ux" resname="Samedi :">
-        <source>Samedi :</source>
-        <target>Saturday :</target>
+      <trans-unit id="aLCM6Ux" resname="Samedi : ">
+        <source>Samedi : </source>
+        <target>Saturday : </target>
       </trans-unit>
-      <trans-unit id="d3hUU3x" resname="Dimanche :">
-        <source>Dimanche :</source>
-        <target>Sunday :</target>
+      <trans-unit id="d3hUU3x" resname="Dimanche : ">
+        <source>Dimanche : </source>
+        <target>Sunday : </target>
       </trans-unit>
       <trans-unit id="nNAtoHa" resname="L'évacuation des salles débute à 17h30 ou à 21h15 les jours de nocturne.">
         <source>L'évacuation des salles débute à 17h30 ou à 21h15 les jours de nocturne.</source>
@@ -151,43 +151,43 @@
       </trans-unit>
       <trans-unit id="Ahuq5Ws" resname="Accéder au Musée du Louvre">
         <source>Accéder au Musée du Louvre</source>
-        <target>Access to the Louvre museum.</target>
+        <target>Access to the Louvre museum</target>
       </trans-unit>
-      <trans-unit id="aReyBiM" resname="En métro :">
-        <source>En métro :</source>
-        <target>By subway :</target>
+      <trans-unit id="aReyBiM" resname="En métro : ">
+        <source>En métro : </source>
+        <target>By subway : </target>
       </trans-unit>
-      <trans-unit id="uISOclo" resname="En bus :">
-        <source>En bus :</source>
-        <target>By bus :</target>
+      <trans-unit id="uISOclo" resname="En bus : ">
+        <source>En bus : </source>
+        <target>By bus : </target>
       </trans-unit>
-      <trans-unit id="JU1Rv9E" resname="Stations Velib à proximité du musée :">
-        <source>Stations Velib à proximité du musée :</source>
-        <target>Velib stations near the museum :</target>
+      <trans-unit id="JU1Rv9E" resname="Stations Velib à proximité du musée : ">
+        <source>Stations Velib à proximité du musée : </source>
+        <target>Velib stations near the museum : </target>
       </trans-unit>
-      <trans-unit id="eGunw6e" resname="En voiture :">
-        <source>En voiture :</source>
-        <target>By car :</target>
+      <trans-unit id="eGunw6e" resname="En voiture : ">
+        <source>En voiture : </source>
+        <target>By car : </target>
       </trans-unit>
       <trans-unit id="W0Gx388" resname="Un parc de stationnement souterrain est accessible par l'avenue du général Lemonier, tous les jours de 7 h 00 à 23 h 00.">
         <source>Un parc de stationnement souterrain est accessible par l'avenue du général Lemonier, tous les jours de 7 h 00 à 23 h 00.</source>
         <target>An underground car park is accessible by General Lemonier Avenue every day from 7 am to 11 pm</target>
       </trans-unit>
-      <trans-unit id="_eJyqnF" resname="En Batobus :">
-        <source>En Batobus :</source>
-        <target>By Batobus :</target>
+      <trans-unit id="_eJyqnF" resname="En Batobus : ">
+        <source>En Batobus : </source>
+        <target>By Batobus : </target>
       </trans-unit>
       <trans-unit id="nziugJj" resname="Nous contacter">
         <source>Nous contacter</source>
         <target>Contact us</target>
       </trans-unit>
-      <trans-unit id="XSnN3Wu" resname="Hotline :">
-        <source>Hotline :</source>
-        <target>Hotline :</target>
+      <trans-unit id="XSnN3Wu" resname="Hotline : ">
+        <source>Hotline : </source>
+        <target>Hotline : </target>
       </trans-unit>
-      <trans-unit id="Iynq7F3" resname="Adresse mail :">
-        <source>Adresse mail :</source>
-        <target>Mail address :</target>
+      <trans-unit id="Iynq7F3" resname="Adresse mail : ">
+        <source>Adresse mail : </source>
+        <target>Mail address : </target>
       </trans-unit>
       <trans-unit id="FixDDnI" resname="Billetterie">
         <source>Billetterie</source>
@@ -365,17 +365,17 @@
         <source>Carte bancaire</source>
         <target>Bank card</target>
       </trans-unit>
-      <trans-unit id="udtplfd" resname="Prix total de la commande : ">
-        <source>Prix total de la commande : </source>
-        <target>Total price of the order : </target>
+      <trans-unit id="udtplfd" resname="Total de la commande : ">
+        <source>Total de la commande : </source>
+        <target>Total order : </target>
       </trans-unit>
       <trans-unit id="zVkfop9" resname="yourTicketHasBeenSent.number">
         <source>yourTicketHasBeenSent.number</source>
         <target>{1}Your ticket has been sent|[2, Inf]Your tickets have been sent</target>
       </trans-unit>
-      <trans-unit id="rgjTnzQ" resname="à l'adresse mail suivante :">
-        <source>à l'adresse mail suivante :</source>
-        <target>to the following email address :</target>
+      <trans-unit id="rgjTnzQ" resname=" à l'adresse mail suivante : ">
+        <source> à l'adresse mail suivante : </source>
+        <target> to the following email address : </target>
       </trans-unit>
       <trans-unit id="j5_bCOw" resname="Retour à l'accueil">
         <source>Retour à l'accueil</source>
@@ -401,13 +401,13 @@
         <source>ticket.number</source>
         <target>{1}Ticket|[2, Inf]Tickets</target>
       </trans-unit>
-      <trans-unit id="DxVKM_c" resname="Bénéficiaire :">
-        <source>Bénéficiaire :</source>
-        <target>Beneficiary :</target>
+      <trans-unit id="DxVKM_c" resname="Bénéficiaire : ">
+        <source>Bénéficiaire : </source>
+        <target>Beneficiary : </target>
       </trans-unit>
-      <trans-unit id="BvasDkH" resname="Tarif :">
-        <source>Tarif :</source>
-        <target>Rate :</target>
+      <trans-unit id="BvasDkH" resname="Tarif : ">
+        <source>Tarif : </source>
+        <target>Rate : </target>
       </trans-unit>
       <trans-unit id="Itj4ahY" resname="Veuillez vérifier l'exactitude des informations données ci-dessus et cliquer sur le bouton &quot;Valider&quot; pour procéder au paiement par carte bancaire.">
         <source>Veuillez vérifier l'exactitude des informations données ci-dessus et cliquer sur le bouton "Valider" pour procéder au paiement par carte bancaire.</source>

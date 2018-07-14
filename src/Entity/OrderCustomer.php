@@ -38,7 +38,7 @@ class OrderCustomer
      * @Assert\Date(groups={"booking"})
      * @Assert\GreaterThanOrEqual("today",
      *     groups={"booking"},
-     *     message= "La date choisie est invalide."
+     *     message="La date choisie est invalide."
      * )
      */
     private $bookingDate;

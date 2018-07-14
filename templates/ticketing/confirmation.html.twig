@@ -35,7 +35,7 @@
     </nav>
 
     <p class="text-center mb-5 max-width">
-        {{ 'Nous vous remerçions pour votre commande. Vous allez recevoir dans quelques instants un mail contenant '|trans }}{{ 'youtTicket.number'|transchoice(order.ticketsQuantity) }}{{ ' à imprimer et à présenter lors de votre visite du musée.'|trans }}
+        {{ 'Nous vous remerçions pour votre commande. Vous allez recevoir dans quelques instants un mail contenant '|trans }}{{ 'yourTicket.number'|transchoice(order.ticketsQuantity) }}{{ ' à imprimer et à présenter lors de votre visite du musée.'|trans }}
     </p>
 
     <div>
@@ -45,7 +45,7 @@
             {% elseif order.ticketType == 2 %}{{ 'Demi-Journée'|trans }}</span>
             {% endif %}
         </p>
-        <p>{{ 'Date de visite : '|trans }}<span class="font-weight-bold">{{ order.bookingDate|date('Y/m/d') }}</span></p>
+        <p>{{ 'Date de visite : '|trans }}<span class="font-weight-bold">{{ order.bookingDate|date('d/m/Y') }}</span></p>
         <p>{{ 'Moyen de paiement : '|trans }}<span class="font-weight-bold">{{ 'Carte bancaire'|trans }}</span></p>
         <p>{{ 'Total de la commande : '|trans }}<span class="font-weight-bold">{{ order.totalPrice|number_format(2, ',') }} €</span></p>
     </div>

@@ -20,12 +20,12 @@ class BeneficiaryType extends AbstractType
         $builder
             ->add('firstName', TextType::class, array(
                 'label' => 'Prénom',
-                'attr' => ['max' => '35'],
-                'translation_domain' => 'forms'
+                'attr' => ['maxlength' => '35'],
+                'translation_domain' => 'forms',
             ))
             ->add('lastName', TextType::class, array(
                 'label' => 'Nom',
-                'attr' => ['max' => '45'],
+                'attr' => ['maxlength' => '45'],
                 'translation_domain' => 'forms'
             ))
             ->add('dateOfBirth', BirthdayType::class, array(
