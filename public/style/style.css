@@ -29,7 +29,7 @@ body {
     color: white !important;
 }
 
-.active {
+.activeLink {
     color: #80CBC4 !important;
     font-weight: bold;
 }

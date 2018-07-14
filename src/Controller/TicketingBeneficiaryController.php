@@ -15,7 +15,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class TicketingBeneficiaryController extends AbstractController
 {
     /**
-     * @Route("/billetterie/beneficiaires", name="ticketing_beneficiary")
+     * @Route("/billetterie/beneficiaire", name="ticketing_beneficiary")
      */
     public function beneficiary(SessionInterface $session, Request $request, TicketingStepsCheck $ticketingStepsCheck)
     {
@@ -43,6 +43,7 @@ class TicketingBeneficiaryController extends AbstractController
 
             return $this->redirectToRoute('ticketing_payment');
         }
+
 
         return $this->render('ticketing/beneficiary.html.twig', array(
             'form' => $form->createView(),

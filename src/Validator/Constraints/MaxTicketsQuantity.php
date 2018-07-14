@@ -18,4 +18,3 @@ class MaxTicketsQuantity extends Constraint
     }
 }
 
-// 'Sorry, tickets quantity left for this date: {{ ticketsQuantityAvailable }}'

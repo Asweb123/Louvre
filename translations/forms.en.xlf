@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="fr" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="Date de visite">
+                <source>Date de visite</source>
+                <target>Date of visit</target>
+            </trans-unit>
+            <trans-unit id="jj/mm/aaaa">
+                <source>jj/mm/aaaa</source>
+                <target>dd/mm/yyyy</target>
+            </trans-unit>
+            <trans-unit id="Réservation impossible le dimanche. Fermé le mardi, le 1er Mai, le 1er Novembre et le 25 Décembre.">
+                <source>Réservation impossible le dimanche. Fermé le mardi, le 1er Mai, le 1er Novembre et le 25 Décembre.</source>
+                <target>Réservation impossible for sundays. Closed on Tuesdays, the 1st of May, the 1st of November et le 25th of December.</target>
+            </trans-unit>
+            <trans-unit id="Le billet Demi-Journée n'est valable qu'à partir de 14h.">
+                <source>Le billet "Demi-Journée" n'est valable qu'à partir de 14h.</source>
+                <target>The "Half-Day" ticket is only valid from 14h.</target>
+            </trans-unit>
+            <trans-unit id="Nombre de visiteurs">
+                <source>Nombre de visiteurs</source>
+                <target>Number of visitors</target>
+            </trans-unit>
+            <trans-unit id="Type de billet">
+                <source>Type de billet</source>
+                <target>Ticket type</target>
+            </trans-unit>
+            <trans-unit id="Journée">
+                <source>Journée</source>
+                <target>Full Day</target>
+            </trans-unit>
+            <trans-unit id="Demi-Journée">
+                <source>Demi-Journée</source>
+                <target>Half-Day</target>
+            </trans-unit>
+            <trans-unit id="Les adresses mails ne sont pas identiques.">
+                <source>Les adresses mails ne sont pas identiques.</source>
+                <target>Email addresses are not identical.</target>
+            </trans-unit>
+            <trans-unit id="Adresse mail de réception du/des billet(s)">
+                <source>Adresse mail de réception du/des billet(s)</source>
+                <target>Mailing address of receipt for the ticket(s)</target>
+            </trans-unit>
+            <trans-unit id="Confirmer l'adresse mail">
+                <source>Confirmer l'adresse mail</source>
+                <target>Confirm the email address</target>
+            </trans-unit>
+            <trans-unit id="Prénom">
+                <source>Prénom</source>
+                <target>First name</target>
+            </trans-unit>
+            <trans-unit id="Nom">
+                <source>Nom</source>
+                <target>Last name</target>
+            </trans-unit>
+            <trans-unit id="Date de naissance">
+                <source>Date de naissance</source>
+                <target>Birth date</target>
+            </trans-unit>
+            <trans-unit id="Année">
+                <source>Année</source>
+                <target>Year</target>
+            </trans-unit>
+            <trans-unit id="Mois">
+                <source>Mois</source>
+                <target>Month</target>
+            </trans-unit>
+            <trans-unit id="Jour">
+                <source>Jour</source>
+                <target>Day</target>
+            </trans-unit>
+            <trans-unit id="Pays">
+                <source>Pays</source>
+                <target>Country</target>
+            </trans-unit>
+            <trans-unit id="Sélectionner un pays">
+                <source>Sélectionner un pays</source>
+                <target>Select a country</target>
+            </trans-unit>
+            <trans-unit id="Réduction">
+                <source>Réduction</source>
+                <target>Reduction</target>
+            </trans-unit>
+            <trans-unit id="Sur présentation d'un justificatif à l'entrée du musée">
+                <source>Sur présentation d'un justificatif à l'entrée du musée</source>
+                <target>Upon presentation of justificative at the museum entrance</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

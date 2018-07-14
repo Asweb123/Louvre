@@ -66,13 +66,13 @@
 </div>
 <h3 class="center">{{ 'Attestation de réservation'|trans }}</h3>
 
-<p class="center">{{ 'Document à présenter à l'entrée du musée accompagné de toute pièce justificative'|trans }}<br/>
-    {{ '(Carte d'étudiant, carte militaire, pièce d'identité...)'|trans }}
+<p class="center">{{ 'Document à présenter à l\'entrée du musée accompagné de toute(s) pièce(s) justificative(s) éventuelle(s)'|trans }}<br/>
+    {{ '(Carte d\'étudiant, carte militaire, pièce d\'identité...)'|trans }}
 </p>
 
 <p class="globalInfo">{{ 'Code de réservation : '|trans }}<span class="bold">{{ order.bookingRef }}</span><br/>
 
-    {{ 'Date de visite: '|trans }}<span class="bold">{{ order.bookingDate|date("m/d/Y") }}</span><br/>
+    {{ 'Date de visite : '|trans }}<span class="bold">{{ order.bookingDate|date("m/d/Y") }}</span><br/>
 
     {{ 'Type de billet : '|trans }}{% if order.ticketType == 1 %}<span class="bold">{{ 'Journée'|trans }}</span>
 {% elseif order.ticketType == 2 %}<span class="bold">{{ 'Demi-journée'|trans }}</span>
@@ -80,13 +80,13 @@
 
     {{ 'Nombre de billets : '|trans }}<span class="bold">{{ order.ticketsQuantity }}</span><br/>
 
-    {{ 'Prix total de la commande: '|trans }}<span class="bold">{{ order.totalPrice|number_format(2, ',') }} €</span>
+    {{ 'Prix total de la commande : '|trans }}<span class="bold">{{ order.totalPrice|number_format(2, ',') }} €</span>
 </p>
 
 <table>
     <thead>
     <tr>
-        <th class="left">{{ 'Bénéficiaire'|trans }}</th>
+        <th class="left">{{ 'beneficiary.number'|transchoice(order.ticketsQuantity) }}</th>
         <th class="quart center">{{ 'Tarif'|trans }}</th>
         <th class="quart right">{{ 'Prix'|trans }}</th>
     </tr>

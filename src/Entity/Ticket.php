@@ -31,15 +31,15 @@ class Ticket
      * @Assert\NotBlank(groups={"beneficiary"})
      * @Assert\Length(
      *      min = 2,
-     *      max = 50,
+     *      max = 35,
      *      minMessage = "Votre prénom doit contenir un minimum de {{ limit }} charactères.",
-     *      maxMessage = "Votre prénoms doit contenir au maximum {{ limit }} characters",
+     *      maxMessage = "Votre prénoms doit contenir au maximum {{ limit }} characters.",
      *      groups={"beneficiary"}
      * )
      * @Assert\Regex(
      *     pattern="/\d/",
      *     match=false,
-     *     message="Votre nom ne peut pas contenir de chiffre.",
+     *     message="Votre prénom ne peut pas contenir de chiffre.",
      *     groups={"beneficiary"}
      * )
      */
@@ -51,7 +51,7 @@ class Ticket
      * @Assert\NotBlank(groups={"beneficiary"})
      * @Assert\Length(
      *      min = 2,
-     *      max = 50,
+     *      max = 45,
      *      minMessage = "Votre nom doit contenir un minimum de {{ limit }} charactères.",
      *      maxMessage = "Votre nom doit contenir au maximum {{ limit }} charactères.",
      *      groups={"beneficiary"}
@@ -210,10 +210,3 @@ class Ticket
     }
 
 }
-
-
-// Your first name must be at least {{ limit }} characters long.
-// Your first name cannot be longer than {{ limit }} characters.
-// Your last name must be at least {{ limit }} characters long.
-// Your last name cannot be longer than {{ limit }} characters.
-// Your name cannot contain a number

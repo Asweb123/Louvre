@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Billetterie{% endblock %}
+{% block title %}{{ 'Paiement'|trans }}{% endblock %}
 
-{% block orderActive %}active{% endblock %}
+{% block orderActive %}activeLink{% endblock %}
 
 {% block content %}
 
@@ -19,7 +19,7 @@
             <img src="{{ asset('img/arrow.svg') }}" alt="" width="30px" class="arrow"/>
             <li class="liBreadcrumb">
                 <div class="svgDiv"><img src="{{ asset('img/badge-13.svg') }}" alt="" width="80px"/></div>
-                <div class="navText font-weight-bold">{{ 'Bénéficiaires'|trans }}</div>
+                <div class="navText font-weight-bold">{{ 'beneficiary.number'|transchoice(order.ticketsQuantity) }}</div>
             </li>
             <img src="{{ asset('img/arrow.svg') }}" alt="" width="30px" class="arrow"/>
             <li class="liBreadcrumb">
@@ -35,14 +35,14 @@
     </nav>
 
     <p class="text-center mb-5">
-        {{ 'Une fois votre commande finalisée, vos billets seront envoyé au format PDF à l\'adresse mail suivante :'|trans }}<br/>
+        {{ 'Une fois votre commande finalisée, '|trans }}{{ 'yourTicketWillBeSent.number'|transchoice(order.ticketsQuantity) }}{{ ' au format PDF à l\'adresse mail suivante :'|trans }}<br/>
         <span class="font-weight-bold">{{ order.emailCustomer }}</span>
     </p>
 
     <table class="table mb-5">
         <thead class="table-headBorder">
         <tr>
-            <th class="table-headBorder" scope="col">{{ 'Billets'|trans }}</th>
+            <th class="table-headBorder" scope="col">{{ 'ticket.number'|transchoice(order.ticketsQuantity) }}</th>
             <th class="table-headBorder text-center" scope="col">{{ 'Prix'|trans }}</th>
         </tr>
         </thead>
@@ -62,15 +62,15 @@
                 {% endif %}</span>
                 <br/>
 
-                {{ 'Type de billet : '|trans }}<span class="font-weight-bold">{% if order.ticketType == 1 %}{{ 'Full day'|trans }}
-                {% elseif order.ticketType == 2 %}{{ 'Half-day'|trans }}
+                {{ 'Type de billet : '|trans }}<span class="font-weight-bold">{% if order.ticketType == 1 %}{{ 'Journée'|trans }}
+                {% elseif order.ticketType == 2 %}{{ 'Demi-Journée'|trans }}
                 {% endif %}</span>
                 <br/>
 
                 {{ 'Date de visite : '|trans }}<span class="font-weight-bold">{{ order.bookingDate|date('Y/m/d') }}</span>
 
             </td>
-            <td class="text-center">{{ ticket.price|number_format(2, ',') }} €</span></td>
+            <td class="text-center"><span class="font-weight-bold">{{ ticket.price|number_format(2, ',') }} €</span></td>
         </tr>
         {% endfor %}
 

@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Bénéficiaires{% endblock %}
+{% block title %}{{ 'beneficiary.number'|transchoice(order.ticketsQuantity) }}{% endblock %}
 
-{% block orderActive %}active{% endblock %}
+{% block orderActive %}activeLink{% endblock %}
 
 {% block content %}
 
-    <h1 class="h2 display-4 text-center mt-5 mb-5 ">{{ 'Billetterie'|trans }}<br /><small class="text-muted d-md-none subTicketing">{{ 'Etape 2/4 : Bénéficiaires'|trans }}</small></h1>
+    <h1 class="h2 display-4 text-center mt-5 mb-5 ">{{ 'Billetterie'|trans }}<br /><small class="text-muted d-md-none subTicketing">{{ 'Etape 2/4 : '|trans }}{{ 'beneficiary.number'|transchoice(order.ticketsQuantity) }}</small></h1>
 
 
 
@@ -19,7 +19,7 @@
             <img src="{{ asset('img/arrow.svg') }}" alt="" width="30px" class="arrow"/>
             <li class="liBreadcrumb">
                 <div class="svgDiv"><img src="{{ asset('img/badge-13.svg') }}" alt="" width="80px"/></div>
-                <div class="navText font-weight-bold">{{ 'Bénéficiaire'|trans }}</div>
+                <div class="navText font-weight-bold">{{ 'beneficiary.number'|transchoice(order.ticketsQuantity) }}</div>
             </li>
             <img src="{{ asset('img/arrow-bw.svg') }}" alt="" width="30px" class="arrow"/>
             <li class="liBreadcrumb">
@@ -37,7 +37,7 @@
     <section class="container">
 
         <p class="text-center mb-5 max-width">
-            {{ 'Afin de nous permettre de définir votre tarification, veuillez compléter les champs ci-dessous :'|trans }}
+            {{ 'Afin de nous permettre de définir '|trans }}{{ 'yourpricing.number'|transchoice(order.ticketsQuantity) }}{{ ', veuillez compléter '|trans }}{{ 'theFields.number'|transchoice(order.ticketsQuantity) }}{{ ' ci-dessous :'|trans }}
         </p>
 
         {{ form_start(form) }}
@@ -45,7 +45,7 @@
             {% if order.ticketsQuantity == 1 %}
                 {{ form_row(ticket, {'label': false } ) }}
             {% else %}
-                {% set userIndex = 'Visiteur ' ~ loop.index %}
+                {% set userIndex = ('Visiteur '|trans({}, 'messages') ~ loop.index) %}
                 {{ form_row(ticket, {'label': userIndex } ) }}
             {% endif %}
         {% endfor %}

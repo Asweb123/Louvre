@@ -109,7 +109,7 @@
         <table>
             <thead>
                 <tr>
-                    <th class="left">{{ 'Bénéficiaire'|trans }}</th>
+                    <th class="left">{{ 'beneficiary.number'|transchoice(order.ticketsQuantity) }}</th>
                     <th class="quart center">{{ 'Tarif'|trans }}</th>
                     <th class="quart right">{{ 'Prix'|trans }}</th>
                 </tr>
@@ -144,7 +144,7 @@
 
 
         <p>
-            {{ 'N\'oubliez pas de vous munir d\'une version imprimée du document reçu en pièce jointe le jour de votre visite ainsi que de toute pièce justificative éventuelle.'|trans }}
+            {{ 'N\'oubliez pas de vous munir d\'une version imprimée du document reçu en pièce jointe le jour de votre visite ainsi que de toute(s) pièce(s) justificative(s) éventuelle(s).'|trans }}
         </p>
 
     </section>

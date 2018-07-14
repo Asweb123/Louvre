@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="fr" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="La date choisie est invalide.">
+                <source>La date choisie est invalide.</source>
+                <target>La date choisie est antérieur à aujourd'hui.</target>
+            </trans-unit>
+            <trans-unit id="Cette valeur n'est pas un nombre valide.">
+                <source>Cette valeur n'est pas un nombre valide.</source>
+                <target>Cette valeur n'est pas un nombre valide.</target>
+            </trans-unit>
+            <trans-unit id="Veuillez choisir au moins 1 billet.">
+                <source>Veuillez choisir au moins 1 billet.</source>
+                <target>Veuillez choisir au moins 1 billet.</target>
+            </trans-unit>
+            <trans-unit id="Veuillez choisir au maximum 15 billets.">
+                <source>Veuillez choisir au maximum 15 billets.</source>
+                <target>Veuillez choisir au maximum 15 billets.</target>
+            </trans-unit>
+            <trans-unit id="L'adresse mail '{{ value }}' n\'est pas une adresse valide.">
+                <source>L'adresse mail '{{ value }}' n\'est pas une adresse valide.</source>
+                <target>L'adresse mail '{{ value }}' n'est pas une adresse valide.</target>
+            </trans-unit>
+            <trans-unit id="Votre prénom doit contenir un minimum de {{ limit }} charactères.">
+                <source>Votre prénom doit contenir un minimum de {{ limit }} charactères.</source>
+                <target>Votre prénom doit contenir un minimum de {{ limit }} charactères.</target>
+            </trans-unit>
+            <trans-unit id="Votre prénoms doit contenir au maximum {{ limit }} characters.">
+                <source>Votre prénoms doit contenir au maximum {{ limit }} characters.</source>
+                <target>Votre prénoms doit contenir au maximum {{ limit }} characters.</target>
+            </trans-unit>
+            <trans-unit id="Votre prénom ne peut pas contenir de chiffre.">
+                <source>Votre prénom ne peut pas contenir de chiffre.</source>
+                <target>Votre prénom ne peut pas contenir de chiffre.</target>
+            </trans-unit>
+            <trans-unit id="Votre nom doit contenir un minimum de {{ limit }} charactères.">
+                <source>Votre nom doit contenir un minimum de {{ limit }} charactères.</source>
+                <target>Votre nom doit contenir un minimum de {{ limit }} charactères.</target>
+            </trans-unit>
+            <trans-unit id="Votre nom doit contenir au maximum {{ limit }} charactères.">
+                <source>Votre nom doit contenir au maximum {{ limit }} charactères.</source>
+                <target>Votre nom doit contenir au maximum {{ limit }} charactères.</target>
+            </trans-unit>
+            <trans-unit id="Votre nom ne peut pas contenir de chiffre.">
+                <source>Votre nom ne peut pas contenir de chiffre.</source>
+                <target>Votre nom ne peut pas contenir de chiffre.</target>
+            </trans-unit>
+            <trans-unit id="Il n'est pas possible de réserver plus d'un an à l'avance.">
+                <source>Il n'est pas possible de réserver plus d'un an à l'avance.</source>
+                <target>Il n'est pas possible de réserver plus d'un an à l'avance.</target>
+            </trans-unit>
+            <trans-unit id="Nombre de billets encore disponibles à la réservation pour cette date: {{ ticketsQuantityAvailable }}">
+                <source>Nombre de billets encore disponibles à la réservation pour cette date: {{ ticketsQuantityAvailable }}</source>
+                <target>Nombre de billets encore disponibles à la réservation pour cette date: {{ ticketsQuantityAvailable }}</target>
+            </trans-unit>
+            <trans-unit id="Après 14h, il n'est plus possible de réserver de billet de type Journée pour le jour même.">
+                <source>Après 14h, il n'est plus possible de réserver de billet de type "Journée" pour le jour même.</source>
+                <target>Après 14h, il n'est plus possible de réserver de billet de type "Journée" pour le jour même.</target>
+            </trans-unit>
+            <trans-unit id="Le musée sera fermé à la date sélectionnée.">
+                <source>Le musée sera fermé à la date sélectionnée.</source>
+                <target>Le musée sera fermé à la date sélectionnée.</target>
+            </trans-unit>
+            <trans-unit id="Les dimanches sont indisponibles à la réservation.">
+                <source>Les dimanches sont indisponibles à la réservation.</source>
+                <target>Les dimanches sont indisponibles à la réservation.</target>
+            </trans-unit>
+            <trans-unit id="Le musée fermera ses portes dans moins d'une demi-heure et n'accepte plus de visiteur. Veuillez choisir une autre date de visite.">
+                <source>Le musée fermera ses portes dans moins d'une demi-heure et n'accepte plus de visiteur. Veuillez choisir une autre date de visite.</source>
+                <target>Le musée fermera ses portes dans moins d'une demi-heure et n'accepte plus de visiteur. Veuillez choisir une autre date de visite.</target>
+            </trans-unit>
+            <trans-unit id="Le musée est fermé le mardi.">
+                <source>Le musée est fermé le mardi.</source>
+                <target>Le musée est fermé le mardi.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

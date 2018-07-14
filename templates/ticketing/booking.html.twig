@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Réservation{% endblock %}
+{% block title %}{{ 'Réservation'|trans }}{% endblock %}
 
-{% block orderActive %}active{% endblock %}
+{% block orderActive %}activeLink{% endblock %}
 
 {% block content %}
 
@@ -19,7 +19,7 @@
                 <img src="{{ asset('img/arrow-bw.svg') }}" alt="" width="30px" class="arrow"/>
                 <li class="liBreadcrumb">
                     <div class="svgDiv"><img src="{{ asset('img/badge-13-bw.svg') }}" alt="" width="80px"/></div>
-                    <div class="navText grey">{{ 'Bénéficiaires'|trans }}</div>
+                    <div class="navText grey">{{ 'Bénéficiaire'|trans }}</div>
                 </li>
                 <img src="{{ asset('img/arrow-bw.svg') }}" alt="" width="30px" class="arrow"/>
                 <li class="liBreadcrumb">

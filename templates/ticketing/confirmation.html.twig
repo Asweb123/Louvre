@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Billetterie{% endblock %}
+{% block title %}{{ 'Billetterie'|trans }}{% endblock %}
 
-{% block orderActive %}active{% endblock %}
+{% block orderActive %}activeLink{% endblock %}
 
 {% block content %}
 
@@ -19,7 +19,7 @@
             <img src="{{ asset('img/arrow.svg') }}" alt="" width="30px" class="arrow"/>
             <li class="liBreadcrumb">
                 <div class="svgDiv"><img src="{{ asset('img/badge-13.svg') }}" alt="" width="80px"/></div>
-                <div class="navText font-weight-bold">{{ 'Bénéficiaires'|trans }}</div>
+                <div class="navText font-weight-bold">{{ 'beneficiary.number'|transchoice(order.ticketsQuantity) }}</div>
             </li>
             <img src="{{ asset('img/arrow.svg') }}" alt="" width="30px" class="arrow"/>
             <li class="liBreadcrumb">
@@ -35,14 +35,14 @@
     </nav>
 
     <p class="text-center mb-5 max-width">
-        {{ 'Nous vous remerçions pour votre commande. Vous allez recevoir dans quelques instants un mail contenant vos billets à imprimer et à présenter lors de votre visite du musée.'|trans }}
+        {{ 'Nous vous remerçions pour votre commande. Vous allez recevoir dans quelques instants un mail contenant '|trans }}{{ 'youtTicket.number'|transchoice(order.ticketsQuantity) }}{{ ' à imprimer et à présenter lors de votre visite du musée.'|trans }}
     </p>
 
     <div>
         <p>{{ 'Code de réservation : '|trans }}<span class="font-weight-bold">{{ order.bookingRef }}</span></p>
-        <p>{{ 'Nombre de billet : '|trans }}<span class="font-weight-bold">{{ order.ticketsQuantity }}</span></p>
-        <p>{{ 'Type de billet : '|trans }}<span class="font-weight-bold">{% if order.ticketType == 1 %}{{ 'Full day'|trans }}
-            {% elseif order.ticketType == 2 %}{{ 'Half-day' }}</span>
+        <p>{{ 'Nombre de billets : '|trans }}<span class="font-weight-bold">{{ order.ticketsQuantity }}</span></p>
+        <p>{{ 'Type de billet : '|trans }}<span class="font-weight-bold">{% if order.ticketType == 1 %}{{ 'Journée'|trans }}
+            {% elseif order.ticketType == 2 %}{{ 'Demi-Journée'|trans }}</span>
             {% endif %}
         </p>
         <p>{{ 'Date de visite : '|trans }}<span class="font-weight-bold">{{ order.bookingDate|date('Y/m/d') }}</span></p>
@@ -50,7 +50,7 @@
         <p>{{ 'Total de la commande : '|trans }}<span class="font-weight-bold">{{ order.totalPrice|number_format(2, ',') }} €</span></p>
     </div>
 
-    <p style="margin-bottom: 75px;">{{ 'Vos billets ont été envoyé à l\'adresse mail suivante : '|trans }}<span class="font-weight-bold">{{ order.emailCustomer }}</span></p>
+    <p style="margin-bottom: 75px;">{{ 'yourTicketHasBeenSent.number'|transchoice(order.ticketsQuantity) }}{{ ' à l\'adresse mail suivante : '|trans }}<span class="font-weight-bold">{{ order.emailCustomer }}</span></p>
 
 
 

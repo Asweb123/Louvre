@@ -1,5 +1,7 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}{{ 'Musée du Louvre'|trans }}{% endblock %}
+
 {% block content %}
 
     <section class="container-fluid">
@@ -195,8 +197,7 @@
         </div>
 
 
-        <p class="text-reduc font-italic text-center mb-5">{{ '* Tarif réduit accordé aux étudiants de plus de 18 ans,
-        militaires, demandeurs d\'emploi, employés de musée ou d\'un service du Ministère de la Culture.'|trans }}</p>
+        <p class="text-reduc font-italic text-center mb-5">{{ '* Tarif réduit accordé aux étudiants de moins de 26 ans, militaires, demandeurs d\'emploi, employés du musée ou d\'un service du Ministère de la Culture.'|trans }}</p>
 
     </section>
 

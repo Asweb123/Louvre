@@ -20,27 +20,32 @@ class BeneficiaryType extends AbstractType
         $builder
             ->add('firstName', TextType::class, array(
                 'label' => 'Prénom',
+                'attr' => ['max' => '35'],
+                'translation_domain' => 'forms'
             ))
             ->add('lastName', TextType::class, array(
                 'label' => 'Nom',
+                'attr' => ['max' => '45'],
+                'translation_domain' => 'forms'
             ))
             ->add('dateOfBirth', BirthdayType::class, array(
                 'label' => 'Date de naissance',
                 'format' => 'dd MMM yyyy',
                 'placeholder' => array(
                     'year' => 'Année', 'month' => 'Mois', 'day' => 'Jour',
-                )
+                ),
+                'translation_domain' => 'forms'
             ))
             ->add('country', CountryType::class, array(
                 'label' => 'Pays',
                 'placeholder' => 'Sélectionner un pays',
-
-
+                'translation_domain' => 'forms'
             ))
             ->add('reduction', CheckboxType::class, array(
                 'label' => 'Réduction',
                 'required' => false,
-                'help' => 'Sur présentation d\'un justificatif à l\'entrée du musée'
+                'help' => 'Sur présentation d\'un justificatif à l\'entrée du musée',
+                'translation_domain' => 'forms'
             ))
         ;
     }
