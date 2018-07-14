@@ -12,6 +12,14 @@ body {
     margin-bottom: 5rem;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition: color 9999s ease-out, background-color 9999s ease-out;
+    -webkit-transition-delay: 9999s;
+}
+
 /*****************NAV*****************/
 
 .navbar-toggler {
@@ -121,6 +129,7 @@ body {
     border-radius: 50px;
     border: #E7E4DB solid 1px;
     box-shadow: 0px 2px 5px 0px rgba(112,112,112,0.20);
+    font-size: 1.025rem;
 }
 
 .subTitle {
@@ -160,7 +169,7 @@ body {
     background-color: #d66037;
 }
 .card-senior {
-    background-color: #c8978e;
+    background-color: #c8ad74;
 }
 .card-reduc {
     background-color: #aea4c5;
@@ -177,7 +186,7 @@ body {
     color: #d66037;
 }
 .card-senior ~ div > h5 {
-    color: #c8978e;
+    color: #c8ad74;
 }
 .card-reduc ~ div > h5 {
     color: #aea4c5;

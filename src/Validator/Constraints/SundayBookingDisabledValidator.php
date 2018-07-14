@@ -11,7 +11,6 @@ class SundayBookingDisabledValidator extends ConstraintValidator
     {
         if ($bookingDate->format('w') == 0)
         {
-
             $this->context->buildViolation($constraint->message)
                 ->addViolation();
         }

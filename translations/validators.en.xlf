@@ -74,6 +74,10 @@
                 <source>Le musée est fermé le mardi.</source>
                 <target>The museum is closed on Tuesdays.</target>
             </trans-unit>
+            <trans-unit id="Le musée est fermé. Veuillez choisir une autre date de visite.">
+                <source>Le musée est fermé. Veuillez choisir une autre date de visite.</source>
+                <target>The museum is closed. Please choose another date.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

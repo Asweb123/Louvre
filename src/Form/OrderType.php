@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Validator\Constraints\GroupSequence;
 
 
 
@@ -23,7 +24,7 @@ class OrderType extends AbstractType
             ->add('bookingDate', DateType::class, array(
                 'widget' => 'single_text',
                 'html5' => false,
-                'format' => 'dd-MM-yyyy',
+                'format' => 'dd/MM/yyyy',
                 'label' => 'Date de visite',
                 'placeholder' => 'jj/mm/aaaa',
                 'attr' => ['class' => 'flatpickr', 'autocomplete' => 'off'],
@@ -60,7 +61,7 @@ class OrderType extends AbstractType
     {
         $resolver->setDefaults(array(
             'data_class' => OrderCustomer::class,
-            'validation_groups' => array('booking')
+            'validation_groups' => array('booking', 'bookingBis'), new GroupSequence(['OrderCustomer', 'booking', 'bookingBis'])
         ));
     }
 }

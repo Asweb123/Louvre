@@ -72,8 +72,9 @@
     <script src="{{ asset('js/js.js') }}" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function() {
+
             $('.flatpickr').flatpickr({
-                locale: '{% if locale is defined and locale != null %}{{ locale }}{% else %}fr{% endif %}',
+                locale: '{{ app.request.locale }}',
                 dateFormat: "d/m/Y",
                 minDate: "today",
                 maxDate: new Date().fp_incr(365),
@@ -88,7 +89,8 @@
                             || (date.getDate() === 25 && date.getMonth() === 11)
                         );
                     }
-                ]
+                ],
+
             });})
     </script>
 

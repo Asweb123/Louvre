@@ -11,8 +11,10 @@ use App\Validator\Constraints as OrderAssert;
 /**
  * @ORM\Entity(repositoryClass="OrderCustomerRepository")
  *
- * @OrderAssert\PmTodayTicket(groups={"booking"})
- * @OrderAssert\MaxTicketsQuantity(groups={"booking"})
+ * @Assert\GroupSequence({"OrderCustomer", "booking", "bookingBis"})
+ *
+ * @OrderAssert\PmTodayTicket(groups={"bookingBis"})
+ * @OrderAssert\MaxTicketsQuantity(groups={"bookingBis"})
  */
 class OrderCustomer
 {
@@ -26,11 +28,12 @@ class OrderCustomer
     /**
      * @ORM\Column(type="date")
      *
-     * @OrderAssert\MaxDateAvailable(groups={"booking"})
-     * @OrderAssert\TodayClosing(groups={"booking"})
-     * @OrderAssert\SundayBookingDisabled(groups={"booking"})
-     * @OrderAssert\TuesdayBookingDisabled(groups={"booking"})
-     * @OrderAssert\PublicHolidayBookingDisabled(groups={"booking"})
+     * @OrderAssert\TodayAlreadyClosed(groups={"bookingBis"})
+     * @OrderAssert\MaxDateAvailable(groups={"bookingBis"})
+     * @OrderAssert\TodayClosing(groups={"bookingBis"})
+     * @OrderAssert\SundayBookingDisabled(groups={"bookingBis"})
+     * @OrderAssert\TuesdayBookingDisabled(groups={"bookingBis"})
+     * @OrderAssert\PublicHolidayBookingDisabled(groups={"bookingBis"})
      * @Assert\NotBlank(groups={"booking"})
      * @Assert\Date(groups={"booking"})
      * @Assert\GreaterThanOrEqual("today",
@@ -72,7 +75,7 @@ class OrderCustomer
     /**
      * @ORM\Column(type="string", length=255)
      *
-     * @Assert\NotBlank(groups={"payment"})
+     * @Assert\NotBlank(groups={"booking"})
      * @Assert\Email(
      *     message = "L'adresse mail '{{ value }}' n\'est pas une adresse valide.",
      *     checkMX = true,

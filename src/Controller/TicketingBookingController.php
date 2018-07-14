@@ -49,17 +49,9 @@ class TicketingBookingController extends AbstractController
             return $this->redirectToRoute('ticketing_beneficiary');
         }
 
-        $routeParams = $request->attributes->get('_route_params');
-        if (isset($routeParams['_locale'])){
-            $locale = $routeParams['_locale'];
-        } else {
-            $locale = null;
-        }
-
 
         return $this->render('ticketing/booking.html.twig', array(
             'form' => $form->createView(),
-            'locale' => $locale
         ));
     }
 }
