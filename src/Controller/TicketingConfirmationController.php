@@ -67,7 +67,6 @@ class TicketingConfirmationController extends Controller
 
                 $html = $this->renderView('pdf.html.twig',  array('order' => $order));
                 $dompdf = $this->get('dompdf');
-                //  $dompdf->streamHtml($html, "document.pdf");
                 $pdf = $dompdf->getPdf($html);
 
 

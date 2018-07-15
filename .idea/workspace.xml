@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0214c111-3abb-48a0-9a26-51f0e25beb09" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path=".idea/" />
@@ -952,7 +951,7 @@
       <workItem from="1531605942848" duration="1673000" />
       <workItem from="1531609090234" duration="2113000" />
       <workItem from="1531611231332" duration="1814000" />
-      <workItem from="1531613736229" duration="487000" />
+      <workItem from="1531613736229" duration="1683000" />
     </task>
     <servers />
   </component>
@@ -965,7 +964,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="682347000" />
+    <option name="totallyTimeSpent" value="683543000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -985,8 +984,8 @@
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3297414" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3297414" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4973861" visible="true" weight="0.15732759" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1444563" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4973861" visible="true" weight="0.15732759" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1444563" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
