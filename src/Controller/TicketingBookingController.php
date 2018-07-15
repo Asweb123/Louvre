@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use App\Entity\OrderCustomer;
 
-use App\Form\OrderType;
+use App\Form\Type\OrderType;
 use App\Service\BeneficiariesListCreator;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;

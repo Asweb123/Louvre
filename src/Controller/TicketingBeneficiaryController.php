@@ -2,10 +2,9 @@
 
 namespace App\Controller;
 
-use App\Entity\Ticket;
-use App\Form\BeneficiariesListType;
+
+use App\Form\Type\BeneficiariesListType;
 use App\Service\TicketingStepsCheck;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
