@@ -51,7 +51,7 @@
 
         {% for ticket  in  order.ticketsList  %}
         <tr>
-            <td>{{ 'Bénéficiaire : '|trans }}<div class="inline"><span class="font-weight-bold name">{{ ticket.firstName }} {{ ticket.lastName }}</span></div>
+            <td>{{ 'Bénéficiaire : '|trans }}<div class="inlineName"><span class="font-weight-bold name">{{ ticket.firstName }} {{ ticket.lastName }}</span></div>
                 <br/>
 
                 {{ 'Tarif : '|trans }}<span class="font-weight-bold">{% if ticket.pricing == 1 %}{{ 'Tout-petit'|trans }}

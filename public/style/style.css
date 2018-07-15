@@ -349,6 +349,10 @@ input:-webkit-autofill:active {
     color: grey;
 }
 
+.inlineName {
+    display: inline-block;
+}
+
 
 .name {
     word-break: break-word;
