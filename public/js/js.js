@@ -9,7 +9,7 @@ $(document).ready(function() {
     //Flip cards price on Index
     var card = $('.scene-card');
 
-     $('.fieldset-s > label[for="full-day"]').click(function()  {
+    $('.fieldset-s > label[for="full-day"]').click(function()  {
          if (card.hasClass('is-flipped-h')){
              card.removeClass('is-flipped-h').addClass('is-flipped-f');
          }
@@ -21,4 +21,16 @@ $(document).ready(function() {
         }
     });
 
+
+/*
+    card.click(function(){
+        if (card.hasClass('is-flipped-h')){
+            card.removeClass('is-flipped-h').addClass('is-flipped-f');
+
+        }else if (!(card.hasClass('is-flipped-h'))){
+            card.removeClass('is-flipped-f').addClass('is-flipped-h');
+
+        }
+    });
+*/
 });

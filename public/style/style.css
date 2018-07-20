@@ -1,7 +1,7 @@
 /*****************GLOBAL*****************/
 
 body {
-    background-color: #fffbf0;
+    background-color: #FAFAFA;
 }
 
 .fullPage {
@@ -115,6 +115,8 @@ input:-webkit-autofill:active {
     margin-top: 3rem;
     height: 3.1rem;
     background-color: #343a40;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
     bottom: 0;
@@ -133,14 +135,15 @@ input:-webkit-autofill:active {
 
 
 .card-title {
-    margin-top: -44px;
+    margin-top: -42px;
     padding-top: 3px;
-    padding-bottom: 7px;
+    padding-bottom: 4px;
     background-color: white;
     line-height: 32px;
     border-radius: 50px;
     border: #E7E4DB solid 1px;
-    box-shadow: 0px 2px 5px 0px rgba(112,112,112,0.20);
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(112,112,112,0.20);
+            box-shadow: 0px 2px 5px 0px rgba(112,112,112,0.20);
     font-size: 1.025rem;
 }
 
@@ -154,9 +157,14 @@ input:-webkit-autofill:active {
 
 
 .tickets-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 
@@ -213,8 +221,13 @@ input:-webkit-autofill:active {
     font-size: 3rem;
 }
 
+.list-group-item:focus, .list-group-item:hover {
+    z-index: 0 !important;
+}
+
 .box-shadow {
-    box-shadow: 0px 5px 10px 1px rgba(112,112,112,0.20);
+    -webkit-box-shadow: 0px 5px 10px 1px rgba(112,112,112,0.20);
+            box-shadow: 0px 5px 10px 1px rgba(112,112,112,0.20);
 }
 
 
@@ -257,48 +270,62 @@ input:-webkit-autofill:active {
     background-color: #72bdb6;
     border-radius: 50em;
     -webkit-transition: -webkit-transform 0.5s ease-in-out;
-    -moz-transition: -moz-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out;
     transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 .pricing-switcher input[type="radio"]:checked + label + .switch,
 .pricing-switcher input[type="radio"]:checked + label:nth-of-type(n) + .switch {
     -webkit-transform: translateX(130px);
-    -moz-transform: translateX(130px);
     -ms-transform: translateX(130px);
-    -o-transform: translateX(130px);
     transform: translateX(130px);
 }
 
 
 .scene {
-    perspective: 1000px;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
 }
 
 .scene-card {
 
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+
+    transition: -webkit-transform 0.5s ease-in-out;
+
+    -o-transition: transform 0.5s ease-in-out;
+
     transition: transform 0.5s ease-in-out;
-    transform-style : preserve-3d;
+
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    -webkit-transform-style : preserve-3d;
+            transform-style : preserve-3d;
 }
 
 .card-face {
     position: relative;
-    backface-visibility: hidden !important;
+    -webkit-backface-visibility: hidden !important;
+            backface-visibility: hidden !important;
 }
 
 .card-back {
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
     position: absolute;
     top: -29px;
     left:0;
 }
 
 .is-flipped-f {
-     transform: rotateY(0deg);
+     -webkit-transform: rotateY(0deg);
+             transform: rotateY(0deg);
  }
 
 .is-flipped-h {
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
 }
 
 
@@ -320,8 +347,12 @@ input:-webkit-autofill:active {
     overflow: hidden;
     font-size: 1.1rem;
     padding: 0rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .my-breadcrumb li {
@@ -362,14 +393,23 @@ input:-webkit-autofill:active {
 .stripe-button-el{
     float: right !important;
     background-image: none !important;
-    background-color: transparent; !important;
-    box-shadow: none !important;
+    background-color: transparent !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
     border: solid rgb(52, 58, 64) 2px !important;
     border-radius: 4.8px !important;
     width: 100px !important;
     height: 50px !important;
 
+    -webkit-transition: background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out !important;
+
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out !important;
+
+    -o-transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
+
     transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
+
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out !important;
 }
 
 .stripe-button-el:hover {
@@ -386,7 +426,10 @@ input:-webkit-autofill:active {
     font-size: 20px !important;
     font-weight: 700 !important;
     font-family: inherit !important;
-    box-shadow: 0px 0px 0px 0px !important;
+    -webkit-box-shadow: 0px 0px 0px 0px !important;
+            box-shadow: 0px 0px 0px 0px !important;
+    -webkit-transition: color .15s ease-in-out !important;
+    -o-transition: color .15s ease-in-out !important;
     transition: color .15s ease-in-out !important;
     margin-top: 7px !important;
     width: 94px !important;
@@ -399,11 +442,19 @@ input:-webkit-autofill:active {
     color: white !important;
 }
 
+.ws {
+    white-space: nowrap;
+}
+
 /*********404********/
 
 .flexy {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-top: -6rem;
 }
 

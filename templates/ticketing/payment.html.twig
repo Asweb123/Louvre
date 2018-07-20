@@ -70,13 +70,13 @@
                 {{ 'Date de visite : '|trans }}<span class="font-weight-bold">{{ order.bookingDate|date('d/m/Y') }}</span>
 
             </td>
-            <td class="text-center"><span class="font-weight-bold">{{ ticket.price|number_format(2, ',') }} €</span></td>
+            <td class="text-center"><span class="font-weight-bold ws">{{ ticket.price|number_format(2, ',') }} €</span></td>
         </tr>
         {% endfor %}
 
         <tr>
             <td class="font-weight-bold">Total :
-            <td class="font-weight-bold text-center">{{ order.totalPrice|number_format(2, ',') }} €</td>
+            <td class="font-weight-bold text-center ws">{{ order.totalPrice|number_format(2, ',') }} €</td>
         </tr>
 
 

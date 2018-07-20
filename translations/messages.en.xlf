@@ -149,9 +149,9 @@
         <source>L'évacuation des salles débute à 17h30 ou à 21h15 les jours de nocturne.</source>
         <target>Room evacuation begins at 5:30 pm or 9:15 pm on evening opening.</target>
       </trans-unit>
-      <trans-unit id="Ahuq5Ws" resname="Accéder au Musée du Louvre">
-        <source>Accéder au Musée du Louvre</source>
-        <target>Access to the Louvre museum</target>
+      <trans-unit id="Ahuq5Ws" resname="Accéder au Musée">
+        <source>Accéder au Musée</source>
+        <target>Access to the museum</target>
       </trans-unit>
       <trans-unit id="aReyBiM" resname="En métro : ">
         <source>En métro : </source>

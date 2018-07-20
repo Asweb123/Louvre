@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use App\Validator\Constraints as OrderAssert;
 
 /**
- * @ORM\Entity(repositoryClass="OrderCustomerRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\OrderCustomerRepository")
  *
  * @Assert\GroupSequence({"OrderCustomer", "booking", "bookingBis"})
  *
@@ -85,7 +85,7 @@ class OrderCustomer
     private $emailCustomer;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=12)
      *
      */
     private $bookingRef;
@@ -98,7 +98,7 @@ class OrderCustomer
     private $ticketsList;
 
     /**
-     * @ORM\Column(type="decimal", precision=10, scale=2)
+     * @ORM\Column(type="decimal", precision=5, scale=2)
      */
     private $totalPrice;
 

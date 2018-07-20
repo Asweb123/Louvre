@@ -149,9 +149,9 @@
         <source>L'évacuation des salles débute à 17h30 ou à 21h15 les jours de nocturne.</source>
         <target>L'évacuation des salles débute à 17h30 ou à 21h15 les jours de nocturne.</target>
       </trans-unit>
-      <trans-unit id="Ahuq5Ws" resname="Accéder au Musée du Louvre">
-        <source>Accéder au Musée du Louvre</source>
-        <target>Accéder au Musée du Louvre</target>
+      <trans-unit id="Ahuq5Ws" resname="Accéder au Musée">
+        <source>Accéder au Musée</source>
+        <target>Accéder au Musée</target>
       </trans-unit>
       <trans-unit id="aReyBiM" resname="En métro : ">
         <source>En métro : </source>
@@ -345,8 +345,8 @@
         <source>Nous vous remerçions pour votre commande. Vous allez recevoir dans quelques instants un mail contenant </source>
         <target>Nous vous remerçions pour votre commande. Vous allez recevoir dans quelques instants un mail contenant </target>
       </trans-unit>
-      <trans-unit id="7QukMVA" resname="youtTicket.number">
-        <source>youtTicket.number</source>
+      <trans-unit id="7QukMVA" resname="yourTicket.number">
+        <source>yourTicket.number</source>
         <target>{1}votre billet|[2, Inf]vos billets</target>
       </trans-unit>
       <trans-unit id=".BwmqJJ" resname=" à imprimer et à présenter lors de votre visite du musée.">

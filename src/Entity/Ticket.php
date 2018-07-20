@@ -26,7 +26,7 @@ class Ticket
     private $pricing;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=35)
      *
      * @Assert\NotBlank(groups={"beneficiary"})
      * @Assert\Length(
@@ -46,7 +46,7 @@ class Ticket
     private $firstName;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=45)
      *
      * @Assert\NotBlank(groups={"beneficiary"})
      * @Assert\Length(
@@ -66,7 +66,7 @@ class Ticket
     private $lastName;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=50)
      *
      * @Assert\NotBlank(groups={"beneficiary"})
      * @Assert\Country(groups={"beneficiary"})
@@ -92,7 +92,7 @@ class Ticket
     private $relatedOrder;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="date")
      *
      * @Assert\NotBlank()
      * @Assert\Date()
