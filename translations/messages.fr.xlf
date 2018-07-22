@@ -153,6 +153,10 @@
         <source>Accéder au Musée</source>
         <target>Accéder au Musée</target>
       </trans-unit>
+      <trans-unit id="Ahuq5Wh" resname='lignes 1 et 7, station "Palais-Royal / Musée du Louvre"'>
+        <source>lignes 1 et 7, station "Palais-Royal / Musée du Louvre"</source>
+        <target>lignes 1 et 7, station "Palais-Royal / Musée du Louvre"</target>
+      </trans-unit>
       <trans-unit id="aReyBiM" resname="En métro : ">
         <source>En métro : </source>
         <target>En métro : </target>

@@ -121,7 +121,7 @@
 
                                                     <p>
 
-<span style="font-size:18px;">{{ 'Date de commande : '|trans }}{{ "now"|date("m/d/Y") }}
+<span style="font-size:18px;">{{ 'Date de commande : '|trans }}{{ "now"|date("d/m/Y") }}
 </span></p>
                                                 </div>
                                             </td>
@@ -175,7 +175,7 @@
 
                                                     <p>
 
-<span style="font-size:16px;">{{ 'Date de visite : '|trans }}<span style="font-weight: bold">{{ order.bookingDate|date("m/d/Y") }}</span>
+<span style="font-size:16px;">{{ 'Date de visite : '|trans }}<span style="font-weight: bold">{{ order.bookingDate|date("d/m/Y") }}</span>
 </span></p>
                                                 </div>
                                             </td>
@@ -201,7 +201,7 @@
 
                                                     <p>
 
-<span style="font-size:16px;">{{ 'Nombre de billets : '|trans }}<span style="font-weight: bold">{{ order.totalPrice|number_format(2, ',') }} €</span>
+<span style="font-size:16px;">{{ 'Nombre de billets : '|trans }}<span style="font-weight: bold">{{ order.ticketsQuantity}}</span>
 </span></p>
                                                 </div>
                                             </td>
