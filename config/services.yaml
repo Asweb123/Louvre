@@ -9,8 +9,8 @@ parameters:
     senior_price: 12
     reduced_price: 10
 
-    stripe_public_key: pk_test_XJEMQqTn9vPLz78h6NYr2bRb
-    stripe_secret_key: sk_test_smGM3OOSKEQRidsbIumaKYhL
+    stripe_public_key: pk_test_YYBUHGxo6Ot78xfM8Iq4GsS3
+    stripe_secret_key: sk_test_yqfXDhQ6rryPxghdx6SgunfT
 
 services:
     # default configuration for services in *this* file
