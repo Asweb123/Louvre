@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Service\TicketingStepsCheck;
+use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -10,6 +11,13 @@ use App\Service\PricingCalculator;
 
 class TicketingPaymentController extends AbstractController
 {
+    private $params;
+
+    public function __construct(ParameterBagInterface $params)
+    {
+        $this->params = $params;
+    }
+
     /**
      * @Route({
      *     "fr": "/billetterie/paiement",

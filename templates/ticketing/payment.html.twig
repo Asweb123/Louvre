@@ -97,7 +97,7 @@
     <form action="{{ path('ticketing_confirmation') }}" method="POST">
         <script
                 src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                data-key="pk_test_XJEMQqTn9vPLz78h6NYr2bRb"
+                data-key="{{ stripe_public_key }}"
                 data-amount="{{ (order.totalPrice * 100) }}"
                 data-name="{{ 'Musée du Louvre'|trans }}"
                 data-description="Billetterie"
