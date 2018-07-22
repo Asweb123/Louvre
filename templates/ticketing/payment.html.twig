@@ -34,6 +34,12 @@
         </ul>
     </nav>
 
+    {% for message in app.session.flashbag.get('error') %}
+        <div class="flash-error mb-5 text-center text-danger font-weight-bold">
+            {{ message|trans }}
+        </div>
+    {% endfor %}
+
     <p class="text-center mb-5">
         {{ 'Une fois votre commande finalisée, '|trans }}{{ 'yourTicketWillBeSent.number'|transchoice(order.ticketsQuantity) }}{{ ' au format PDF à l\'adresse mail suivante :'|trans }}<br/>
         <span class="font-weight-bold">{{ order.emailCustomer }}</span>

@@ -417,6 +417,10 @@
         <source>Veuillez vérifier l'exactitude des informations données ci-dessus et cliquer sur le bouton "Valider" pour procéder au paiement par carte bancaire.</source>
         <target>Please check the accuracy of the information given above and click on the "Validate" button to proceed to the payment by credit card.</target>
       </trans-unit>
+      <trans-unit id="errorMessage">
+        <source>errorMessage</source>
+        <target>Your payment has not been processed. Please try again.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

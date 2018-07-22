@@ -6,7 +6,7 @@ namespace App\Controller;
 use App\Form\Type\BeneficiariesListType;
 use App\Service\TicketingStepsCheck;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
@@ -19,7 +19,7 @@ class TicketingBeneficiaryController extends AbstractController
      *     "en": "/ticketing/beneficiary"
      * }, name="ticketing_beneficiary")
      */
-    public function beneficiary(SessionInterface $session, Request $request, TicketingStepsCheck $ticketingStepsCheck)
+    public function beneficiary(Session $session, Request $request, TicketingStepsCheck $ticketingStepsCheck)
     {
         if(($session->has('order')) === true) {
             $order = $session->get('order');

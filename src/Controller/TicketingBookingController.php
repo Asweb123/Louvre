@@ -7,7 +7,7 @@ use App\Entity\OrderCustomer;
 use App\Form\Type\OrderType;
 use App\Service\BeneficiariesListCreator;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
@@ -20,7 +20,7 @@ class TicketingBookingController extends AbstractController
      *     "en": "/ticketing/booking"
      * }, name="ticketing_booking")
      */
-    public function booking(SessionInterface $session, Request $request, BeneficiariesListCreator $beneficiariesListCreator)
+    public function booking(Session $session, Request $request, BeneficiariesListCreator $beneficiariesListCreator)
     {
 
         if($session->has('order') === true) {

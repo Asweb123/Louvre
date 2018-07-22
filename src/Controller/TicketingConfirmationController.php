@@ -8,7 +8,8 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\HttpFoundation\Session\Session;
+
 
 class TicketingConfirmationController extends Controller
 {
@@ -26,7 +27,7 @@ class TicketingConfirmationController extends Controller
      *     "en": "/ticketing/confirmation"
      * }, name="ticketing_confirmation")
      */
-    public function confirmation(SessionInterface $session, CodeGenerator $codeGenerator,
+    public function confirmation(Session $session, CodeGenerator $codeGenerator,
                                  EntityManagerInterface $entityManager, \Swift_Mailer $mailer,
                                  TicketingStepsCheck $ticketingStepsCheck)
     {
@@ -56,6 +57,7 @@ class TicketingConfirmationController extends Controller
                 'source' => $token,
             ]);
 
+
             if((isset($charge) === true) && ($charge !== null)) {
 
                 $bookingRef = $codeGenerator->codeGenerator();
@@ -63,7 +65,6 @@ class TicketingConfirmationController extends Controller
 
                 $entityManager->persist($order);
                 $entityManager->flush();
-
 
                 $html = $this->renderView('pdf.html.twig',  array('order' => $order));
                 $dompdf = $this->get('dompdf');
@@ -79,6 +80,10 @@ class TicketingConfirmationController extends Controller
                 $mailer->send($message);
 
             } else {
+                $session->getFlashBag()->add(
+                    'error',
+                    'errorMessage'
+                );
                 return $this->redirectToRoute('ticketing_payment');
             }
         }

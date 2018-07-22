@@ -417,6 +417,10 @@
         <source>Veuillez vérifier l'exactitude des informations données ci-dessus et cliquer sur le bouton "Valider" pour procéder au paiement par carte bancaire.</source>
         <target>Veuillez vérifier l'exactitude des informations données ci-dessus et cliquer sur le bouton "Valider" pour procéder au paiement par carte bancaire.</target>
       </trans-unit>
+      <trans-unit id="errorMessage">
+        <source>errorMessage</source>
+        <target>Votre paiement n'a pas été pris en compte pour une raison indéterminée. Veuillez recommencer.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

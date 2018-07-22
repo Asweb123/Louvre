@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use App\Service\TicketingStepsCheck;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Service\PricingCalculator;
 
@@ -16,7 +16,7 @@ class TicketingPaymentController extends AbstractController
      *     "en": "/ticketing/payment"
      * }, name="ticketing_payment")
      */
-    public function payment(SessionInterface $session, PricingCalculator $pricingCalculator, TicketingStepsCheck $ticketingStepsCheck)
+    public function payment(Session $session, PricingCalculator $pricingCalculator, TicketingStepsCheck $ticketingStepsCheck)
     {
         if($session->has('order') === true) {
             $order = $session->get('order');
