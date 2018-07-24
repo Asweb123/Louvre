@@ -21,16 +21,15 @@ $(document).ready(function() {
         }
     });
 
-
+/*
     card.click(function(){
         if (card.hasClass('is-flipped-h')){
             $('.fieldset-s > label[for="full-day"]').trigger('click');
 
         }else if (!(card.hasClass('is-flipped-h'))){
             $('.fieldset-s > label[for="half-day"]').trigger('click');
-
         }
     });
-
+*/
 
 });
