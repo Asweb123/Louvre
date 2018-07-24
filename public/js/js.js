@@ -22,15 +22,15 @@ $(document).ready(function() {
     });
 
 
-/*
     card.click(function(){
         if (card.hasClass('is-flipped-h')){
-            card.removeClass('is-flipped-h').addClass('is-flipped-f');
+            $('.fieldset-s > label[for="full-day"]').trigger('click');
 
         }else if (!(card.hasClass('is-flipped-h'))){
-            card.removeClass('is-flipped-f').addClass('is-flipped-h');
+            $('.fieldset-s > label[for="half-day"]').trigger('click');
 
         }
     });
-*/
+
+
 });
